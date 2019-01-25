@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享到"/>
+
+    <LinearLayout
+        android:padding="@dimen/padding_small"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/qq_friend"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/share_qq_friend"
+            android:gravity="center"
+            android:text="QQ好友"/>
+
+        <TextView
+            android:id="@+id/wechat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/share_wechat"
+            android:gravity="center"
+            android:text="微信"/>
+
+        <TextView
+            android:id="@+id/wechat_circle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/share_friend_circle"
+            android:gravity="center"
+            android:text="好友圈"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/sina_weibo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/share_sina_microblog"
+            android:gravity="center"
+            android:text="新浪微博"/>
+    </LinearLayout>
+
+</LinearLayout>

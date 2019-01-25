@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.homepaas.sls.ui.homepage_3_3_0.DetailWebActivity">
+    <RelativeLayout
+        android:elevation="1dp"
+        android:translationZ="1dp"
+        android:id="@+id/toolbar"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/back"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:src="@mipmap/return_black"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <FrameLayout
+            android:id="@+id/message"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/call_secretary"
+                    android:src="@mipmap/client_v3_3_0_ic_tab_secretary"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:textSize="10sp"
+                    android:text="小秘书"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:visibility="invisible"
+                android:id="@+id/unreadIcon"
+                android:background="@drawable/unread_message_icon"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="5dp"
+                android:layout_height="5dp"/>
+
+        </FrameLayout>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/title"
+            android:textSize="18sp"
+            android:textColor="@color/homepageServerText1"
+            android:text="我的订单"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/webView_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:progressDrawable="@drawable/progressbar_bg" />
+    </RelativeLayout>
+
+</LinearLayout>

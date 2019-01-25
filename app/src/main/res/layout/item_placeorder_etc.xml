@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <!--space-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_cell_space"
+        android:background="#fbfbfb"
+        android:foreground="@drawable/bottom_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:background="@drawable/top_line_bg"
+        android:orientation="vertical">
+
+        <!--心理价格，针对区间价格会显示-->
+        <RelativeLayout
+            android:id="@+id/service_price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_cell_height"
+            android:layout_marginLeft="@dimen/standard_cell_margin"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/bottom_line"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small">
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:drawableRight="@mipmap/right_gray"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="2"
+                    android:textColorHint="@color/appTextLight" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:drawableLeft="@mipmap/confirm_an_order_price"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:fontFamily="Noto"
+                    android:text="@string/service_price_str"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--服务数量-->
+        <RelativeLayout
+            android:id="@+id/service_number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_cell_height"
+            android:layout_marginLeft="@dimen/standard_cell_margin"
+            android:background="@drawable/bottom_line"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/padding_small">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/confirm_an_order_amount"
+                android:drawablePadding="@dimen/padding_small"
+                android:text="服务数量"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/unit"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/minus_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/reduce2"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/service_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_tiny"
+                    android:background="#f1f2f6"
+                    android:gravity="center"
+                    android:minHeight="25dp"
+                    android:minWidth="50dp"
+                    tools:text="1" />
+
+                <ImageView
+                    android:id="@+id/plus_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/add1"
+                    android:layout_marginLeft="6dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView9"
+                android:layout_alignBottom="@+id/textView9"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/padding_small"
+                android:layout_marginLeft="15dp"
+                android:drawableRight="@mipmap/right_gray"
+                android:gravity="center"
+                tools:text="小时" />
+        </RelativeLayout>
+
+
+        <!--服务时间-->
+        <RelativeLayout
+            android:id="@+id/id_anchor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_cell_height"
+            android:layout_marginLeft="@dimen/standard_cell_margin"
+            android:background="@drawable/bottom_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/confirm_an_order_time"
+                android:drawablePadding="@dimen/padding_small"
+                android:fontFamily="Noto"
+                android:text="服务时间"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/service_time_option"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small">
+
+                <TextView
+                    android:id="@+id/service_time_text"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:drawableRight="@mipmap/right_gray"
+                    android:gravity="center_vertical"
+                    android:hint="请选择服务时间"
+                    android:textColor="@color/appTextSubTitle"
+                    android:textColorHint="@color/appTextLight" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <include layout="@layout/promotion_activity_layout" />
+    </LinearLayout>
+</LinearLayout>

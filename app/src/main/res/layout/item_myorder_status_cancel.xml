@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/timeList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorDivider"
+        tools:text="2014-9-8 8:09"
+        android:padding="@dimen/horizontal_padding_normal" />
+
+    <RelativeLayout
+        android:background="@drawable/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/avatar"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:scaleType="fitCenter"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:id="@+id/order_icon"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_marginLeft="@dimen/margin_small"
+            tools:text="美家阿姨"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/order_status"
+            android:text="服务完成"
+            android:padding="@dimen/padding_normal"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:background="@drawable/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/order_content"
+            android:gravity="left"
+            android:paddingTop="@dimen/padding_large"
+            android:paddingBottom="@dimen/padding_large"
+            tools:text="I want an aunt for Home Stuff ,Better to be HangZhou Native People!"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/padding_small"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@+id/order_money"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/order_money"
+            android:textColor="@color/numberOrange"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            tools:text="900.00"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/service_type"
+            tools:text="小时工"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/button_delete"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="删除"
+                android:gravity="center"
+                android:background="@drawable/order_delete_button_bg"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

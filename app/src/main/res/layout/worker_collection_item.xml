@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    android:id="@+id/swipe_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="80dp"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:text="@string/swipe_delete"
+        android:textColor="@android:color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="@dimen/horizontal_margin_small"
+            android:layout_marginRight="@dimen/horizontal_margin_small"
+            tools:background="@color/textHint"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin_small"
+            android:layout_marginStart="@dimen/horizontal_margin_small"
+            android:layout_toEndOf="@id/photo"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/photo"
+            tools:text="带鱼"/>
+
+        <TextView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin_small"
+            android:layout_marginRight="@dimen/horizontal_margin_small"
+            android:layout_toEndOf="@id/name"
+            android:layout_toRightOf="@id/name"
+            android:drawableLeft="@mipmap/my_collection_item_like_unchecked"
+            android:drawableStart="@mipmap/my_collection_item_like_unchecked"
+            tools:text="123"/>
+        <!--<CheckBox-->
+            <!--android:id="@+id/like"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="@dimen/horizontal_margin_small"-->
+            <!--android:layout_marginRight="@dimen/horizontal_margin_small"-->
+            <!--android:layout_toEndOf="@id/name"-->
+            <!--android:layout_toRightOf="@id/name"-->
+            <!--android:button="@drawable/my_collection_item_like"-->
+            <!--tools:text="123"/>-->
+
+        <TextView
+            android:id="@+id/collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/like"
+            android:layout_toRightOf="@id/like"
+            android:drawableLeft="@mipmap/my_collection_item_collection"
+            android:drawableStart="@mipmap/my_collection_item_collection"
+            tools:text="123"/>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin_small"
+            android:layout_marginRight="@dimen/horizontal_margin_small"
+            android:layout_toEndOf="@id/collection"
+            android:layout_toRightOf="@id/collection"
+            android:drawableLeft="@mipmap/my_collection_item_score"
+            android:drawableStart="@mipmap/my_collection_item_score"
+            tools:text="123"/>
+
+        <TextView
+            android:id="@+id/worker_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/horizontal_margin_small"
+            android:layout_marginStart="@dimen/horizontal_margin_small"
+            android:layout_toEndOf="@id/photo"
+            android:layout_toRightOf="@id/photo"
+            tools:text="小时工"/>
+
+        <TextView
+            android:id="@+id/worker_hometown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/horizontal_margin_small"
+            android:layout_marginRight="@dimen/horizontal_margin_small"
+            android:layout_toEndOf="@id/worker_type"
+            android:layout_toRightOf="@id/worker_type"
+            tools:text="浙江籍"/>
+
+        <TextView
+            android:id="@+id/worker_years"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/worker_hometown"
+            android:layout_toRightOf="@id/worker_hometown"
+            tools:text="工龄年"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_into"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/icon_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/photo"
+            android:layout_toRightOf="@id/photo"
+            android:orientation="horizontal"
+            app:layoutManager="@string/layoutManager_LinearLayout"
+            tools:listitem="@layout/detail_authenticate_icon_item"/>
+    </RelativeLayout>
+</com.daimajia.swipe.SwipeLayout>

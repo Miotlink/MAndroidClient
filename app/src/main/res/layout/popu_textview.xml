@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="3dp"
+    android:textSize="9sp"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:text="快送上门"
+    android:textColor="@color/appText"
+    android:background="@drawable/popu_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />

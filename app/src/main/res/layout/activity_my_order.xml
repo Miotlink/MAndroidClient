@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical"
+    tools:context=".ui.order.manage.OrderManageActivity">
+
+    <!--Title-->
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_title_bg"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/tv_history_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:text="历史订单"
+            android:textColor="@color/app_title_color"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="我的订单"
+            android:textColor="@color/app_title_color"
+            android:textSize="18sp" />
+
+        <FrameLayout
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:src="@mipmap/message" />
+
+            <View
+                android:id="@+id/unreadIcon"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/unread_message_icon"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="5.5dp"
+
+        app:tabIndicatorColor="@color/appText13"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/appTextSubTitle"
+        app:tabTextColor="@color/appText3" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground" />
+
+    <!--<com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout-->
+    <!--android:id="@+id/refreshLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/viewpager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/colorBackground" />-->
+    <!--</com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout>-->
+</LinearLayout>

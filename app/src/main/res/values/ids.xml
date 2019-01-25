@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="head_photo" type="id"/>
+    <item name="head_phone" type="id"/>
+    <item name="head_nick_name" type="id"/>
+    <item name="drawer_list" type="id"/>
+
+    <!--default ids for list page-->
+    <item name="toolbar" type="id"/>
+    <item name="recyclerView" type="id"/>
+    <item name="refreshLayout" type="id"/>
+    <item name="back" type="id" />
+    <item name="empty_view" type="id"/>
+    <item name="empty_content" type="id"/>
+    <item name="empty_image" type="id"/>
+    <item name="empty_message" type="id"/>
+    <item name="empty_description" type="id"/>
+    <item name="service_type_ex" type="id"/>
+</resources>

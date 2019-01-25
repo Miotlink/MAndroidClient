@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/explain_text"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="@drawable/blackground"
+            android:paddingTop="3dp"
+            android:text="你好"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_above="@+id/marker_img"
+            android:layout_alignLeft="@+id/marker_img"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxEms="13"
+            />
+
+        <TextView
+            android:id="@+id/explain_text_all"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="@drawable/greenground"
+            android:paddingTop="3dp"
+            android:text="全城服务"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_above="@+id/marker_img"
+            android:layout_alignLeft="@+id/marker_img"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxEms="6"
+            />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true">
+            <LinearLayout
+                android:id="@+id/marker_lin"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/green"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/marker_house_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/green_house"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/marker_worker_lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/orange_people"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+
+        <com.homepaas.sls.ui.widget.CircleImageView
+            android:id="@+id/marker_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

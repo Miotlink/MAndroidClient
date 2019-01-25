@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_rel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_title_bg"
+        android:elevation="7dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingLeft="@dimen/common_margin_left_right"
+            android:paddingRight="@dimen/common_margin_left_right"
+            android:src="@mipmap/return_black" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/message_remark"
+            android:textColor="@color/app_title_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <com.homepaas.sls.ui.widget.ReboundScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_rel"
+        android:layout_marginBottom="80dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/remark_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_margin_left_right"
+                    android:background="@color/white"
+                    android:gravity="left|top"
+                    android:maxEms="100"
+                    android:maxLength="100"
+                    android:minHeight="256dp"
+                    android:padding="@dimen/common_item_top"
+                    android:textColorHint="@color/homepageServerText1"
+                    android:textSize="14sp"
+                    android:imeOptions="actionDone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.homepaas.sls.ui.widget.ReboundScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_sumbit_rel_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/btn_sumbit"
+                android:layout_width="@dimen/btn_sumbit_width"
+                android:layout_height="@dimen/btn_sumbit_height"
+                android:background="@drawable/subset_order_button"
+                android:text="@string/submit_reasons"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

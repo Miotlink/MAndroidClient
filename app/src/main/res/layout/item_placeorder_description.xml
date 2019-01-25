@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_cell_space"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/description"
+        android:textSize="13sp"
+        android:paddingTop="15dp"
+        android:lineSpacingExtra="6sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:textColor="#999"
+        android:paddingLeft="@dimen/standard_cell_margin"
+        android:paddingRight="@dimen/padding_small"  />
+</LinearLayout>

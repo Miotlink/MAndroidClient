@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/father_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        style="@style/TitleBarStyle2"
+        android:layout_height="60dp"
+        android:background="@color/appPrimary"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@mipmap/return_black" />
+
+        <LinearLayout
+            android:id="@+id/search_edit_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/search_text"
+                style="@style/AutoCompleteStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:background="@drawable/round_layout"
+                android:completionThreshold="1"
+                android:drawableLeft="@mipmap/search"
+                android:drawablePadding="@dimen/padding_small"
+                android:drawableStart="@mipmap/search"
+                android:gravity="center_vertical"
+                android:hint="@string/add_service"
+                android:imeOptions="actionDone"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                android:singleLine="true"
+                android:textColor="@color/appTextPrimary"
+                android:textColorHint="@color/textHint"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/detele"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:src="@mipmap/login_clean"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cancel_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <include layout="@layout/content_choose_service" />
+</RelativeLayout>

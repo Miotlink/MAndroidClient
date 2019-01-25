@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:clickable="true"
+        android:id="@+id/couponbd"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@mipmap/coupon_bg">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/coupon_icon" />
+
+        <TextView
+            android:id="@+id/coupon_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/icon"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="闪付红包" />
+
+        <TextView
+            android:id="@+id/isUsed"
+            android:visibility="invisible"
+            android:textColor="@color/appPrimary"
+            android:textSize="14sp"
+            android:text="已使用"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/coupon_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coupon_title"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/icon"
+            android:textColor="@color/white"
+            android:text="满100减20；满200减50；满300减10" />
+        <TextView
+            android:id="@+id/coupon_description1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coupon_description"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/icon"
+            android:textColor="@color/white"
+            android:text="全城，全品类" />
+
+        <TextView
+            android:id="@+id/coupon_endtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/icon"
+            android:layout_marginLeft="8dp"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/icon"
+            android:textColor="@color/white"
+            android:text="有效期至:2016-9-9" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

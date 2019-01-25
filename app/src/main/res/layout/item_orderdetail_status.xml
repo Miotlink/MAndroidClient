@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/status_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/status_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/client_v3_1_0_ic_indent_aaffirm" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/status_picture"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/status_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="工人服务完成"
+                android:textColor="@color/order_detail_type"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/status_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                tools:text="等待工人来"
+                android:textColor="@color/appText10"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/client_v3_1_0_ic_indent_imaginary_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/status_lin_v1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/status_v1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="状态一"
+                android:textColor="@color/appText10"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_lin_v2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/status_v2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="状态二"
+                android:textColor="@color/appText10"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_lin_v3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/status_v3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="状态三"
+                android:textColor="@color/appText10"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_lin_v4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/status_v4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="状态四"
+                android:textColor="@color/appText10"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/status_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/indent_flow_1"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="18dp"/>
+</LinearLayout>

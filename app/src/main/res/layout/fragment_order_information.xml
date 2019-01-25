@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <com.homepaas.sls.ui.widget.ReboundScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/technological_process_orderinfo_margin"
+        android:fadingEdge="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/common_margin_left_right_first">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                        <TextView
+                            style="@style/client_order_detail_text_left"
+                            android:text="@string/service_type" />
+
+                        <TextView
+                            android:id="@+id/service_type"
+                            style="@style/client_order_detail_text_right"
+                            tools:text="小时工" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                        <TextView
+                            style="@style/client_order_detail_text_left"
+                            android:text="@string/service_time" />
+
+                        <TextView
+                            android:id="@+id/service_time"
+                            style="@style/client_order_detail_text_right"
+                            tools:text="2020" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/service_price_rel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_left_right_first"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/service_price_title"
+                            style="@style/client_order_detail_text_left"
+                            tools:text="服务价格" />
+
+                        <TextView
+                            android:id="@+id/service_price"
+                            style="@style/client_order_detail_text_right"
+                            tools:text="30元/小时" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/claims_rel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_left_right_first"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/claims_title"
+                            style="@style/client_order_detail_text_left"
+                            tools:text="1元保险" />
+
+                        <TextView
+                            android:id="@+id/claims_money"
+                            style="@style/client_order_detail_text_right"
+                            tools:text="1元" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/service_total_price_rel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_left_right_first"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/client_order_detail_text_left"
+                            android:text="@string/service_total_price" />
+
+                        <TextView
+                            android:id="@+id/service_total_price"
+                            style="@style/client_order_detail_text_right"
+                            tools:text="31元" />
+                    </RelativeLayout>
+
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/activity_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layoutManager="@string/layoutManager_LinearLayout" />
+
+                    <RelativeLayout
+                        android:id="@+id/red_coupon_rel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_left_right_first"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/red_coupon_title"
+                            style="@style/client_order_detail_text_left"
+                            tools:text="红包" />
+
+                        <TextView
+                            android:id="@+id/red_coupon_money"
+                            style="@style/client_order_detail_text_right"
+                            tools:text="2元" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/payment_rel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin_left_right_first"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/payment_type_title"
+                            style="@style/client_order_detail_text_left"
+                            tools:text="待付款" />
+
+                        <TextView
+                            android:id="@+id/payment_money"
+                            style="@style/client_order_detail_text_right"
+                           android:textColor="@color/count_down_time"
+                            tools:text="27元" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!--备注-->
+                <LinearLayout
+                    android:id="@+id/remark_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View style="@style/fenge_view1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/client_order_detail_text_left"
+                            android:text="@string/remark" />
+
+                        <TextView
+                            android:id="@+id/remark"
+                            style="@style/client_order_detail_text_right"
+                            android:layout_marginBottom="@dimen/common_margin_left_right"
+                            android:layout_marginLeft="@dimen/compensation_reason_item"
+                            android:layout_marginTop="@dimen/common_margin_left_right"
+                            tools:text="备注" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/photo_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layoutManager="@string/layoutManager_Gridlayout"
+                        android:padding="@dimen/common_margin_left_right_second"/>
+                </LinearLayout>
+
+                <!--退款信息-->
+                <LinearLayout
+                    android:id="@+id/refund_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View style="@style/fenge_view1" />
+
+                    <TextView
+                        style="@style/client_order_detail_text_left"
+                        android:layout_marginTop="@dimen/service_item_first_margin"
+                        android:text="@string/refund_record" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/refund_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="4dp"
+                        app:layoutManager="@string/layoutManager_LinearLayout" />
+                </LinearLayout>
+
+                <View style="@style/fenge_view1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                    <TextView
+                        style="@style/client_order_detail_text_left"
+                        android:text="@string/client_name" />
+
+                    <TextView
+                        android:id="@+id/client_name"
+                        style="@style/express_order_tracking_text_other_right"
+                        android:layout_marginLeft="14dp"
+                        tools:text="张大爷" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                    <TextView
+                        style="@style/client_order_detail_text_left"
+                        android:text="@string/client_phone" />
+
+                    <TextView
+                        android:id="@+id/client_phone"
+                        style="@style/express_order_tracking_text_other_right"
+                        tools:text="4378437483" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                    <TextView
+                        style="@style/client_order_detail_text_left"
+                        android:text="@string/client_address" />
+
+                    <TextView
+                        android:id="@+id/client_address"
+                        style="@style/express_order_tracking_text_other_right"
+                        tools:text="设计师创意园" />
+                </LinearLayout>
+
+                <View
+                    style="@style/fenge_view1"
+                    android:layout_marginTop="@dimen/common_margin_left_right_first" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_left_right_first"
+                    android:paddingBottom="@dimen/common_margin_left_right_first">
+
+                    <TextView
+                        style="@style/client_order_detail_text_left"
+                        android:text="@string/order_code" />
+
+                    <TextView
+                        android:id="@+id/order_code"
+                        style="@style/express_order_tracking_text_other_right"
+                        tools:text="489483948394" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.homepaas.sls.ui.widget.ReboundScrollView>
+</LinearLayout>

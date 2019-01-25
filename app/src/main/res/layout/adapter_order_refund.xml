@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_margin_left_right_second"
+        android:layout_marginRight="@dimen/common_margin_left_right_second"
+        android:layout_marginTop="@dimen/common_margin_left_right">
+
+        <TextView
+            android:id="@+id/refund_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/homepageServerText1"
+            android:textSize="14sp"
+            tools:text="2016-8-2111:23" />
+
+        <TextView
+            android:id="@+id/refund_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/refund_time"
+            android:textColor="@color/appText13"
+            android:textSize="14sp"
+            tools:text="退款完成" />
+
+        <TextView
+            android:id="@+id/refund_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/homepageServerText1"
+            android:textSize="14sp"
+            tools:text="一元" />
+    </RelativeLayout>
+</LinearLayout>

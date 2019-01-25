@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bh"
+    android:orientation="vertical"
+    tools:context="com.homepaas.sls.ui.order.directOrder.EditAddressActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="7dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:theme="@style/ToolbarTheme"
+            app:title="新增服务地址" />
+    </android.support.design.widget.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/address_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <!--联系人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="联系人"
+                android:textColor="@color/homepageServerText1"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.homepaas.sls.ui.widget.ScalableHintEditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/null_bg"
+                    android:hint="您的姓名"
+                    android:textColorHint="@color/order_list_info_color"
+                    android:textSize="15sp"
+                    app:hintTextSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/common_background_color" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="27dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_man"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/btn_address_gender_bg_gray"
+                        android:gravity="center"
+                        android:text="先生"
+                        android:textColor="@color/order_list_info_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txt_woman"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/btn_address_gender_bg_gray"
+                        android:gravity="center"
+                        android:text="女士"
+                        android:textColor="@color/order_list_info_color"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--联系人电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="17dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:text="联系电话"
+                android:textColor="@color/homepageServerText1"
+                android:textSize="15sp" />
+
+            <com.homepaas.sls.ui.widget.ScalableHintEditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="您的联系电话"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColorHint="@color/order_list_info_color"
+                android:textSize="15sp"
+                app:hintTextSize="15sp" />
+        </LinearLayout>
+
+        <!--联系人地址-->
+        <LinearLayout
+            android:id="@+id/ly_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="选择地区"
+                android:textColor="@color/homepageServerText1"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:divider="@drawable/layout_vertical_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <com.homepaas.sls.ui.widget.ScalableHintEditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="地区信息"
+                    android:inputType="none"
+                    android:minHeight="40dp"
+                    android:textColorHint="@color/order_list_info_color"
+                    android:textSize="15sp"
+                    app:hintTextSize="15sp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@mipmap/client_v330_ic_tab_nearby_open" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:text="详细地址"
+                android:textColor="@color/homepageServerText1"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:divider="@drawable/layout_vertical_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <com.homepaas.sls.ui.widget.ScalableHintEditText
+                    android:id="@+id/detail_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="小区/写字楼/大厦/学校等"
+                    android:maxLength="40"
+                    android:paddingBottom="18dp"
+                    android:paddingTop="18dp"
+                    android:textColorHint="@color/order_list_info_color"
+                    android:textSize="15sp"
+                    app:hintTextSize="15sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_de_address_info"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="32dp"
+                android:src="@mipmap/delete_black"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!--标签-->
+        <LinearLayout
+            android:id="@+id/label_selector"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_small"
+                android:text="标签\t\t\t"
+                android:textColor="@color/homepageServerText1"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/rab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rl_no"
+                    android:layout_width="41dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/address_br_tag"
+                    android:button="@drawable/null_bg"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="无"
+                    android:textColor="@color/address_txt_tag" />
+
+                <RadioButton
+                    android:id="@+id/rl_family"
+                    android:layout_width="41dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/address_br_tag"
+                    android:button="@drawable/null_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="家"
+                    android:textColor="@color/address_txt_tag" />
+
+                <RadioButton
+                    android:id="@+id/rl_company"
+                    android:layout_width="41dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/address_br_tag"
+                    android:button="@drawable/null_bg"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="公司"
+                    android:textColor="@color/address_txt_tag" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

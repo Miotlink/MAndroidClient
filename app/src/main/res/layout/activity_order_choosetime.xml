@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:elevation="1dp"
+        android:translationZ="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/back"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:src="@mipmap/return_black"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="@string/service_choose_time"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:textSize="18sp"
+            android:textColor="@color/homepageServerText1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.homepaas.sls.ui.widget.ReboundScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp"
+            android:fadingEdge="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/menu_time_recyclerview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="@string/layoutManager_LinearLayout" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/item_time_recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/service_result_left"
+                    android:layout_marginRight="@dimen/service_result_left"
+                    android:background="@color/white"
+                    app:layoutManager="@string/layoutManager_Gridlayout" />
+            </LinearLayout>
+       </com.homepaas.sls.ui.widget.ReboundScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <Button
+                    android:id="@+id/confirm_selection_button"
+                    android:layout_width="325dp"
+                    android:layout_height="43dp"
+                    android:background="@drawable/subset_order_button"
+                    android:text="@string/confirm_selection"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

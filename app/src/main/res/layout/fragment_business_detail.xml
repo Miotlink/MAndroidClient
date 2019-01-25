@@ -1,0 +1,237 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.homepaas.sls.ui.detail.BusinessDetailFragment">
+
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:theme="@style/ToolbarTheme"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/title_detail">
+
+        </com.homepaas.sls.ui.widget.CenterTitleToolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:refreshMode="ALL"
+        app:headerView="@+id/headerView"
+        app:targetView="@+id/viewPager"
+        android:layout_marginBottom="@dimen/bottom_operate_button_height"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/headerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:divider="@drawable/layout_vertical_divider"
+                android:orientation="vertical"
+                android:showDividers="middle|end">
+
+                <android.support.percent.PercentRelativeLayout
+                    android:id="@+id/business_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_main_height"
+                    android:layout_marginBottom="@dimen/vertical_margin_small"
+                    android:layout_marginLeft="@dimen/horizontal_margin_normal"
+                    android:layout_marginRight="@dimen/horizontal_margin_normal"
+                    android:layout_marginTop="@dimen/vertical_margin_normal">
+
+                    <FrameLayout
+                        android:id="@+id/photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_marginRightPercent="5%">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/photo_image"
+                            android:layout_width="@dimen/detail_portrait_size"
+                            android:layout_height="@dimen/detail_portrait_size"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/worker_portrait_default"
+                            app:riv_corner_radius="6dp" />
+
+                        <TextView
+                            android:id="@+id/photo_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/photo_count_background"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp"
+                            tools:text="999" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/shop_name"
+                        style="@style/TextViewEllipsizeEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/detail_text_height"
+                        android:layout_toEndOf="@id/photo"
+                        android:layout_toRightOf="@id/photo"
+                        android:drawableEnd="@mipmap/arrow_into"
+                        android:drawableRight="@mipmap/arrow_into"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        tools:text="家美乐家政公司" />
+
+                    <LinearLayout
+                        android:id="@+id/business_add_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/detail_text_height"
+                        android:layout_below="@id/shop_name"
+                        android:layout_toEndOf="@id/photo"
+                        android:layout_toRightOf="@id/photo"
+                        android:divider="@drawable/layout_horizontal_divider"
+                        android:dividerPadding="8dp"
+                        android:orientation="horizontal"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:id="@+id/shop_address"
+                            style="@style/TextViewEllipsizeEnd"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="6dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            tools:text="钱江新城丹桂街19号" />
+
+                        <TextView
+
+                            android:id="@+id/business_distance"
+                            style="@style/TextViewEllipsizeEnd"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:gravity="center_vertical"
+                            tools:text="距离2.2km" />
+                    </LinearLayout>
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/business_distance"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="@dimen/detail_text_height"-->
+                    <!--android:layout_below="@id/business_add_layout"-->
+                    <!--android:layout_toEndOf="@id/photo"-->
+                    <!--android:layout_toRightOf="@id/photo"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--tools:text="距离2.2km"/>-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/detail_text_height"
+                        android:layout_below="@id/business_add_layout"
+                        android:layout_toEndOf="@id/photo"
+                        android:layout_toRightOf="@id/photo"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/icon_background"
+                            android:text="@string/icon_services"
+                            android:textColor="@color/appPrimary"
+                            android:textSize="12sp" />
+
+                        <com.homepaas.sls.ui.widget.MarqueeTextView
+                            android:id="@+id/services"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                        android:id="@+id/like"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/detail_checkbox_height"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/detail_checkbox_background"
+                        android:clickable="true"
+                        android:drawablePadding="4dp"
+                        android:src="@drawable/checkbox_detail_like"
+                        android:textColor="@color/appPrimary"
+                        app:drawableDirection="left"
+                        app:layout_widthPercent="45%" />
+
+
+                    <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                        android:id="@+id/collection"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/detail_checkbox_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/detail_checkbox_background"
+                        android:checked="true"
+                        android:clickable="true"
+                        android:drawablePadding="4dp"
+                        android:src="@drawable/checkbox_detail_collection"
+                        android:textColor="@color/appPrimary"
+                        app:layout_widthPercent="45%" />
+                </android.support.percent.PercentRelativeLayout>
+
+                <include layout="@layout/detail_message_include" />
+
+                <include layout="@layout/tag_list_view"/>
+
+                <include layout="@layout/detail_icon_bonus_include" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/colorBackground" />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:tabIndicatorHeight="2dp"
+
+                    app:tabTextColor="@color/appText3"
+                    app:tabIndicatorColor="@color/appText13"
+                    app:tabSelectedTextColor="@color/appTextSubTitle"
+                    app:tabTextAppearance="@style/TabTextAppearance" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout>
+
+    <include layout="@layout/bottom_operate_button_include" />
+
+    <ViewStub
+        android:id="@+id/viewStub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/view_stub_gallery" />
+
+</android.support.design.widget.CoordinatorLayout>

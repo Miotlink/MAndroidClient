@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headerView"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="?attr/actionBarSize"
+    app:layout_collapseMode="parallax">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <android.support.v4.view.ViewPager
+            android:background="@color/appPrimary"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/gallery"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:id="@+id/indicator_container"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/middle_margin"
+            android:orientation="horizontal"
+            android:layout_width="100dp"
+            android:layout_height="1dp"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:divider="@drawable/layout_horizontal_divider"
+        android:background="@color/white"
+        android:showDividers="middle"
+        android:padding="@dimen/padding_small"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="5"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="吸顶灯家居安装服务公司中国家居装修领导平拍"
+                android:singleLine="true"
+                android:maxEms="14"
+                android:ellipsize="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="包括家庭，办公场所，以及卡迪，以及所有的一切可打扫的地方，哈哈哈哈哈"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/fontColorLight"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLength="18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:padding="@dimen/padding_small"
+            android:text="50.00元起"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/fontColorMoney"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/colorDividerLight"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_height"/>
+</LinearLayout>

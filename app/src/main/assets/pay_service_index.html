@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="cache-control" content="no-cache">
+  <title>充值协议</title>
+  <script>
+    (function (win, lib) {
+      var doc = win.document;
+      var docEl = doc.documentElement;
+      var metaEl = doc.querySelector('meta[name="viewport"]');
+      var flexibleEl = doc.querySelector('meta[name="flexible"]');
+      var dpr = 0;
+      var scale = 0;
+      var tid;
+      var flexible = lib.flexible || (lib.flexible = {});
+
+      if (metaEl) {
+        //console.warn('将根据已有的meta标签来设置缩放比例');
+        var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+        if (match) {
+          scale = parseFloat(match[1]);
+          dpr = parseInt(1 / scale);
+        }
+      } else if (flexibleEl) {
+        var content = flexibleEl.getAttribute('content');
+        if (content) {
+          var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+          var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+          if (initialDpr) {
+            dpr = parseFloat(initialDpr[1]);
+            scale = parseFloat((1 / dpr).toFixed(2));
+          }
+          if (maximumDpr) {
+            dpr = parseFloat(maximumDpr[1]);
+            scale = parseFloat((1 / dpr).toFixed(2));
+          }
+        }
+      }
+
+      if (!dpr && !scale) {
+        var isAndroid = win.navigator.appVersion.match(/android/gi);
+        var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+        var devicePixelRatio = win.devicePixelRatio;
+        if (isIPhone) {
+          // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+          if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+            dpr = 3;
+          } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+            dpr = 2;
+          } else {
+            dpr = 1;
+          }
+        } else {
+          // 其他设备下，仍旧使用1倍的方案
+          dpr = 1;
+        }
+        scale = 1 / dpr;
+      }
+
+      docEl.setAttribute('data-dpr', dpr);
+      if (!metaEl) {
+        metaEl = doc.createElement('meta');
+        metaEl.setAttribute('name', 'viewport');
+        metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' +
+          scale + ', user-scalable=no');
+        if (docEl.firstElementChild) {
+          docEl.firstElementChild.appendChild(metaEl);
+        } else {
+          var wrap = doc.createElement('div');
+          wrap.appendChild(metaEl);
+          doc.write(wrap.innerHTML);
+        }
+      }
+
+      function refreshRem() {
+        var width = docEl.getBoundingClientRect().width;
+        if (width / dpr > 540) {
+          width = 540 * dpr;
+        }
+        var rem = width / 10;
+        docEl.style.fontSize = rem + 'px';
+        flexible.rem = win.rem = rem;
+      }
+
+      win.addEventListener('resize', function () {
+        clearTimeout(tid);
+        tid = setTimeout(refreshRem, 300);
+      }, false);
+      win.addEventListener('pageshow', function (e) {
+        if (e.persisted) {
+          clearTimeout(tid);
+          tid = setTimeout(refreshRem, 300);
+        }
+      }, false);
+
+      if (doc.readyState === 'complete') {
+        doc.body.style.fontSize = 12 * dpr + 'px';
+      } else {
+        doc.addEventListener('DOMContentLoaded', function (e) {
+          doc.body.style.fontSize = 12 * dpr + 'px';
+        }, false);
+      }
+
+
+      refreshRem();
+
+      flexible.dpr = win.dpr = dpr;
+      flexible.refreshRem = refreshRem;
+      flexible.rem2px = function (d) {
+        var val = parseFloat(d) * this.rem;
+        if (typeof d === 'string' && d.match(/rem$/)) {
+          val += 'px';
+        }
+        return val;
+      }
+      flexible.px2rem = function (d) {
+        var val = parseFloat(d) / this.rem;
+        if (typeof d === 'string' && d.match(/px$/)) {
+          val += 'rem';
+        }
+        return val;
+      }
+
+    })(window, window['lib'] || (window['lib'] = {}));
+
+  </script>
+  <style>
+      h4, p, span, font, b {
+          font-size: 14px;
+      }
+      span {
+          display: inline-block;
+      }
+      font {
+          text-indent: 2em;
+      }
+      b {
+          text-indent: 2em;
+          font-weight: normal;
+          display: inline-block;
+      }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>尊敬的用户，为保障您的合法权益，请您在充值前仔细阅读本《充值协议》（“本协议”）以了解助家生活的充值、返现、红包及余额使用规则并避免产生误解。当您点击“立即支付”按钮，即视为您已阅读、理解本协议，并同意按照本协议约定的规则进行充值、参与返现、红包或使用账户余额。</p>
+    <h4>1.定义</h4>
+    <p>充值本金：您通过“助家生活”软件向您已注册的用户账号实际支付的金额。
+      账户余额：您的账号中显示的余额，包括（1）充值本金及（2）助家生活通过“充值送红包”活动赠送的红包（3）助家生活通过“充值返利”活动赠送的返利金额
+    </p>
+    <h4>2.账户余额有效期</h4>
+    <p>用户账户余额的有效期为自充值之日起至使用完毕为止</p>
+    <h4>3.充值返现活动规则</h4>
+    <p>我们会通过页面及/或具体活动页面及时公布不同数额的充值本金可享受的返利金额，例如:充值100元返利50元，则您账户可得金额为150元。具体活动详情，您可通过充值或关注我们的活动页面进行了解。</p>
+    <h4>4.充值返红包规则</h4>
+    <p>我们会通过页面及/或具体活动页面及时公布不同数额的充值本金可享受的返红包的金额，例如:充值2000元返红包388元，则您账户可得金额为2000元（没有有效期限制）+388元红包，红包为组合红包，红包有不同品类与有效期规定。具体参考活动详情，您可通过充值或关注我们的活动页面进行了解。</p>
+    <h4>5.账户余额的使用规则</h4>
+    <span>1）账户余额仅可用于支付助家生活平台上的服务订单，不可用于支付押金、转移、提现或转赠；</span>
+    <span>2）用户账号使用期间，充值本金将会被优先使用；</span>
+    <span>3）充值本金中未使用部分，不可以可申请退款，但可以用于购买支付助家生活平台上所有产品。</span>
+    <span>4）鉴于返利金额\红包金额是以您账户可合法有效使用为前提条件，返现金额\红包金额在如下情况下将会失效</span>
+    <b>1.您主动注销用户账户</b>
+    <b>2.因涉嫌作弊导致您的用户账户被冻结或者关闭</b>
+    <b>3.其他根据用户协议、相关说明或规则导致我们无法向您提供或停用服务的情形</b>
+    <h4>6.保证与承诺</h4>
+    <p>您完全理解并同意，助家生活所提供的包括“充值返利”“充值送红包”在内与充值相关的优惠活动仅适用于正当、合法按照《用户协议》使用我们服务的用户。一旦发现您的用户账号存在任何利用前述规则从事作弊行为以获取不正当经济利益的情形，助家生活有权冻结或关闭您的用户账号以及任何其他与作弊行为相关的用户账号、收回或取消已赠送的返现金额或红包及/或追回作弊行为取得的所有不正当的经济利益，并且助家生活保留停止向您提供服务以及根据作弊行为的严重程度进一步追究法律责任的权利。</p>
+    <h4>7.特别说明</h4>
+    <p>您完全理解并同意，助家生活有权随时修改本协议内容，届时将通过在“助家生活”软件上公布修改后的协议，该公布将视为助家生活已通知用户；同时，助家生活也可通过其他适当方式通知用户。如果您选择继续充值即表示您同意并接受修改后的协议并受其约束；如果您不同意对我们对本协议的修改，请立即放弃充值或停止使用本服务。</p>
+  </div>
+</body>
+
+</html>

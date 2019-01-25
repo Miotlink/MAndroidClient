@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/service_content_height"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingLeft="@dimen/padding_normal"
+    android:paddingRight="@dimen/padding_normal"
+    android:paddingTop="@dimen/padding_small">
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true"
+        app:layout_aspectRatio="125%"
+        app:layout_heightPercent="85%"
+        android:scaleType="fitXY"
+        app:layout_marginRightPercent="3%"
+        tools:background="@android:color/holo_green_light"/>
+
+
+    <TextView
+        android:id="@+id/service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/picture"
+        android:layout_toRightOf="@id/picture"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="17sp"
+        tools:text="新房开荒旧房保洁上门服务"/>
+
+    <TextView
+        android:id="@+id/service_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/service_name"
+        android:layout_toEndOf="@id/picture"
+        android:layout_toRightOf="@id/picture"
+        android:maxLines="3"
+        android:textColor="@color/appTextNormal"
+        android:textSize="13sp"
+        tools:text="助家生活浙江助家生活浙江助家生活浙江助家生活浙江活浙江浙江助家生活浙江助家生活浙江活浙江"/>
+
+    <TextView
+        android:id="@+id/service_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/picture"
+        android:layout_toRightOf="@id/picture"
+        android:textSize="15sp"
+        tools:text="￥50元每小时"/>
+</android.support.percent.PercentRelativeLayout>

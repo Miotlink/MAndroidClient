@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:paddingTop="@dimen/item_servic_type_paddin"
+    android:paddingBottom="@dimen/item_servic_type_paddin"
+    android:paddingRight="@dimen/item_servic_type_paddin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/four_go_detail_rel">
+        <ImageView
+            android:id="@+id/four_picture"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            tools:background="@android:color/holo_green_light" />
+
+        <ImageView
+            android:id="@+id/four_go_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrow_indicator" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/item_servic_type_paddin"
+            android:layout_marginRight="@dimen/item_servic_type_paddin"
+            android:layout_toLeftOf="@id/four_go_detail"
+            android:layout_toRightOf="@id/four_picture">
+
+            <TextView
+                android:id="@+id/four_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="14sp"
+                tools:text="新房开荒旧房保洁上门服务" />
+
+            <TextView
+                android:id="@+id/four_service_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/four_service_name"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/appTextNormal"
+                android:textSize="10sp"
+                android:layout_marginTop="8dp"
+                tools:text="助家生活浙江助家生活浙江助家生活浙江助家生活浙江助家生活浙江助家生活浙江助家生活" />
+
+            <TextView
+                android:id="@+id/four_service_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="4dp"
+                android:textSize="10sp"
+                android:textColor="@color/decorateOrange"/>
+
+            <TextView
+                android:id="@+id/four_buy_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/order_middle_bg"
+                android:gravity="center"
+                android:textColor="@color/decorateOrange"
+                android:text="购买" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/pay_order">
+
+        </com.homepaas.sls.ui.widget.CenterTitleToolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/price_rel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/service_result_left"
+                android:text="支付金额" />
+
+            <TextView
+                android:id="@+id/pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/service_result_left"
+                android:textColor="@color/appText10"
+                tools:text="90.00元" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/pay_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price_rel"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/horizontal_padding_normal"
+                android:paddingRight="@dimen/horizontal_padding_normal"
+                android:text="请选择支付方式"
+                android:textColor="@color/appTextNormal" />
+
+            <View
+                style="@style/fenge_view"
+                android:layout_marginLeft="@dimen/horizontal_padding_normal" />
+            <!--支付方式-->
+            <RelativeLayout
+                android:id="@+id/balance_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="@dimen/service_result_left">
+
+                <ImageView
+                    android:id="@+id/balance_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@mipmap/account_balance" />
+
+
+                <TextView
+                    android:id="@+id/balance_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/balance_text"
+                    android:textColor="#8c8a9f"
+                    tools:text="余额36.50元" />
+
+                <ImageView
+                    android:id="@+id/balance_pay"     android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/subscribe_order_list_no_select" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/balance_icon"
+                    android:background="@color/common_split_line_color" />
+
+                <TextView
+                    android:id="@+id/balance_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/balance_icon"
+                    android:layout_alignBottom="@+id/balance_icon"
+                    android:layout_toEndOf="@+id/balance_icon"
+                    android:layout_toRightOf="@+id/balance_icon"
+                    android:drawablePadding="@dimen/horizontal_padding_small"
+                    android:gravity="center"
+                    android:text="账户余额" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/zhifubao_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="@dimen/service_result_left">
+
+                <ImageView
+                    android:id="@+id/alipay_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@mipmap/alipay" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/alipay_icon"
+                    android:drawablePadding="@dimen/horizontal_padding_small"
+                    android:gravity="center"
+                    android:text="支付宝支付" />
+
+                <ImageView
+                    android:id="@+id/zhifubao_pay"  android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/subscribe_order_list_no_select"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/alipay_icon"
+                    android:background="@color/common_split_line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/weixin_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="@dimen/service_result_left">
+
+                <ImageView
+                    android:id="@+id/wechat_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:src="@mipmap/wechat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/wechat_icon"
+                    android:drawablePadding="@dimen/horizontal_padding_small"
+                    android:gravity="center"
+                    android:text="微信支付" />
+
+                <ImageView
+                    android:id="@+id/wx_pay"  android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/subscribe_order_list_no_select" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pay_mode"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/prompt_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/appText3"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/pay_button"
+            style="@style/PayButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#51D862"
+            android:enabled="false"
+            android:text="确认支付"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gray">#e2e1e1</color>
+
+    <eat-comment/>
+
+    <!--common-->
+    <!--//标题栏文字颜色-->
+    <color name="app_title_color"> #333333</color>
+    <!--//标题栏背景颜色-->
+    <color name="app_title_bg"> #ffffff</color>
+
+    <!-- 重要-->
+    <!--小面积使用，用于特别需要强调突出的按钮和图标-->
+    <color name="appPrimary">#32BEFF</color>
+    <color name="appPrimary2">#2E88FF</color>
+    <color name="appPrimaryLight">#8256c9ff</color>
+    <color name="appPrimaryDark">#1c728c</color>
+    <color name="login_close">#56c9ff</color>
+    <!-- 用于显示重要文字信息，内页标题信息-->
+    <color name="appTextPrimary">#3F3E48</color>
+    <!-- 用于次一级以及普通字段，描述性文字-->
+    <color name="appTextNormal">#8C8A9F</color>
+    <!-- 用于辅助的次要文字，图标-->
+
+    <color name="button">#ffc125</color>
+    <color name="button2">#32CD32</color>
+    <color name="appTextSecondary">#E0DFE9</color>
+
+    <color name="appbg">#FAFAFA</color>
+    <color name="translucent">#cc000000</color>
+    <color name="translucentCount">#99000000</color>
+
+    <color name="loginText">#AAAAAA</color>
+    <color name="empty_data">#a0a5a8</color>
+
+    <!--新版字体颜色-->
+
+    <color name="appText11">#4c56c9ff</color>
+    <color name="appText2">#000000</color>
+    <color name="ppwindowbg">#19000000</color>
+    <color name="appText">#333333</color>
+    <color name="homepageServerText1">#333639</color>
+    <color name="appText10">#666666</color>
+    <color name="appText3">#999999</color>
+    <color name="appText9">#cccccc</color>
+    <color name="appShandow">#c9c9c9</color>
+    <color name="appText6">#FFFFFF</color>
+    <color name="appText4">#2E88FF</color>
+    <color name="appText5">#2A86FF</color>
+    <color name="appText7">#ff1b56</color>
+    <color name="appText8">#fe1a55</color>
+    <color name="homepageServerText2">#fd552e</color>
+    <color name="homepageServerBg1">#27b8f3</color>
+    <color name="homepageServerBg2">#f65a7e</color>
+    <color name="homepageServerBg3">#14aef5</color>
+    <color name="edittextcolor">#AFAFAF</color>
+    <color name="order_detail_type">#3fbef9</color>
+    <color name="appText13">#f56165</color>
+    <color name="appText14">#f93e24</color>
+    <color name="appText15">#fff5f5</color>
+    <color name="login_line">#576B95</color>
+    <color name="login_bg">#cccccc</color>
+
+    <color name="home_type_txt">#333639</color>
+
+    <eat-comment/>
+    <!-- 辅助-->
+    <!-- 背景色-->
+    <color name="colorBackground">#FEFEFE</color>
+    <color name="line">#89e2dfdf</color>
+    <!-- 用于分隔条-->
+    <color name="colorDivider">#edecec</color>
+    <!-- 用于块状分割，以及部分输入框底色-->
+    <color name="colorDividerLight">#F6F6F6</color>
+    <color name="home_search_bg">#d9eef2f5</color>
+
+    <!-- 输入框提示色-->
+    <color name="textHint">#ACACAC</color>
+
+    <color name="markerTextBgColor">#AAFFFFFF</color>
+
+    <color name="buttonDisable">#DDDDDD</color>
+    <eat-comment/>
+    <!-- 装饰-->
+    <color name="decorateRed">#DD1242</color>
+    <color name="decorateOrange">#FD5524</color>
+    <color name="decorateYellow">#FFAA3B</color>
+    <color name="decorateGreen">#0FC213</color>
+    <color name="decorateP">#b742e9</color>
+    <!--红色-->
+    <color name="red">#FFFF0000</color>
+    <!--半透明-->
+    <color name="translucence">#6a000000</color>
+    <color name="colorPressed">#F4FCFF</color>
+    <color name="progressBg">#35000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="networkerrrortxt">#777777</color>
+    <color name="white">#FFFFFF</color>
+    <color name="order_rgb_white">#66ffffff</color>
+    <color name="activity_bh">#f7f7ff</color>
+
+
+    <color name="numberOrange">#ff9a37</color>
+    <color name="order_detail_tabtext_color">#8a8c9f</color>
+    <color name="colorRedPacket">#ef7373</color>
+    <color name="fontColorLight">#8a8c9f</color>
+    <color name="fontColorNormal">#000</color>
+    <color name="fontColorMoney">#FF9A37</color>
+    <color name="colorDividerDark">#8c8989</color>
+    <color name="colorButtonUnable">#BBB</color>
+    <color name="appTextHint">#8C8A9F</color>
+    <color name="colorDividerNormal">#33333333</color>
+    <color name="colorBorderNormal">#8c8a9f</color>
+    <color name="black">#000</color>
+    <color name="colorDividerDim">#e2e2e2</color>
+    <color name="colorDividerTransparent">#f5f4f4</color>
+    <color name="appTextLight">#999</color>
+    <color name="newAppPrimary">#3FBEF9</color>
+    <color name="common_background">#F8F8F8</color>
+    <color name="service_hot_color">#E94B14</color>
+    <color name="service_install_color">#FD792A</color>
+    <color name="service_housekeep_color">#11BB7B</color>
+    <color name="service_fix_color">#F82B4B</color>
+    <color name="service_repair_color">#955AE8</color>
+    <color name="service_convenience_color">#EE2C09</color>
+    <color name="order_list_info_color">#999999</color>
+    <color name="trans">#00000000</color>
+    <color name="imaginary_line">#cccccc</color>
+
+    <color name="title_color">#3FBEF9</color>
+    <color name="split_line_color">#cccccc</color>
+    <color name="colorBackgroundEmpty">#F6F6F6</color>
+    <color name="appTextSubTitle">#333333</color>
+    <color name="color_cell_space">#fbfbfb</color>
+
+    <!--我的钱包-->
+    <color name="recharge_bg_color">#27bbf3</color>
+    <color name="wallet_title_color">#27b8f3</color>
+    <color name="adapter_view">#cccccc</color>
+    <color name="detail_account">#fbfbfb</color>
+    <color name="preferential_push_background">#feffd3</color>
+    <color name="preferential_push_text">#ffa800</color>
+    <color name="colorbtn">#51DB62</color>
+    <color name="common_background_color">#EEF2F5</color>
+    <color name="common_split_line_color">#E4EAEE</color>
+
+    <!--detail-->
+    <color name="detail_round_bg_color">#5a3408</color>
+    <!--引导页-->
+    <color name="guide_bg_color">#F3F7F8</color>
+    <color name="guide_go_btn_solid_color">#4773BA</color>
+    <color name="guide_dot_focus_color">#EA8BE9</color>
+    <color name="guide_dot_default_color">#DFE1EC</color>
+
+    <!--服务选择-->
+    <color name="text_remen">#e94b14</color>
+    <color name="serarch_click">#27bbf3</color>
+    <color name="voice_button_up">#93ddfa</color>
+
+    <!--商户工人下单服务-->
+    <color name="service_number_background">#f7f7f8</color>
+    <color name="action_choose_service_title">#393534</color>
+    <color name="translucent2">#cc000000</color>
+    <color name="merchant_menu_select">#27b7f3</color>
+    <color name="merchant_menu_background">#eef2f5</color>
+    <color name="merchant_fenge">#dee5e5</color>
+    <color name="to_pay_button_true">#5ed862</color>
+    <color name="to_pay_button_false">#86e490</color>
+    <color name="confirmorder_background">#fdfdfd</color>
+    <color name="choose_time_full_time">#27b7f1</color>
+
+    <!--新下单页-->
+    <color name="place_order_button">#f66165</color>
+    <color name="bg_red">#66f56165</color>
+
+    <color name="count_down">#7a4617</color>
+    <color name="count_down_time">#f56165</color>
+    <color name="service_number">#f3f3f3</color>
+    <color name="item_choose_time_line">#26b8f3</color>
+    <color name="item_choose_time_background">#eaeff3</color>
+
+    <color name="line_color">#eef2f5</color>
+    <color name="partTranslucent">#39000000</color>
+    <color name="worker_info">#f7f9fa</color>
+    <color name="btn_bg_gray">#eeeeee</color>
+    <!--支付成功提示界面-->
+    <color name="pay_success1">#999999</color>
+    <color name="pay_success2">#F56165</color>
+    <color name="pay_success3">#333639</color>
+    <color name="pay_success4">#000000</color>
+    <!--支付界面-->
+    <color name="pay_activity1">#F0A954</color>
+    <color name="pay_activity2">#F56165</color>
+    <color name="pay_activity3">#333639</color>
+    <!--#27B8F3-->
+    <color name="progress_bar">#27B8F3</color>
+    <!--userlocation-->
+    <color name="user_location">#F1F2F6</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="filter_item_select">#FFF56165</color>
+    <color name="filter_item">#A8A8A8</color>
+
+    <color name="merchant_1">#CCCCCC</color>
+    <color name="merchant_2">#333639</color>
+</resources>

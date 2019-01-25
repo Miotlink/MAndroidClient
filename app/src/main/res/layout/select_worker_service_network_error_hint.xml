@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="165dp"
+        android:layout_height="110dp"
+        android:src="@mipmap/select_worker_or_service_net_error" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/network_error1"
+        android:textColor="@color/appText3"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/select_worker_service_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="刷新"
+        android:textColor="@color/networkerrrortxt"
+        android:textSize="16sp" />
+</LinearLayout>

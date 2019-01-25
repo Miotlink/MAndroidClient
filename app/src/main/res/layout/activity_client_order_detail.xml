@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_rel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_title_bg"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingLeft="@dimen/common_margin_left_right_second"
+            android:paddingRight="@dimen/common_margin_left_right_second"
+            android:src="@mipmap/return_black" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/order_detail_info"
+            android:textColor="@color/app_title_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_margin_left_right_second"
+            android:gravity="center"
+            android:paddingLeft="@dimen/express_icon_compan"
+            android:textColor="@color/app_title_color"
+            android:textSize="15sp"
+            tools:text="@string/more" />
+    </RelativeLayout>
+
+    <com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_rel"
+        app:refreshMode="LIST_REFRESH_ONLY">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_background_color"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/count_down_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/preferential_push_background"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="支付剩余时间"
+                            android:textColor="@color/count_down"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/count_down_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:textColor="@color/count_down_time"
+                            android:textSize="14sp"
+                            tools:text="14:58" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:paddingLeft="@dimen/common_margin_left_right_second"
+                        android:paddingRight="@dimen/common_margin_left_right_second"
+                        android:src="@mipmap/client_v3_3_0_ic_pay_help" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@drawable/layout_vertical_divider"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tablayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:tabIndicatorColor="@color/appText13"
+
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/appTextSubTitle"
+                        app:tabTextColor="@color/appText3" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout>
+
+    <!--底部按钮-->
+    <LinearLayout
+        android:id="@+id/show_button_lin"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_margin_left_right_second"
+            android:layout_marginRight="@dimen/common_margin_left_right_second"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/claims_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/common_margin_left_right"
+                android:textColor="@color/homepageServerText1"
+                android:textSize="16sp"
+                android:visibility="visible"
+                tools:text="审核中" />
+
+            <LinearLayout
+                android:id="@+id/no_button_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/claims_button"
+                    android:layout_width="93dp"
+                    android:layout_height="43dp"
+                    android:layout_marginRight="@dimen/common_margin_left_right"
+                    android:background="@drawable/cancel_order_button"
+                    android:gravity="center"
+                    android:textColor="@color/count_down_time"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="查看赔付" />
+
+                <TextView
+                    android:id="@+id/delete_button"
+                    android:layout_width="93dp"
+                    android:layout_height="43dp"
+                    android:layout_marginRight="@dimen/common_margin_left_right"
+                    android:background="@drawable/cancel_order_button"
+                    android:gravity="center"
+                    android:textColor="@color/count_down_time"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    tools:text="删除订单" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ok_button"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:background="@drawable/subset_order_button"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible"
+                tools:text="确认完成服务" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

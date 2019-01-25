@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/go_to_detail_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_left_right_first"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp">
+
+            <ImageView
+                android:id="@+id/img_service_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/client_order_list_margin"
+                android:layout_marginRight="9dp"
+                android:src="@mipmap/default_image" />
+
+            <TextView
+                android:id="@+id/service_name"
+                style="@style/client_order_list_left"
+                android:layout_toRightOf="@+id/img_service_icon"
+                tools:text="小时工" />
+
+            <TextView
+                android:id="@+id/status_description"
+                style="@style/client_order_list_right"
+                android:layout_marginRight="@dimen/client_order_list_margin"
+                android:textColor="@color/homepageServerText1"
+                android:textSize="15sp"
+                tools:text="等待工人接单" />
+
+            <View
+                style="@style/fenge_view1"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/client_order_list_margin" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_margin_left_right_first"
+            android:layout_marginTop="@dimen/technological_process_margin_top"
+            android:orientation="vertical">
+
+            <!--普通订单-->
+            <LinearLayout
+                android:id="@+id/ordinary_order_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/client_order_list_margin"
+                android:layout_marginRight="@dimen/client_order_list_margin"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        android:id="@+id/tv_server_time_title"
+                        style="@style/client_order_list_left"
+                        android:text="@string/service_time" />
+
+                    <TextView
+                        android:id="@+id/service_time"
+                        style="@style/client_order_list_right"
+                        tools:text="明天 20:00" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        android:id="@+id/service_address_title"
+                        style="@style/client_order_list_left"
+                        tools:text="@string/service_address" />
+
+                    <TextView
+                        android:id="@+id/service_address"
+                        style="@style/client_order_list_right"
+                        tools:text="设计师创意园多少多少多少号就付款待积分地方就付款待积分" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/run_receive_address_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        style="@style/client_order_list_left"
+                        android:text="@string/client_receive_address" />
+
+                    <TextView
+                        android:id="@+id/run_receive_address"
+                        style="@style/client_order_list_right"
+                        tools:text="设计师创意园多少多少多少号就付款待积分地方就付款待积分" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/claims_rel"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        android:id="@+id/claims_title"
+                        style="@style/client_order_list_left"
+                        tools:text="1元保险" />
+
+                    <TextView
+                        android:id="@+id/cliams_amount"
+                        style="@style/client_order_list_right"
+                        tools:text="1元" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/service_price_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        android:id="@+id/service_price_title"
+                        style="@style/client_order_list_left"
+                        tools:text="服务价格" />
+
+                    <TextView
+                        android:id="@+id/service_price_amount"
+                        style="@style/client_order_list_right"
+                        tools:text="1元/小时" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/total_price_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        style="@style/client_order_list_left"
+                        android:text="@string/service_total_price" />
+
+                    <TextView
+                        android:id="@+id/total_price_amount"
+                        style="@style/client_order_list_right"
+                        tools:text="1元" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pay_amount_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        android:id="@+id/pay_amount_title"
+                        style="@style/client_order_list_left"
+                        tools:text="实付" />
+
+                    <TextView
+                        android:id="@+id/pay_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:textColor="@color/homepageServerText1"
+                        android:textSize="14sp"
+                        tools:text="1元" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <!--快递-->
+            <LinearLayout
+                android:id="@+id/express_info_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/client_order_list_margin"
+                android:layout_marginRight="@dimen/client_order_list_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/express_odd_numbers_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        style="@style/client_order_list_left"
+                        android:text="@string/express_odd_numbers" />
+
+                    <TextView
+                        android:id="@+id/express_odd_Numbers"
+                        style="@style/client_order_list_right"
+                        tools:text="123456789" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        style="@style/client_order_list_left"
+                        android:text="@string/mailing_time" />
+
+                    <TextView
+                        android:id="@+id/mailing_time"
+                        style="@style/client_order_list_right"
+                        tools:text="123456789" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        style="@style/client_order_list_left"
+                        android:text="@string/clinet_send_address" />
+
+                    <TextView
+                        android:id="@+id/clinet_send_address"
+                        style="@style/client_order_list_right"
+                        tools:text="123456789" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_orderinfo_margin">
+
+                    <TextView
+                        style="@style/client_order_list_left"
+                        android:text="@string/client_receive_address" />
+
+                    <TextView
+                        android:id="@+id/client_receive_address"
+                        style="@style/client_order_list_right"
+                        tools:text="123456789" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/fenge_view1" />
+
+        <RelativeLayout
+            android:id="@+id/button_rel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/client_order_list_margin"
+            android:layout_marginRight="@dimen/client_order_list_margin">
+
+
+            <TextView
+                android:id="@+id/claims_status"
+                style="@style/client_order_list_left"
+                tools:text="已赔付" />
+
+            <!--共有三种状态的背景边框，待支付之前【取消订单】，待支付，待评价 查看赔付 。3.5.2新增增加服务数量(位置靠右-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/claims_button"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_toLeftOf="@+id/negative_action"
+                    android:background="@drawable/cancel_order_button"
+                    android:gravity="center"
+                    android:textColor="@color/count_down_time"
+                    android:textSize="13sp"
+                    tools:text="查看赔付" />
+
+                <TextView
+                    android:id="@+id/delete_button"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_toLeftOf="@+id/positive_action"
+                    android:background="@drawable/cancel_order_button"
+                    android:gravity="center"
+                    android:textColor="@color/count_down_time"
+                    android:textSize="13sp"
+                    tools:text="删除订单" />
+
+                <TextView
+                    android:id="@+id/ok_button"
+                    android:layout_width="75dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:background="@drawable/common_red_btn_bg"
+                    android:gravity="center"
+                    android:textColor="@color/order_btn_color"
+                    android:textSize="13sp"
+                    tools:text="支付" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

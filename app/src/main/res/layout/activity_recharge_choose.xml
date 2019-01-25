@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:elevation="7dp"
+        android:layout_height="@dimen/wallet_title_height"
+        android:background="@color/app_title_bg">
+
+        <LinearLayout
+            android:id="@+id/back_ll"
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:scaleType="center"
+                android:src="@mipmap/return_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/recharge"
+            android:textColor="@color/app_title_color"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/common_background_color">
+
+        <com.homepaas.sls.ui.widget.ExpandedGridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recharge"
+            android:layout_marginLeft="@dimen/gradview_left"
+            android:layout_marginRight="@dimen/gradview_left"
+            android:layout_marginTop="@dimen/recharge_choose_top"
+            android:horizontalSpacing="@dimen/gradview_space_hor"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/gradview_space_ver"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gradview_left"
+            android:layout_marginRight="@dimen/gradview_left"
+            android:layout_marginTop="@dimen/recharge_choose_top"
+            android:background="@drawable/round_layout"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/recharge_choose_height_one">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/choose_drawable_left"
+                    android:text="@string/recharge_paymoney"
+                    android:textColor="@color/appText"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/paymoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/choose_drawable_left"
+                    android:textColor="@color/appText"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/money_symbol"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="1dp"
+                    android:layout_toLeftOf="@id/paymoney"
+                    android:text="¥"
+                    android:textColor="@color/appText3"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <View style="@style/fenge_view" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/recharge_choose_height_one">
+
+                <TextView
+                    android:id="@+id/extra_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/choose_drawable_left"
+                    android:text="@string/extra_gift"
+                    android:textColor="@color/appText10"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/total_get_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/choose_drawable_left"
+                    android:textColor="@color/wallet_title_color"
+                    android:textSize="13sp"
+                    android:text="0.00"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/total_get_money"
+                    android:text="@string/actually_available"
+                    android:textColor="@color/appText10"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/extra_gift_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView15"
+                    android:layout_alignBottom="@+id/textView15"
+                    android:layout_gravity="center|end"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/extra_gift"
+                    android:layout_toRightOf="@+id/extra_gift"
+                    android:textColor="@color/wallet_title_color"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/caozuo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/recharge_choose_top"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/pay_service_cb"
+                        android:layout_gravity="center"
+                        android:text="点击去充值,即表示同意"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/pay_service_tv"
+                        android:text="《充值协议》"
+                        android:textColor="@color/recharge_bg_color"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/recharge_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/gradview_space_ver"
+                android:layout_marginLeft="@dimen/gradview_left"
+                android:layout_marginRight="@dimen/gradview_left"
+                android:background="@drawable/recharge_button_bg"
+                android:text="去充值"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

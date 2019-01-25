@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/complete_text"
+        android:text="工人服务已完成，快来确认吧"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:textColor="@color/appTextHint"
+        android:background="@drawable/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:padding="@dimen/padding_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:id="@+id/avatar"
+            android:src="@drawable/umeng_socialize_default_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:id="@+id/name"
+            tools:text="扈老师"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/age"
+            tools:text="♂18岁"
+            android:textColor="@color/appTextHint"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_toRightOf="@id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/service_type"
+            tools:text="♂18岁"
+            android:textColor="@color/appTextHint"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_below="@id/name"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/create_time"
+            tools:text="下单时间 2014-7-9 20:27"
+            android:textColor="@color/appTextHint"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_toRightOf="@id/service_type"
+            android:layout_below="@id/name"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/confirmOrder"
+        style="@style/CommonButton"
+        android:text="确认完成"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="personal_item_height">46dp</dimen>
+    <dimen name="menu_item_height">50dp</dimen>
+    <dimen name="auth_code_button_width">80dp</dimen>
+    <dimen name="message_center_icon_top">130dp</dimen>
+
+    <dimen name="marker_photo_corner">4dp</dimen>
+    <dimen name="marker_photo_width">90px</dimen>
+    <dimen name="marker_photo_height">90px</dimen>
+    <dimen name="marker_photo_margin_top">4px</dimen>
+    <dimen name="marker_text_width">90px</dimen>
+    <dimen name="marker_text_height">25px</dimen>
+    <dimen name="marker_text_margin_top">68px</dimen>
+    <dimen name="marker_width">98px</dimen>
+    <dimen name="marker_height">115px</dimen>
+    <dimen name="marker_text_corner">2dp</dimen>
+
+    <dimen name="ratingBar_minHeight_large">14dp</dimen>
+    <dimen name="ratingBar_minWidth_large">16dp</dimen>
+    <dimen name="service_content_height">100dp</dimen>
+
+    <dimen name="dialog_qr_code_size">210dp</dimen>
+</resources>

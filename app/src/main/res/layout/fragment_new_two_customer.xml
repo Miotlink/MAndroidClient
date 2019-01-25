@@ -1,0 +1,73 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshLayout"
+    tools:context="com.homepaas.sls.ui.newdetail.NewCustomerReviewFragment"
+    >
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:paddingLeft="16dp"
+                android:id="@id/recyclerView"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="@string/layoutManager_LinearLayout"
+                tools:listitem="@layout/new_customer_review_item_layout" />
+
+     <android.support.design.widget.FloatingActionButton
+         android:visibility="gone"
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20.0dip"
+        android:onClick="click"
+         android:scaleType="center"
+        android:src="@mipmap/client_v3_1_0_ic_homepage_comment"
+        app:backgroundTint="@color/white"
+        app:elevation="5.0dip"
+        app:fabSize="normal"
+         android:layout_gravity="end|bottom"
+        app:pressedTranslationZ="10.0dip"
+        app:rippleColor="@color/appPrimary" />
+    <!--app:layout_anchor="@id/recyclerView"-->
+    <!--app:layout_anchorGravity="bottom|right|end"-->
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:visibility="gone"
+                android:id="@id/empty_view"
+                android:background="@color/common_background_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@id/empty_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:drawableTop="@mipmap/client_v3_1_0_ic_homepage_no_evaluate"
+                        android:gravity="center"
+                        android:textColor="@color/appTextHint"
+                        android:text="暂无评价" />
+                </FrameLayout>
+            </android.support.v4.widget.NestedScrollView>
+        <!--</FrameLayout>-->
+    <!--</android.support.v4.widget.SwipeRefreshLayout>>-->
+    <!--app:layout_behavior="com.homepaas.sls.ui.newdetail.ScrollAwareFABBehavior"-->
+
+</android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

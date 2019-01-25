@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.order.orderplace.ServiceTypeActivity">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            app:theme="@style/ToolbarTheme"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/service_type" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ExpandableListView
+        android:layout_marginTop="-15dp"
+        android:groupIndicator="@null"
+        android:childIndicator="@null"
+        android:layout_below="@+id/app_bar"
+        android:id="@+id/listview"
+        android:childDivider="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ExpandableListView>
+</RelativeLayout>

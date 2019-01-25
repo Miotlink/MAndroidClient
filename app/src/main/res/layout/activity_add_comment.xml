@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbg"
+    tools:context="com.homepaas.sls.ui.comment.AddCommentActivity">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="评价"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+
+        android:divider="@drawable/layout_vertical_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="@dimen/horizontal_padding_normal"
+            android:paddingRight="@dimen/horizontal_padding_normal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="评分"/>
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                style="@style/HeartRatingBarLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="2dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginStart="50dp"
+                android:stepSize="1.0"
+                tools:rating="5"/>
+
+            <TextView
+                android:id="@+id/rating_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                tools:text="4分"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:padding="@dimen/padding_normal">
+
+            <EditText
+                android:id="@+id/comment_input"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="再此输入我的评论"
+                android:textSize="14sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/add_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                app:layoutManager="@string/layoutManager_LinearLayout"
+                tools:listitem="@layout/comment_photo_item"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/appbg">
+
+            <Button
+                android:id="@+id/submit"
+                style="@style/CommonButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/horizontal_margin_large"
+                android:layout_marginRight="@dimen/horizontal_margin_large"
+                android:layout_marginTop="@dimen/vertical_margin_small"
+                android:text="提交评论"
+                android:textSize="16sp"/>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

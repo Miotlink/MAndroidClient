@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/worker_three_service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="新房开荒"
+        android:textColor="@color/homepageServerText1"
+        android:textSize="15sp"
+        android:layout_marginLeft="@dimen/mainfragment_srarch_left"/>
+
+    <TextView
+        android:id="@+id/worker_three_servicee_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/decorateOrange"
+        android:textSize="10sp"
+        android:layout_marginRight="@dimen/mainfragment_srarch_left"/>
+
+    <TextView
+        android:id="@+id/worker_three_buy_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/worker_three_servicee_price"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/order_middle_bg"
+        android:gravity="center"
+        android:text="购买"
+        android:textColor="@color/decorateOrange"
+        android:layout_marginRight="@dimen/mainfragment_srarch_left"/>
+</RelativeLayout>

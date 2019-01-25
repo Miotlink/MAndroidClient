@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.homepaas.sls.ui.widget.BreathingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="30dp"
+    android:layout_gravity="center_vertical"
+    app:innerRadius="4dp"
+    app:outerRadius="10dp"
+    app:gapRadius="8dp"
+    app:innerColor="#32A9FB"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+</com.homepaas.sls.ui.widget.BreathingView>

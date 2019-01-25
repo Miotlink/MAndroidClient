@@ -1,0 +1,441 @@
+<resources>
+    <string name="LinearLayoutManager">LinearLayoutManager</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="service_phone_number">4008–262–056</string>
+
+    <string name="bottom_pull_refresh_content">刷新并查看服务项目</string>
+    <string name="top_pull_refresh_content">松开刷新</string>
+    <string name="top_pull_go_home_content">松开回到首页</string>
+
+    <string name="verfiy_code_dilog_title">请填写图形验证码</string>
+    <string name="app_name">助家生活</string>
+    <string name="im_welcome">Hi,我是您的小秘书,需要什么服务尽管问我哦~</string>
+    <string name="im_welcome_name">助家小秘书</string>
+
+    <string name="search_bar_hint">输入您想要的服务</string>
+    <string name="search_prompt">
+        你可以这样说:\n“小时工”\n“油烟机清洗”\n“维修”\n“开锁”\n等服务名称
+    </string>
+    <string name="speech_button_text">按住 说出您想要的服务</string>
+
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="title_detail">详情</string>
+    <string name="dialog_auth_detail">认证详情</string>
+
+    <!--recyclerView Layout-->
+    <string name="layoutManager_Gridlayout">GridLayoutManager</string>
+    <string name="layoutManager_LinearLayout">LinearLayoutManager</string>
+
+    <!--商户信息-->
+    <string name="shop_message_found_time">成立时间</string>
+    <string name="shop_message_business_property">商户性质</string>
+    <string name="shop_message_area">营业面积</string>
+    <string name="shop_message_employee_number">员工人数</string>
+    <string name="shop_message_operate_scale">经营规模</string>
+    <string name="shop_message_signature">个性说明:</string>
+    <string name="shop_message_service_time">服务时间:</string>
+    <string name="shop_message_service_tag">标&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;签:</string>
+    <string name="shop_message_service_tag2">标签:</string>
+    <string name="space">&#160;&#160;&#160;</string>
+    <string name="shop_message_shop_address">商户地址:</string>
+    <string name="shop_message_service_range">服务范围:</string>
+    <string name="shop_message_shop_introduction">商户介绍:</string>
+    <string name="shop_message_system_authenticate">认证:</string>
+    <!--工人信息-->
+    <string name="worker_message_worker_code">工号:</string>
+    <string name="worker_message_native_place">籍贯:</string>
+    <string name="worker_message_working_year">工作年限:</string>
+    <string name="worker_message_education">学历:</string>
+    <string name="worker_message_hobby">爱好:</string>
+    <string name="worker_message_height">身高:</string>
+    <string name="worker_message_weight">体重:</string>
+    <string name="worker_message_blood_type">血型:</string>
+    <string name="worker_message_constellation">星座:</string>
+    <string name="worker_message_worker_address">工人地址:</string>
+    <string name="worker_message_worker_introduction">系统介绍:</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email"><![CDATA[账    号]]></string>
+    <string name="prompt_password"><![CDATA[密    码]]></string>
+    <string name="prompt_auth_code">验证码</string>
+    <string name="action_sign_in">登&#160;录</string>
+    <string name="action_register">注&#160;册</string>
+    <string name="action_confirm">确&#160;认</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="register_account">新用户注册</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="button_send_auth_code">发送验证码</string>
+    <string name="button_push_auth_code">获取验证码</string>
+    <string name="register_prompt">点击“注册”，即代表您同意遵守助家生活的《用户协议》</string>
+    <string name="prompt_old_password">输入原密码</string>
+    <string name="prompt_new_password">输入新密码</string>
+    <string name="prompt_input_password">输入密码</string>
+    <string name="prompt_confirm_password">确认密码</string>
+    <string name="click_to_see_detail"><![CDATA[点击查看详情>>]]></string>
+
+    <string name="swipe_delete">删除</string>
+    <string name="swipe_set_default">设为默认地址</string>
+
+    <!--个人信息-->
+    <string name="title_personal_message">个人信息</string>
+    <string name="nick_name">昵称</string>
+    <string name="please_set_your_nick_name">请设置您的昵称</string>
+    <string name="my_qr_code">我的二维码</string>
+    <string name="modify_password">修改密码</string>
+    <string name="my_address">我的地址</string>
+    <string name="logout_button">退出登录</string>
+    <string name="set_photo_portrait">头像设置</string>
+    <string name="gallery">图片库</string>
+    <string name="take_photo">拍照</string>
+
+    <string name="scan_the_qr_code">扫扫上面的二维码，加我</string>
+    <string name="write_the_qr_code">请输入邀请码</string>
+    <string name="feedback_submit"><![CDATA[提   交]]></string>
+
+
+    <!--消息中心-->
+    <string name="no_message">没有消息</string>
+    <string name="no_message_explanation">你的消息中心空空</string>
+    <string name="no_collection">没有收藏</string>
+    <string name="input_new_nickname">请输入新的昵称</string>
+    <string name="no_call_logs">没有通话记录</string>
+    <string name="no_call_logs_explanation">您的通话记录空空</string>
+    <string name="anim_plus">+1</string>
+    <string name="icon_services">业务</string>
+    <string name="no_comment_explanation">暂无评价，欢迎下单参与评价</string>
+    <string name="no_service_explanation">暂无服务，敬请期待</string>
+    <string name="please_check_network">网络不稳定,请检查设置并重试</string>
+
+    <string name="service_type">服务类别</string>
+    <string name="hourly_worker">小时工</string>
+    <string name="service_content">服务内容</string>
+    <string name="service_requirements">请输入您的服务内容、服务要求等</string>
+    <string name="service_money">服务金额(选填)</string>
+    <string name="please_input_service_money">请输入价格</string>
+    <string name="service_money_text">服务金额</string>
+    <string name="pay_tips">温馨提示：\n
+    1.您可以使用红包或者优惠券进行抵扣，优惠券至多用一张。\n
+    2.账户余额不足时，您可以使用支付宝或者微信支付剩余部分</string>
+    <string name="pay_tips1">温馨提示：\n
+    1.在线支付才能享受特价满减等优惠活动。\n
+    2.余额不足时可用支付宝或微信支付剩余部分。</string>
+
+    <string name="order_detail_info">订单详情</string>
+    <string name="contact_mechant">联系商户</string>
+    <string name="contact_hourlyworker">联系客服</string>
+    <string name="service_status">服务状态</string>
+    <string name="add_evaluate">追加评价</string>
+    <string name="my_red_packet">我的红包</string>
+    <string name="use_red_packet">使用红包</string>
+    <string name="get_packet">获取红包</string>
+    <string name="packet_illustrate">红包说明</string>
+    <string name="packet_illustrate_new">使用说明</string>
+    <string name="share">分享</string>
+
+    <!--账户-->
+    <string name="no_charge_explanation">口袋空空如也，赶紧去充值吧</string>
+    <string name="no_payment_explanation">还没有交易哦，去找找需要的服务吧！</string>
+    <string name="prompt_phone">手机号</string>
+    <string name="currentAction">活动</string>
+    <string name="refund_record">退款记录</string>
+    <string name="confirm_order">确认订单</string>
+    <string name="choose_service">选择服务类型</string>
+    <string name="cancle_order_str">取消订单</string>
+    <string name="delete_order_str">删除订单</string>
+    <string name="confirm_order_finish">确认服务完成</string>
+    <string name="pay_str">支付</string>
+    <string name="recommend_code">邀请码(选填)</string>
+    <string name="invitation_share_title">Hi,朋友，邀请你一起来免费体验上门家庭服务</string>
+    <string name="invitation_share_description">生活服务我一直用助家生活，寄快递、送水、保洁、维修。既经济有方便。首次服务有优惠</string>
+    <string name="my_account">我的账户</string>
+
+    <string name="add_service">点击搜索服务类型</string>
+    <string name="title_service">标题</string>
+    <string name="service_type_str">服务类型</string>
+    <string name="hint_choose_service_str">请选择服务类型</string>
+    <string name="service_price_str">服务价格</string>
+    <string name="hint_choose_service_price_str">请选择服务价格</string>
+
+    <!--我的钱包-->
+    <string name="account_balance">账户余额（元）</string>
+    <string name="recharge_button"> 充值</string>
+    <string name="detail_account">账单明细</string>
+    <string name="choose_all">全部</string>
+    <string name="choose_income">收入</string>
+    <string name="choose_expenditure">支出</string>
+    <string name="account_details">账单明细</string>
+    <string name="no_account_list">没有账单</string>
+    <string name="account_detail">账单详情</string>
+    <string name="serivce_number">客服电话: 4008-262-056</string>
+
+    <!--充值-->
+    <string name="recharge">充值</string>
+    <string name="recharge_paymoney">充值金额:</string>
+    <string name="extra_gift">额外赠送</string>
+    <string name="actually_available">实际可得</string>
+    <string name="payment">支付</string>
+    <string name="reminder">温馨提示:</string>
+    <string name="reminder_first">1.在线支付才能享受特价等优惠活动哦</string>
+    <string name="reminder_second">2.如有疑问请联系客服4008-262-056</string>
+    <string name="recharge_result_ensuring">支付结果确认中</string>
+    <string name="pay_cancel">支付已取消</string>
+    <string name="pay_fail">支付失败</string>
+    <string name="pay_succ">支付成功</string>
+    <string name="recharge_total_money">充值金额:</string>
+    <string name="recharge_gift">充值优惠:</string>
+    <string name="recharge_time">充值时间:</string>
+    <string name="recharge_tradeno">充值单号:</string>
+
+    <!--引导页-->
+    <string name="go">立即体验</string>
+
+    <!--搜索服务-->
+    <string name="edittext_hint">搜服务/工人/商户</string>
+    <string name="hot_service">热门服务</string>
+    <string name="history_service">历史搜索</string>
+    <string name="touch_and_spake">按住这里 说出你想要的服务</string>
+    <string name="voice_tishi_one">说出工人、商户名或你想要的服务</string>
+    <string name="voice_tishi_second">如:"洗衣机"、"小时工"</string>
+    <string name="voice_tishi_third">"油烟机清洗"、"维修"、"开锁"等</string>
+    <string name="action_up_hand">向上滑动取消</string>
+    <string name="action_up_result">松开  查看结果</string>
+    <string name="action_up_cancel">松开  取消发送</string>
+    <string name="action_up_cancel_text">松开手指取消发送</string>
+
+    <!--商户主页和工人主页服务-->
+    <string name="to_store_payment">到店支付</string>
+    <string name="confirm_payment">确认支付</string>
+    <string name="purchase">购买</string>
+    <string name="pay_order">支付订单</string>
+
+    <!--订单详情-->
+    <string name="no_date"></string>
+    <string name="order_submitted">订单已提交</string>
+    <string name="order_mer_submitted">商户已接单</string>
+    <string name="order_worker_submitted">工人已接单</string>
+    <string name="mer_aggigend_worker_type">商户已指派工人</string>
+    <string name="door_to_door_service">上门服务</string>
+    <string name="worker_already_service">工人已完成服务</string>
+    <string name="already_service_type">服务已完成</string>
+    <string name="refund_in">退款中</string>
+    <string name="cancel_order">订单已取消</string>
+
+    <string name="first_pay_then_wait">请支付服务费用并等待商户/工人接单</string>
+    <string name="first_pay_then_wait_merchant">请支付服务费用并等待商户接单</string>
+    <string name="first_pay_then_wait_worker">请支付服务费用并等待工人接单</string>
+    <string name="wait_patience_mer_worker">请耐心等待商户/工人接单</string>
+    <string name="wait_patience_merchant_assigned_worker">请耐心等待商户接单,并指派工人</string>
+    <string name="wait_patience_worker_order">请耐心等待工人接单</string>
+    <string name="first_pay_or_client_cancel_order">请支付服务费用，避免商户取消服务</string>
+    <string name="first_pay_or_worker_cancel_order">请支付服务费用，避免工人取消服务</string>
+    <string name="wait_patience_merchant_then_assigned_worker">请耐心等待商户指派工人</string>
+    <string name="wait_mer_assigned_worker_for_service">请耐心等待商户指派工人上门服务</string>
+    <string name="negotiate_price_with_customer_content">请与商户协商，并确定价格</string>
+    <string name="negotiate_price_with_worker_content">请与工人协商，并确定价格</string>
+    <string name="wait_worker_door_to_door_service">请耐心等待工人在约定时间上门服务哦</string>
+    <string name="confirm_service_completion_content">请确认服务完成</string>
+    <string name="evaluation_service">评价一下这次服务吧</string>
+    <string name="refund_in_72_hours">系统将在72小时内退款</string>
+
+    <string name="wait_order">待接单</string>
+    <string name="wait_service">待服务</string>
+    <string name="wait_pay">待付款</string>
+    <string name="already_pay">已支付</string>
+    <string name="pay_sussess">支付成功</string>
+    <string name="wait_mer_order">待商户接单</string>
+    <string name="wait_woker_order">待工人接单</string>
+    <string name="wait_assigend_worker">待指派工人</string>
+    <string name="already_assigend_worker">已指派工人</string>
+    <string name="already_service">已服务</string>
+    <string name="pending_confirmation">待确认</string>
+    <string name="service_completion">服务完成</string>
+    <string name="refund_success">退款成功</string>
+    <string name="pending_pricing">待定价</string>
+    <string name="common_request_permission">该操作需要开通权限</string>
+    <string name="common_allow_permission">允许</string>
+
+    <!-- for test -->
+
+    <!--3.3.搜索页-->
+    <string name="common_search_edittext_hint">大家都在搜保洁</string>
+    <string name="common_taglayout_first_title">大家都在搜</string>
+    <string name="common_taglayout_second_title">历史搜索</string>
+    <string name="common_no_result_text">啊哦,没有搜索到结果</string>
+    <string name="common_look_people_search">看看大家都在搜什么</string>
+
+    <!--3.3.0下单页-->
+    <string name="place_order">提交订单</string>
+    <string name="choose_one_service">请选择一个服务地址</string>
+    <string name="service_number">服务数量</string>
+    <string name="service_choose_time">请选择服务时间</string>
+    <string name="confirm_selection">确认选择</string>
+    <string name="remark_text">备注留言</string>
+
+    <!--环信-->
+    <string name="is_contact_customer">正在联系客服，请稍等...</string>
+    <string name="is_contact_customer_failure_seconed">联系客服失败:</string>
+    <string name="em_tip_request_fail">请求失败</string>
+    <string name="em_tip_wating">请稍等...</string>
+    <string name="not_connect_to_server">尚未连接至服务器，请稍后重试</string>
+    <string name="system_is_regist">系统正在自动为您注册用户...</string>
+    <string name="register_user_fail">注册失败</string>
+
+    <string name="title_satifisfaction_eval">满意度评价</string>
+    <string name="nick_service">客服昵称</string>
+
+    <string name="tip_eval">请对我的服务做出评价</string>
+    <string name="hint_leave_message">留言</string>
+    <string name="tip_btn_sumbit">提交</string>
+
+    <!--3.4登录界面-->
+    <string name="common_login">登录</string>
+    <string name="register_now">立即注册</string>
+    <string name="input_auth_code">请输入收到的验证码</string>
+    <string name="input_phone_number">请输入手机号</string>
+    <string name="prompt_register">未注册过的手机将自动创建为助家生活账户</string>
+    <string name="prompt_hint">说明：注册/登录代表您已经同意《助家生活用户协议》</string>
+    <!--订单取消原因-->
+    <string name="cancel_reasons">取消原因</string>
+    <string name="ordre_cancel_talk_reasons">订单即将取消,请告诉我们原因</string>
+    <string name="provide_the_best_service">我们会努力为你提供更好的服务</string>
+    <string name="submit_reasons">提交</string>
+    <string name="input_other_reasons">请输入其他原因</string>
+    <!--留言备注-->
+    <string name="message_remark">留言备注</string>
+
+    <!--快递订单跟踪-->
+    <string name="express_order_tracking">订单跟踪</string>
+    <string name="express_company">快递公司：</string>
+    <string name="express_odd_numbers">快递单号：</string>
+    <string name="order_information">订单信息</string>
+    <string name="send_address">发件地址：</string>
+    <string name="send_people">发件人：</string>
+    <string name="receiver_address">收件地址：</string>
+    <string name="receiver_people">收件人：</string>
+    <string name="goods_name">物品名称</string>
+    <string name="goods_weight">物品重量</string>
+    <string name="payment_method">付款方式</string>
+    <string name="estimated_cost">预估费用</string>
+    <string name="drop_box_program">待收件</string>
+    <string name="wait_courier_collect">请等待快递员上门收件</string>
+    <string name="order_number">订单编号</string>
+    <string name="order_create_time">下单时间</string>
+
+    <string name="apply_compensation">申请赔付</string>
+    <string name="compensation_reason">赔付原因</string>
+    <string name="compensation_explain">详细描述</string>
+    <string name="place_order_insurance">一元保险：迟到、爽约赔付</string>
+
+    <string name="more">更多</string>
+    <string name="run_alone">接单跑男</string>
+    <string name="call_running_man">联系跑男</string>
+    <string name="delivery_time">发货时间</string>
+    <string name="remark">备注</string>
+    <string name="cost">费用</string>
+    <string name="order_cancel">订单取消</string>
+    <string name="contact_customer_service_cancel_order">请联系客服取消订单</string>
+
+    <!--新订单详情-->
+
+    <string name="service_time">服务时间</string>
+    <string name="service_address">服务地址</string>
+    <string name="service_total_price">订单总价</string>
+    <string name="deposit">订金</string>
+    <string name="client_name">联系人:</string>
+    <string name="client_phone">服务电话:</string>
+    <string name="client_address">服务地址:</string>
+    <string name="order_code">订单编号:</string>
+    <string name="deposit_coupon">订金不可用红包</string>
+    <string name="no_coupon">暂无可用红包</string>
+
+
+    <string name="client_insurance_claims">保险赔付</string>
+    <string name="client_view_the_payment">查看赔付</string>
+    <string name="client_view_the_reason">查看原因</string>
+    <string name="client_to_pay_order">去支付</string>
+    <string name="client_add_service">¥增加服务</string>
+    <string name="client_confirm_order">确认完成</string>
+    <string name="client_to_evaluate_order">去评价</string>
+    <string name="client_cancel_order">取消订单</string>
+    <string name="client_delete_order">删除订单</string>
+    <string name="clinet_send_address">寄件地址</string>
+    <string name="client_receive_address">收件地址</string>
+    <string name="mailing_time">寄件时间</string>
+
+
+    <string name="city_choose">城市选择</string>
+    <string name="location_error">定位失败...</string>
+    <string name="super_discount">超级优惠</string>
+
+
+    <!--main-->
+    <string name="network_error">网络不稳定,请检查设置并重试</string>
+    <string name="network_error1">当前网络不好</string>
+
+    <string name="data_empty">暂无数据</string>
+
+    <!--maintab-->
+    <string name="main_tab1">首页</string>
+    <string name="main_tab2">附近</string>
+    <string name="main_tab3">小秘书</string>
+    <string name="main_tab4">订单</string>
+    <string name="main_tab5">我的</string>
+
+
+    <!--complanint-->
+    <string name="complanint1">投诉</string>
+    <string name="complanint2">选择投诉原因,我们将第一时间为你处理</string>
+    <string name="complanint3">请对我们的服务提出建议</string>
+    <string name="complanint4">提交</string>
+    <!--增加服务数 量-->
+    <string name="add_service_num1">增拍前请先与服务商沟通确认</string>
+    <string name="add_service_num2">输入补拍金额(元)</string>
+    <string name="add_service_num3">元</string>
+    <string name="add_service_num4"><font size='15'>与工人沟通后输入</font></string>
+    <string name="add_service_num5">请选择支付方式</string>
+    <string name="add_service_num6">账户余额支付</string>
+    <string name="add_service_num7">支付宝支付</string>
+    <string name="add_service_num8">微信支付</string>
+    <string name="add_service_num9">温馨提示：\n
+    1.账户余额不足时,您可以使用支付宝或者微信支付剩余部分\n
+    2.如有疑问请联系客服4008-262-056</string>
+
+
+
+    <!--UI title-->
+    <string name="add_service_num">增加服务</string>
+    <string name="history_order">历史订单</string>
+    <string name="select_service_or_worker">选择服务商/工人</string>
+    <string name="service_or_worker_photo">商户照片及员工服务照</string>
+
+    <!--选择服务商或工人-->
+    <string name="empty_hint1">附近没有工人哦</string>
+    <string name="empty_hint2">您还没有预约过的工人</string>
+    <string name="empty_hint3">暂无评价</string>
+    <string name="empty_hint4">暂无服务</string>
+    <string name="system_worker">系统推荐工人</string>
+    <string name="system_merchant">系统推荐商家</string>
+    <string name="login1">点击“立即登录”，即表示您同意《助家生活用户协议》，未注册助家生活帐号的手机号，登录时将自动注册</string>
+
+    <string name="txt1">点击设置昵称</string>
+    <string name="collection">我的收藏</string>
+    <string name="collection_empty1">您的收藏夹空空\n赶紧去地图找喜欢的工人收藏吧</string>
+    <string name="collection_empty2">您的收藏夹空空赶紧去地图找喜欢的商户收藏吧</string>
+    <!--homepage-->
+    <string name="homepage1">查看更多</string>
+    <string name="homepage2">查看所有服务</string>
+
+    <!--pay-->
+    <string name="pay_activity1">已付订金</string>
+
+<!--merchant-->
+    <string name="merchant_1">助家为您推荐商户</string>
+    <string name="merchant_2">筛选</string>
+
+
+    <!--SubsetOrderFragment-->
+    <string name="SubsetOrderFragment1">主要需求</string>
+    <string name="SubsetOrderFragment2">请选择您的需求</string>
+
+</resources>

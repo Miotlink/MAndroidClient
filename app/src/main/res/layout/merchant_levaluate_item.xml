@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_interval"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="gone" />
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/rl_user_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/user_grade_icon" />
+
+        <TextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/rl_user_icon"
+            android:textColor="@color/appText10"
+            android:textSize="15sp"
+            tools:text="135***6525" />
+
+        <RatingBar
+            android:id="@+id/rb_user_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="12.0dip"
+            android:layout_below="@+id/tv_user_phone"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/rl_user_icon"
+            android:indeterminateDrawable="@drawable/ratingbar_list"
+            android:indeterminateOnly="false"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressDrawable="@drawable/ratingbar_list"
+            android:rating="5" />
+
+        <TextView
+            android:id="@+id/tv_levaluate_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rb_user_grade"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/rl_user_icon"
+            android:textColor="@color/pay_success3"
+            android:textSize="12sp"
+            tools:text="这是我最满意的一次保洁服务，阿姨做事情很仔细，连门" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_levaluate_info"
+            android:layout_toRightOf="@+id/rl_user_icon"
+            android:textColor="@color/merchant_1"
+            android:textSize="12sp"
+            tools:text="杭州" />
+
+        <TextView
+            android:id="@+id/tv_server_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_levaluate_info"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tv_city"
+            android:textColor="@color/merchant_1"
+            android:textSize="12sp"
+            tools:text="小时工" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_levaluate_info"
+            android:textColor="@color/merchant_1"
+            android:textSize="12sp"
+            tools:text="2015-12-11 15:43" />
+    </RelativeLayout>
+
+</LinearLayout>

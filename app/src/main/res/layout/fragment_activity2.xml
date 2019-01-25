@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:background="@color/white"
+    android:divider="@drawable/layout_vertical_divider"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.homepaas.sls.ui.personalcenter.ActivityFragment">
+   <RelativeLayout
+       android:id="@id/toolbar"
+       android:elevation="7dp"
+       android:background="@color/app_title_bg"
+       android:gravity="center_vertical"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize">
+      <ImageView
+          android:visibility="gone"
+          android:id="@+id/setting"
+          android:layout_marginLeft="16dp"
+          android:src="@mipmap/my_set"
+          android:background="@null"
+          android:layout_width="25dp"
+          android:layout_height="25dp" />
+      <FrameLayout
+          android:id="@+id/message"
+          android:layout_marginRight="16dp"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+         <ImageView
+             android:src="@mipmap/message"
+             android:background="@null"
+
+             android:layout_width="25dp"
+             android:layout_height="25dp"/>
+         <View
+             android:visibility="invisible"
+             android:id="@+id/unreadIcon"
+             android:background="@drawable/unread_message_icon"
+             android:layout_gravity="right|top"
+             android:layout_marginTop="2dp"
+             android:layout_width="5dp"
+             android:layout_height="5dp"/>
+
+      </FrameLayout>
+      <TextView
+          android:textSize="18sp"
+          android:textColor="@color/app_title_color"
+          android:text="活动"
+          android:layout_centerHorizontal="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+   </RelativeLayout>
+
+   <com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout
+       android:id="@+id/refreshLayout"
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <FrameLayout
+          android:background="@color/white"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+         <android.support.v7.widget.RecyclerView
+             android:layout_marginLeft="15dp"
+             android:layout_marginRight="15dp"
+             android:id="@id/recyclerView"
+             android:background="@color/white"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:visibility="gone"
+             app:layoutManager="@string/LinearLayoutManager" />
+
+         <android.support.v4.widget.NestedScrollView
+             android:id="@id/empty_view"
+             android:background="@color/white"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fillViewport="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+               <TextView
+                   android:id="@id/empty_content"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="80dp"
+                   android:layout_gravity="center_horizontal"
+                   android:drawablePadding="@dimen/padding_small"
+                   tools:drawableTop="@mipmap/order"
+                   android:gravity="center"
+                   android:textColor="@color/appTextHint"
+                   tools:text="当前没有订单，赶快去看看需要什么服务吧" />
+            </FrameLayout>
+         </android.support.v4.widget.NestedScrollView>
+      </FrameLayout>
+
+   </com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout>
+
+</LinearLayout>

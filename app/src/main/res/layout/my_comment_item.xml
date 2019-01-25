@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:divider="@drawable/layout_vertical_divider"
+              android:orientation="vertical"
+              android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorDividerLight"
+        android:gravity="center"
+        tools:text="下午 12:00"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/horizontal_padding_normal"
+        android:paddingRight="@dimen/horizontal_padding_normal">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            tools:src="@mipmap/home_icon"/>
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            tools:text="唐瓜瓜"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <RatingBar
+            android:isIndicator="true"
+            android:id="@+id/ratingbar"
+            style="@style/HeartRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:stepSize="0.25"
+            tools:rating="4.7"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/decorateOrange"
+            tools:text="4.5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/customer_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:paddingLeft="@dimen/horizontal_padding_normal"
+            android:paddingRight="@dimen/horizontal_padding_normal"
+            tools:text="电脑主要给我妈用的，她老人家对电脑要求不高，只求打牌不卡，换了这台新电脑，赞。怎么有点杀鸡用牛刀的感觉。谢谢莫站，谢谢邮购部的各位，说不定以后还会来打扰"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/phones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/horizontal_padding_small"
+            android:paddingRight="@dimen/horizontal_padding_small"
+            tools:listitem="@layout/comment_photo_item"
+            app:layoutManager="@string/layoutManager_LinearLayout"/>
+        <LinearLayout
+            android:paddingLeft="@dimen/horizontal_padding_normal"
+            android:paddingRight="@dimen/horizontal_padding_normal"
+            android:id="@+id/comment_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[追加评论]："/>
+
+            <TextView
+                android:id="@+id/comment_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="服务很好，很体贴下次还会请这个阿姨来做的，好评呦"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="@dimen/horizontal_padding_normal"
+            android:paddingRight="@dimen/horizontal_padding_normal"
+            android:id="@+id/reply_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[客服回复]："/>
+
+            <TextView
+                android:id="@+id/reply_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="服务很好，很体贴下次还会请这个阿姨来做的，好评呦"/>
+        </LinearLayout>
+        <!--<com.homepaas.sls.ui.widget.UnTouchedRecyclerView-->
+            <!--android:id="@+id/comments"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:paddingLeft="@dimen/horizontal_padding_normal"-->
+            <!--android:paddingRight="@dimen/horizontal_padding_normal"-->
+            <!--app:layoutManager="@string/layoutManager_LinearLayout"-->
+            <!--tools:listitem="@layout/added_comment_item"/>-->
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+
+    <Button
+        android:id="@+id/add_comment"
+        style="@style/CommonButton"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="@dimen/horizontal_margin_normal"
+        android:layout_marginRight="@dimen/horizontal_margin_normal"
+        android:text="追加评论"/>
+    </FrameLayout>
+</LinearLayout>

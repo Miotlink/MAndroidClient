@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.homepaas.sls.ui.redpacket.RedPacketActivity">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:theme="@style/ToolbarTheme"
+
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/my_red_packet" />
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--获取红包-->
+        <TextView
+            android:id="@+id/get_packet"
+            android:text="@string/get_packet"
+            android:gravity="center"
+            android:textColor="@color/colorRedPacket"
+            android:background="@drawable/get_packet_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    <View
+        android:background="@color/colorDividerLight"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+</LinearLayout>

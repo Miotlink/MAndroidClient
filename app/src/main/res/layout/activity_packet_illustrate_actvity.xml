@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.homepaas.sls.ui.redpacket.PacketIllustrateActvity">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/packet_illustrate" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/padding_small"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/packet_illustrate_text"
+                android:text="我们在使用 Toolbar 时候需要先隐藏掉系统原先的导航栏，网上很多人都说给Activity设置一个NoActionBar的Theme。但个人觉得有点小题大做了，所以这里我直接在BaseActivity中调用 supportRequestWindowFeature(Window.FEATURE_NO_TITLE) 去掉了默认的导航栏（注意，我的BaseActivity是继承了AppCompatActivity的，如果是继承Activity就应该调用 requestWindowFeature(Window.FEATURE_NO_TITLE) ）；
+如果你想修改标题和子标题的字体大小、颜色等，可以调用 setTitleTextColor 、 setTitleTextAppearance 、 setSubtitleTextColor 、 setSubtitleTextAppearance 这些API；
+自定义的View位于 title 、 subtitle 和 actionmenu 之间，这意味着，如果 title 和 subtitle 都在，且 actionmenu选项 太多的时候，留给自定义View的空间就越小；
+导航图标和 app logo 的区别在哪？如果你只设置 导航图标 （ or app logo ） 和 title 、 subtitle ，会发现 app logo 和 title 、 subtitle 的间距比较小，看起来不如 导航图标 与 它们两搭配美观；
+Toolbar和其他控件一样，很多属性设置方法既支持代码设置，也支持在xml中设置（这里也是最最最最最坑爹的地方，如何坑爹法，请接着往下看）；"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

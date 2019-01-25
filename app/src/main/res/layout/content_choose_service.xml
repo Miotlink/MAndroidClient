@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="60dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.homepaas.sls.ui.order.chooseservice.ChooseServiceActivity"
+    tools:showIn="@layout/activity_choose_service"
+    android:id="@+id/service_type"
+    >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/service_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray"
+        app:layoutManager="@string/layoutManager_LinearLayout">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

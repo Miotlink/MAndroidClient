@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:background="@drawable/navigation_item_bg"
+             android:layout_height="@dimen/menu_item_height"
+             android:paddingBottom="@dimen/horizontal_padding_small"
+             android:paddingLeft="@dimen/horizontal_padding_large"
+             android:paddingRight="@dimen/horizontal_padding_large"
+             android:paddingTop="@dimen/horizontal_padding_small">
+
+    <TextView
+
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawablePadding="@dimen/padding_normal"
+        android:gravity="center_vertical"
+        tools:drawableLeft="@android:drawable/ic_menu_save"
+        tools:text="我的收藏"/>
+
+</FrameLayout>

@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".ui.order.chooseservice.SelectServiceItemFragment">
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_round_top_layout"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/service_list"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_round_bottom_layout">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDividerLight"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/add_evaluate" />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--首评-->
+    <LinearLayout
+        android:layout_below="@+id/title_layout"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="@dimen/padding_small"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:stepSize="1.0"
+                android:max="5"
+                android:numStars="5"
+                android:rating="3"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                style="@style/EvaluateRatingBarStyle"
+                android:layout_alignBottom="@+id/evaluate_time"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/rating_text"
+                android:gravity="center_vertical"
+                android:text="4"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/rating_bar"/>
+
+            <TextView
+                android:id="@+id/evaluate_time"
+                android:text="2014-5-9  9:21"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!--评价内容-->
+        <RelativeLayout
+            android:padding="@dimen/padding_small"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/evaluate_content"
+                tools:text="今天这位阿姨真的是太好了，简直不能更好，洗衣做饭样样都会，无所不能吗，下次我还要点他。"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/picture"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_below="@+id/evaluate_content"
+                app:layoutManager="@string/LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/comment_photo_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:background="@color/colorDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_divider_height"/>
+
+    <EditText
+        android:id="@+id/additional_evaluate_content"
+        android:minHeight="150dp"
+        android:hint="请输入您的追加评价"
+        android:padding="@dimen/padding_small"
+        android:gravity="left|top"
+        android:background="@color/white"
+        android:textColorHint="@color/textHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <!--底部按钮-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        >
+        <Button
+            android:id="@+id/action_button"
+            style="@style/CommonButton"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="提交追评"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

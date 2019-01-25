@@ -1,0 +1,60 @@
+task assemble {}
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'dependencies.gradle'
+//apply plugin: "org.sonarqube"
+
+buildscript {
+    repositories {
+
+        jcenter()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+        classpath 'org.aspectj:aspectjtools:1.8.7'
+        classpath 'com.growingio.android:vds-gradle-plugin:0.9.103'
+        classpath 'com.meituan.android.walle:plugin:1.1.5'
+        classpath 'com.tencent.tinker:tinker-patch-gradle-plugin:1.7.11'
+    }
+
+}
+
+
+allprojects {
+    ext {
+        //Android config
+        compileSdkVersion = 26
+        buildToolsVersion = "26.0.1"
+        applicationId = "com.homepaas.sls"
+        minSdkVersion = 16
+        targetSdkVersion = 26
+        versionCode = 163
+        versionName = "3.6.0"
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"
+        }
+        maven { url "https://jitpack.io" }
+    }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

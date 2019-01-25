@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:divider="@drawable/layout_vertical_divider"
+              android:orientation="vertical"
+              android:showDividers="middle">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_normal"
+            android:textSize="16sp"
+            android:text="@string/write_the_qr_code" />
+        <LinearLayout
+            android:layout_marginBottom="@dimen/padding_normal"
+            android:background="@drawable/edit_bg"
+            android:gravity="center"
+            android:padding="3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/Invitation_code"
+                android:padding="5dp"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/layout_horizontal_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <TextView
+            android:textColor="@color/appPrimary"
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/cancel" />
+
+        <TextView
+            android:textColor="@drawable/text_color_selector2"
+            android:id="@+id/button_confirm"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/action_confirm" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<resources>>
+
+    <style name="AppTheme.White">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimaryDark">@color/colorDivider</item>
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+    </style>
+    <!--<style name="SearchTheme" parent="AppTheme.White">-->
+    <!--<item name="actionMenuTextColor">@color/appPrimary</item>-->
+    <!--<item name="actionMenuTextAppearance">@style/ToolbarTextAppearance</item>-->
+    <!--</style>-->
+    <style name="SearchTitleBackground">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="CommonButton">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textColor">@color/primary_state_color</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:background">@drawable/common_button_bound</item>
+    </style>
+
+    <style name="CommonPressedButton">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@drawable/bottom_button_background</item>
+    </style>
+
+    <style name="NoTitleStyle" parent="Base.Theme.AppCompat.Light">
+        <item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+        <!--<item name="android:windowLightStatusBar">true</item>-->
+        <item name="android:windowBackground">@color/aialog_translucent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <!--<style name="NoTitleStyle" parent="Base.Theme.AppCompat.Light">-->
+        <!--<item name="android:windowAnimationStyle">@style/Animation.AppCompat.Dialog</item>-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <!--<item name="android:windowLightStatusBar">true</item>-->
+        <!--<item name="android:windowBackground">@color/aialog_translucent</item>-->
+        <!--<item name="android:backgroundDimEnabled">false</item>-->
+        <!--<item name="android:windowDrawsSystemBarBackgrounds">false</item>-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+        <!--<item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>-->
+        <!--<item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>-->
+        <!--<item name="android:windowCloseOnTouchOutside">true</item>-->
+    <!--</style>-->
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/padding_small"
+    android:orientation="horizontal">
+<!--下单但是没有支付-->
+    <Button
+        android:id="@+id/cancelOrder"
+        style="@style/CommonNorButton"
+        android:text="取消订单"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+       />
+
+    <Button
+        android:id="@+id/payOrder"
+        style="@style/CommonButton"
+        android:text="支付"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        />
+</LinearLayout>

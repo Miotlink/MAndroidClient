@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+       xmlns:tools="http://schemas.android.com/tools"
+       tools:showIn="@layout/activity_detail">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/auth_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:clickable="true"
+        android:orientation="horizontal"
+        app:layoutManager="@string/layoutManager_LinearLayout"
+        tools:listitem="@layout/detail_authenticate_icon_item"/>
+    <!--P2部分-->
+    <LinearLayout
+        android:id="@+id/coupon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_small"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="领取优惠券，慢100减20"/>
+    </LinearLayout>
+</merge>

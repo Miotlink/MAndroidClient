@@ -1,0 +1,96 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion parent.ext.compileSdkVersion
+    buildToolsVersion parent.ext.buildToolsVersion
+    publishNonDefault true
+    defaultConfig {
+        minSdkVersion parent.ext.minSdkVersion
+        targetSdkVersion parent.ext.targetSdkVersion
+        versionCode parent.ext.versionCode
+        versionName parent.ext.versionName
+
+        //ormlite db config
+        buildConfigField "String", "DB_NAME", "\"ahgroup.db\""
+        buildConfigField "int", "DB_VERSION", "1"
+
+        //nosql db config
+        buildConfigField "String", "NO_SQL_DB_NAME", "\"ahgroup_nosql.db\""
+        buildConfigField "int", "NO_SQL_DB_VERSION", "1"
+
+        //api
+        buildConfigField("String", "HTM_BASE_URL", "\"http://copen.zhujiash.com/htm/\"")
+        buildConfigField "String", "API_BASE_URL", "\"http://copen.zhujiash.com/api/v2/\""
+        buildConfigField "long", "DEFAULT_CONNECTION_TIMEOUT_SEC", "30"
+        buildConfigField "long", "DEFAULT_READ_TIMEOUT_SEC", "30"
+
+        buildConfigField "String", "PERSIST_WORKER_NAME", "\"persist_workers\""
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+
+    buildTypes {
+        //正式环境
+        release {
+            debuggable true
+            minifyEnabled false
+            buildConfigField "String", "API_BASE_URL", "\"http://copen.zhujiash.com/api/v3/\""
+            buildConfigField("String", "HTM_BASE_URL", "\"https://copen.zhujiash.com/htm/\"")
+            buildConfigField("String","HOURLY_WORKER_WINDOW","\"733\"")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+
+        //预发环境
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "API_BASE_URL", "\"http://copen.zhujiash.com/api/v3/\""
+            buildConfigField("String", "HTM_BASE_URL", "\"http://copen.homepaas.com/htm/\"")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        //测试环境
+        developer {
+            debuggable true
+            minifyEnabled false
+            buildConfigField "String", "API_BASE_URL", "\"http://copen.zhujiash.com/api/v3/\""
+            buildConfigField("String", "HTM_BASE_URL", "\"https://copen.zhujiash.com/htm/\"")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        //未知环境
+        singletest{
+            debuggable true
+            minifyEnabled false
+            buildConfigField "String", "API_BASE_URL", "\"http://copen.zhujiash.com/api/v3/\""
+            buildConfigField("String", "HTM_BASE_URL", "\"http://192.168.1.191:3001/htm/\"")
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile rootProject.ext.dependencies.androidSupportV7
+    compile rootProject.ext.dependencies.dagger
+    apt rootProject.ext.dependencies.daggerCompiler
+    provided rootProject.ext.dependencies.javaxAnnotation
+    compile rootProject.ext.dependencies.rxJava
+    compile rootProject.ext.dependencies.rxAndroid
+    compile rootProject.ext.dependencies.ormlite
+    compile rootProject.ext.dependencies.retrofit
+    compile rootProject.ext.dependencies.retrofitGsonConverter
+    compile rootProject.ext.dependencies.retrofitRxJavaAdapter
+    compile 'com.squareup.okhttp:logging-interceptor:2.7.5'
+    testCompile rootProject.ext.testDependencies.junit
+    testCompile rootProject.ext.testDependencies.mockito
+    compile project(':domain')
+}

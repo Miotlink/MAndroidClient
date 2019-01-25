@@ -1,0 +1,317 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.homepaas.sls.ui.order.orderplace.PlaceOrderWorkerFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/divider"
+                android:layout_below="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/layout_vertical_divider_light"
+                android:orientation="vertical"
+                android:showDividers="middle|end"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_layout"
+                android:layout_above="@+id/bottom_layout"
+                android:layout_below="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/layout_vertical_large_divider_light"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/sliding_panel_short_detail_height"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small">
+                    <!-- photo-->
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/margin_small"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/portrait_default" />
+                    <!--detail-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name"
+                            style="@style/TextViewEllipsizeEnd"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/sliding_panel_short_detail_title_height"
+                            android:layout_marginLeft="@dimen/horizontal_margin_small"
+                            android:layout_marginRight="@dimen/horizontal_margin_small"
+                            android:gravity="bottom"
+                            android:textSize="15sp"
+                            android:text="刘德华" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/sliding_panel_short_detail_title_height"
+                            android:gravity="center_vertical">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                                    android:id="@+id/like"
+                                    android:layout_width="60dp"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="2dp"
+                                    android:src="@drawable/checkbox_like"
+                                    android:textColor="@color/appTextPrimary"
+                                    android:textSize="13sp"
+                                    tools:text="123" />
+
+                                <TextView
+                                    android:id="@+id/like_anim"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/anim_plus"
+                                    android:textColor="@color/appPrimary"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                                    android:id="@+id/collection"
+                                    android:layout_width="60dp"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="2dp"
+                                    android:src="@drawable/checkbox_collection"
+                                    android:textColor="@color/appTextPrimary"
+                                    android:textSize="13sp"
+                                    tools:text="35" />
+
+                                <TextView
+                                    android:id="@+id/collection_anim"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/anim_plus"
+                                    android:textColor="@color/appPrimary"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                                android:id="@+id/score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/margin_small"
+                                android:layout_marginStart="@dimen/margin_small"
+                                android:drawablePadding="2dp"
+                                android:src="@mipmap/checkbox_score"
+                                android:textColor="@color/appTextPrimary"
+                                android:textSize="13sp"
+                                tools:text="4.8" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--服务类型start-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:text="@string/service_type" />
+
+                    <TextView
+                        android:id="@+id/hourly_worker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@mipmap/arrow_into"
+                        android:padding="5dp"
+                        android:text="@string/hourly_worker" />
+                </RelativeLayout>
+                <!--服务类型end-->
+
+
+                <!--服务内容start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/padding_small"
+                        android:background="@drawable/bottom_divider"
+                        android:paddingLeft="@dimen/padding_small"
+                        android:paddingRight="@dimen/padding_small">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_small"
+                            android:text="@string/service_content" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_divider"
+                        android:paddingLeft="@dimen/padding_small"
+                        android:paddingRight="@dimen/padding_small"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin_small"
+                            android:textSize="14sp"
+                            android:hint="@string/service_requirements"
+                            android:textColorHint="@color/appTextNormal"
+                            android:gravity="left|top"
+                            android:background="@null"
+                            android:minHeight="50dp" />
+
+                        <!--上传图片-->
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:id="@+id/picture_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp">
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/picture_list"
+                                android:foregroundGravity="center"
+                                android:layout_toLeftOf="@+id/camera"
+                                android:orientation="horizontal"
+                                app:layoutManager="@string/LinearLayoutManager"
+                                tools:listitem="@layout/comment_photo_item"
+                                android:focusable="false"
+                                android:enabled="false"
+                                android:padding="0dp"
+                                android:layout_margin="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"></android.support.v7.widget.RecyclerView>
+                            <ImageView
+                                android:id="@+id/camera"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="10dp"
+                                android:src="@mipmap/camera"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--服务内容end-->
+
+
+                <!--服务金额-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_divider"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_small"
+                        android:text="@string/service_money" />
+
+                    <EditText
+                        android:id="@+id/service_money"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right|center_vertical"
+                        android:textColor="#ff9a37"
+                        android:textColorHint="#c4c2d0"
+                        android:textSize="14sp"
+                        android:hint="@string/please_input_service_money"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:layout_width="wrap_content"
+                        android:minWidth="70dp"
+                        android:layout_height="wrap_content" />
+
+                    <!--服务金额说明-->
+                    <TextView
+                        android:id="@+id/service_money_quote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/service_illustrate"
+                    android:textColor="#8c8a9f"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:text="说明：90后，社会地位的提高，和受到热门的普遍尊敬。随着经济社会的发展。\n人民物质生活和精神生活的提高。人们对及癌症服务\n的要求也日益规范化。"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/horizontal_margin_large"
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
+                >
+
+                <Button
+                    android:id="@+id/pay_button"
+                    style="@style/CommonButton"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="1dp"
+                    android:text="提交订单"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

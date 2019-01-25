@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/swipe_delete"
+        android:textColor="@android:color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/click_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/photo"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/horizontal_margin_normal"
+            android:layout_marginRight="@dimen/horizontal_margin_normal"
+            tools:background="@color/colorDivider"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/photo"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_toEndOf="@id/photo"
+            android:layout_toRightOf="@id/photo"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textSize="18sp"
+            tools:text="李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四李四(4)"/>
+
+        <TextView
+            android:id="@+id/address_and_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/photo"
+            android:layout_toEndOf="@id/photo"
+            android:layout_toRightOf="@id/photo"
+            android:drawableLeft="@mipmap/call_out"
+            android:drawablePadding="4dp"
+            android:drawableStart="@mipmap/call_out"
+            android:maxLines="1"
+            tools:text="杭州浙江|昨天下午14:20"/>
+
+        <ImageView
+            android:id="@+id/call_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/horizontal_margin_normal"
+            android:layout_marginRight="@dimen/horizontal_margin_normal"
+            android:padding="@dimen/padding_small"
+            android:src="@mipmap/call_logs_call"/>
+    </RelativeLayout>
+</com.daimajia.swipe.SwipeLayout>

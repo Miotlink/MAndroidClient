@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.homepaas.sls.ui.widget.ReboundScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/title_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/close"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:src="@mipmap/close_activity" />
+
+                    <TextView
+                        android:id="@+id/tv_service_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="评价本次服务"
+                        android:textColor="@color/homepageServerText1"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_service_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_service_title"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/appText3"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/fenge_view1"
+                    android:layout_alignParentBottom="true" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/star_recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="29dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    app:layoutManager="@string/layoutManager_LinearLayout" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:textColor="@color/appText13"
+                    android:textSize="12sp"
+                    tools:text="满意" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/label_recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:background="@color/white"
+                    app:layoutManager="@string/layoutManager_Gridlayout" />
+
+                <RelativeLayout
+                    android:id="@+id/remark_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:background="@color/white">
+
+                    <EditText
+                        android:id="@+id/remark_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/common_margin_left_right_third"
+                        android:layout_marginRight="@dimen/common_margin_left_right_third"
+                        android:background="@color/common_background_color"
+                        android:gravity="left|top"
+                        android:hint="其他想说的(将匿名并延迟告诉师傅)"
+                        android:imeOptions="actionDone"
+                        android:maxLength="40"
+                        android:padding="@dimen/common_item_top"
+                        android:textColor="@color/appText10"
+                        android:textColorHint="@color/appText9"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/remaining_words"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="@dimen/common_margin_left_right_first"
+                        android:layout_marginRight="27dp"
+                        android:text="40"
+                        android:textColor="@color/appText9"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/show_button_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="73dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:layout_marginLeft="@dimen/common_margin_left_right_third"
+                        android:layout_marginRight="@dimen/common_margin_left_right_third"
+                        android:background="@drawable/subset_order_button"
+                        android:gravity="center"
+                        android:text="匿名提交"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.homepaas.sls.ui.widget.ReboundScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

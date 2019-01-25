@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@mipmap/follow"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:icon="@mipmap/zan"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"></item>
+    <item
+        android:icon="@mipmap/share"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"></item>
+</menu>

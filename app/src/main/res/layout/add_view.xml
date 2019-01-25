@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_new_view"
+    android:orientation="vertical"
+    android:background="@drawable/top_line_bg"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <LinearLayout
+        android:id="@+id/showDetial"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <TextView
+                style="@style/TextViewEllipsizeEnd"
+                android:id="@+id/name"
+                android:gravity="center_vertical"
+                android:text="张大山"
+                android:textSize="16sp"
+                android:textColor="@color/appText2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+           <TextView
+               style="@style/TextViewEllipsizeEnd"
+               android:id="@+id/sex"
+               android:gravity="center_vertical"
+               android:drawablePadding="4dp"
+               android:drawableStart="@mipmap/man"
+               android:drawableLeft="@mipmap/man"
+               android:text="28岁"
+               android:textSize="15sp"
+               android:textColor="@color/appText"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content" />
+            <TextView
+                style="@style/TextViewEllipsizeEnd"
+                android:id="@+id/native_place"
+                android:gravity="center_vertical"
+                android:text="湖北省"
+                android:textSize="15sp"
+                android:textColor="@color/appText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                style="@style/TextViewEllipsizeEnd"
+                android:id="@+id/experience"
+                android:gravity="center_vertical"
+                android:text="从业8年"
+                android:textSize="15sp"
+                android:textColor="@color/appText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:divider="@drawable/layout_horizontal_divider"
+            android:dividerPadding="8dp"
+            android:showDividers="middle"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_marginRight="6dp"
+                android:drawableStart="@mipmap/_distance"
+                android:drawableLeft="@mipmap/_distance"
+                android:drawablePadding="3dp"
+                style="@style/TextViewEllipsizeEnd"
+                android:textColor="@color/appText3"
+                android:text="300m"
+                android:textSize="14sp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/like"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:drawableStart="@mipmap/like"
+                android:drawableLeft="@mipmap/like"
+                android:drawablePadding="3dp"
+                style="@style/TextViewEllipsizeEnd"
+                android:textColor="@color/appText3"
+                android:text="400"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/zan"
+                android:layout_marginLeft="6dp"
+                android:drawableStart="@mipmap/zan"
+                android:drawableLeft="@mipmap/zan"
+                android:drawablePadding="3dp"
+                style="@style/TextViewEllipsizeEnd"
+                android:textColor="@color/appText3"
+                android:text="3.5K"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/detail_ll"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/service_list"-->
+                <!--android:orientation="horizontal"-->
+                <!--app:layoutManager="@string/layoutManager_LinearLayout"-->
+                <!--tools:listitem="@layout/tag_item_view"-->
+                <!--android:background="@color/line"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="wrap_content"/>-->
+            <TextView
+                style="@style/TextViewEllipsizeEnd"
+                android:padding="3dp"
+                android:text="小时工"
+                android:textSize="12sp"
+                android:textColor="@color/appText4"
+                android:id="@+id/service_list"
+                android:background="@color/line"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/detial"
+                android:layout_marginLeft="21dp"
+                android:textSize="12sp"
+                android:text="详情"
+                android:textColor="@color/appText5"
+                android:drawablePadding="2dp"
+                android:drawableEnd="@mipmap/details"
+                android:drawableRight="@mipmap/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/pay_order"
+                android:background="@color/button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:drawableStart="@mipmap/orders_1"
+                    android:drawableLeft="@mipmap/orders_1"
+                    android:drawablePadding="5dp"
+                    android:text="下单"
+                    android:textColor="@color/appText6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/call_phone"
+            android:gravity="center"
+            android:background="@color/button2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:drawableStart="@mipmap/phone"
+                android:drawableLeft="@mipmap/phone"
+                android:drawablePadding="5dp"
+                android:text="电话"
+                android:textColor="@color/appText6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:text="满立减"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:background="@mipmap/promotions4"
+        android:id="@+id/activity_icon"
+        android:layout_gravity="center|bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/shadow"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+
+</FrameLayout>

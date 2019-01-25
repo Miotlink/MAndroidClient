@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:id="@+id/img_service_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/default_no_circular_image" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_subscribe"
+            android:layout_toRightOf="@+id/img_service_icon"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_server_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:singleLine="true"
+                android:textColor="@color/homepageServerText1"
+                android:textSize="15sp"
+                tools:text="北京妇联家政服务中心sdfsdsdfsdff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp">
+
+                <RatingBar
+                    android:id="@+id/rb_service_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12.0dip"
+                    android:layout_centerVertical="true"
+                    android:indeterminateDrawable="@drawable/ratingbar_list"
+                    android:indeterminateOnly="false"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/ratingbar_list"
+                    android:rating="2.5" />
+
+                <TextView
+                    android:id="@+id/tv_service_grad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/rb_service_grade"
+                    android:textColor="@color/appText10"
+                    android:textSize="14sp"
+                    tools:text="3.5" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/count_down_time"
+                android:textSize="16sp"
+                tools:text="170" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_subscribe"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_subscribe_bg"
+            android:text="预约"
+            android:textColor="@color/count_down_time"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/img_service_icon"
+            android:layout_toRightOf="@+id/img_service_icon"
+            android:background="@color/common_background_color" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="99dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_service_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/service_details"
+            android:drawablePadding="4dp"
+            android:singleLine="true"
+            android:textColor="@color/appText10"
+            android:textSize="14sp"
+            tools:text="" />
+
+        <ImageView
+            android:id="@+id/img_phone"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/service_phone" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="4dp"
+            android:background="#F1F2F6" />
+
+        <TextView
+            android:id="@+id/tv_service_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appText10"
+            android:textSize="14sp"
+            tools:text="3.7公里" />
+    </LinearLayout>
+</LinearLayout>

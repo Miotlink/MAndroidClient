@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.data.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.data.ActivityState"
+        className = "com.homepaas.sls.detail.WorkerDetailActivity"/>
+      <point      
+        x = "2568"      
+        y = "212"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.data.ActivityState"
+        className = "com.homepaas.sls.MainActivity"/>
+      <point      
+        x = "640"      
+        y = "188"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.data.ActivityState"
+        className = "com.homepaas.sls.detail.ShopDetailActivity"/>
+      <point      
+        x = "3544"      
+        y = "208"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.data.ActivityState"
+        className = "com.homepaas.sls.SearchActivity"/>
+      <point      
+        x = "1600"      
+        y = "216"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

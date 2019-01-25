@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/to_store_payment">
+
+        </com.homepaas.sls.ui.widget.CenterTitleToolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/photo"
+                    style="@style/PhotoStyle"
+                    android:layout_width="@dimen/merchant_photo_size"
+                    android:layout_height="@dimen/merchant_photo_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/service_result_left"
+                    app:riv_oval="true"
+                    tools:background="@null"
+                    tools:src="@mipmap/ic_launcher" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="13dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/merchant_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="商户名"
+                        android:textColor="@color/homepageServerText1"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/merchant_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/merchant_name"
+                        android:layout_marginTop="@dimen/item_servic_type_paddin"
+                        android:text="商户地址"
+                        android:textColor="@color/appText10"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mainfragment_srarch_left"
+                    android:text="消费总额"
+                    android:textColor="@color/homepageServerText1"
+                    android:textSize="15sp" />
+
+
+                <EditText
+                    android:id="@+id/pay_money_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/mainfragment_srarch_left"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@null"
+                    android:gravity="right"
+                    android:hint="询问服务员后输入"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColorHint="@color/gray"
+                    android:textSize="15sp"
+                    android:imeOptions="actionDone"/>
+                <TextView
+                    android:id="@+id/money_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/pay_money_edit"
+                    android:text="¥"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/action_collection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_order_rectangle"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:visibility="gone"
+                app:layoutManager="@string/layoutManager_LinearLayout"
+                tools:listitem="@layout/list_item_string"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/mainfragment_srarch_left"
+                    android:text="实付金额"
+                    android:textColor="@color/homepageServerText1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/last_need_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/mainfragment_srarch_left"
+                    android:textColor="@color/text_remen"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ok_to_pay_button_bg"
+            android:singleLine="true"
+            android:text="@string/confirm_payment"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</LinearLayout>

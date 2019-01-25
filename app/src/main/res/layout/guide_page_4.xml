@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.homepaas.sls.ui.widget.GuideVideoView
+        android:layout_above="@+id/guide_text"
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.homepaas.sls.ui.widget.GuideVideoView>
+    <ImageView
+        android:id="@+id/guide_text"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/guide_text2"/>
+    <ImageView
+        android:visibility="gone"
+        android:src="@mipmap/new_guide_3"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="false"
+        android:focusable="true"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnStartMainActivity"
+        android:background="@mipmap/button_guide"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp" />
+
+</RelativeLayout>

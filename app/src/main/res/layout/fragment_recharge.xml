@@ -1,0 +1,226 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:clickable="true"
+    android:divider="@drawable/layout_vertical_divider"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:context="com.homepaas.sls.ui.account.RechargeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallet_title_height"
+        android:background="@color/app_title_bg">
+
+        <LinearLayout
+            android:id="@+id/back_ll"
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/return_black"
+                android:layout_marginLeft="12dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/payment"
+            android:textSize="18sp"
+            android:textColor="@color/app_title_color" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_normal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="充值说明"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/recharge_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:lineSpacingMultiplier="1.2"
+            tools:text="月初和月末运营商系统繁忙,到账时间会稍有延迟.受系统升级影响,部分订单可能会充值失败.若充值失败,钱款会退至您的付款账户,请您耐心等待." />
+    </LinearLayout>
+
+    <FrameLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="@dimen/horizontal_padding_normal"
+        android:paddingRight="@dimen/horizontal_padding_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="充值金额" />
+
+        <TextView
+            android:id="@+id/recharge_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:textColor="@color/decorateOrange"
+            tools:text="55.00元" />
+    </FrameLayout>
+        
+        <View
+           style="@style/fenge_view"
+            android:layout_marginLeft="@dimen/horizontal_padding_normal"/>
+
+    <FrameLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="@dimen/horizontal_padding_normal"
+        android:paddingRight="@dimen/horizontal_padding_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="支付金额" />
+
+        <TextView
+            android:id="@+id/pending_pay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:textColor="@color/appText"
+            tools:text="55.00元" />
+    </FrameLayout>
+        <View
+            style="@style/fenge_view"
+            android:layout_marginLeft="@dimen/horizontal_padding_normal"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginTop="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/horizontal_padding_normal"
+        android:paddingRight="@dimen/horizontal_padding_normal"
+        android:text="请选择支付方式"
+        android:textColor="@color/appTextNormal" />
+    <View
+        style="@style/fenge_view"
+        android:layout_marginLeft="@dimen/horizontal_padding_normal"/>
+
+    <FrameLayout
+        android:id="@+id/alipay_method"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:paddingLeft="@dimen/horizontal_padding_normal"
+        android:paddingRight="@dimen/horizontal_padding_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/alipay"
+            android:drawablePadding="@dimen/horizontal_padding_normal"
+            android:drawableStart="@mipmap/alipay"
+            android:gravity="center_vertical"
+            android:text="支付宝支付" />
+
+        <ImageView
+            android:id="@+id/alipay_checker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:src="@drawable/pay_method_checker" />
+    </FrameLayout>
+    <View
+        style="@style/fenge_view"
+        android:layout_marginLeft="@dimen/recharge_choose_top"/>
+    <FrameLayout
+        android:id="@+id/wechat_pay_method"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:paddingLeft="@dimen/horizontal_padding_normal"
+        android:paddingRight="@dimen/horizontal_padding_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/wechat"
+            android:drawablePadding="@dimen/horizontal_padding_normal"
+            android:drawableStart="@mipmap/wechat"
+            android:gravity="center_vertical"
+            android:text="微信支付" />
+
+        <ImageView
+            android:id="@+id/wechat_pay_checker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:src="@drawable/pay_method_checker" />
+    </FrameLayout>
+    <View
+        style="@style/fenge_view" />
+</LinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reminder"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/appText3"
+        android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder_first"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/appText3"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/reminder_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder_second"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/appText3"
+            android:visibility="gone"/>
+    </LinearLayout>
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorbtn"
+            android:textColor="@color/white"
+            android:text="支付"
+            android:textSize="20sp"/>
+</RelativeLayout>

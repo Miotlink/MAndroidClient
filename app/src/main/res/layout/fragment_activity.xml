@@ -1,0 +1,12 @@
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/webView"
+    android:layout_width="540px"
+    android:layout_height="640px"
+    android:layout_gravity="center"
+    android:padding="0dp"
+    android:scrollbars="none"
+    android:scrollbarSize="0dip"
+    android:text="@string/hello_blank_fragment"
+    tools:context="com.homepaas.sls.ui.activities.ActivityFragment"/>
+

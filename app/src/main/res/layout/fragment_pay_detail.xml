@@ -1,0 +1,30 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.homepaas.sls.ui.account.AccountBalanceFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/pay_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="@string/layoutManager_LinearLayout" />
+
+
+    <TextView
+        android:id="@+id/empty_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:drawablePadding="@dimen/padding_normal"
+        android:drawableTop="@mipmap/no_detail"
+        android:gravity="center"
+        android:text="@string/no_payment_explanation"
+        android:textColor="@color/appTextNormal" />
+</FrameLayout>
+

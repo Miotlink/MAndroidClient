@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/confirmorder_background"
+    android:orientation="vertical"
+    tools:context="com.homepaas.sls.ui.order.directOrder.ConfirmOrderActivity">
+
+    <!--Title-->
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/confirm_order" />
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:layout_marginBottom="52dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--服务地址-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:background="@drawable/recyclerview_deco_parallel_lines"
+                    android:layout_marginTop="@dimen/standard_cell_space">
+
+                    <TextView
+                        android:id="@+id/address_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@mipmap/icon_address"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:fontFamily="Noto"
+                        android:text="服务地址"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="@dimen/standard_cell_margin"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_toRightOf="@id/address_icon"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/address_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:lineSpacingExtra="5sp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="25dp"
+                            android:drawablePadding="7dp"
+                            android:drawableRight="@mipmap/right_gray"
+                            android:layout_marginTop="7.5dp"
+                            android:layout_marginBottom="7.5dp"
+                            android:minWidth="20dp"
+                            android:gravity="right|end"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:hint="请选择服务地址"
+                            android:textColorHint="@color/appTextLight"
+                            android:textColor="@color/appTextSubTitle"
+                            android:layout_alignBaseline="@+id/address_icon"
+                            android:layout_alignBottom="@+id/address_icon"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!--服务类型-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:background="@drawable/recyclerview_deco_parallel_lines"
+                    android:layout_marginTop="@dimen/standard_cell_space">
+
+                    <FrameLayout
+                        android:id="@+id/service_type_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/confirm_an_order_type_of_service">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@mipmap/confirm_an_order_service"
+                            android:drawablePadding="@dimen/padding_small"
+                            android:fontFamily="Noto"
+                            android:gravity="center_vertical"
+                            android:text="@string/service_type_str"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/service_type"
+                        android:layout_toRightOf="@id/service_type_layout"
+                        android:layout_marginLeft="25dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="7dp"
+                        android:drawableRight="@mipmap/right_gray"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:hint="@string/hint_choose_service_str"
+                        android:minWidth="20dp"
+                        tools:text="管道疏通（主管,CEO，CTO，PM，UI,DEVEOPER）" />
+
+                </RelativeLayout>
+
+                <!--区间价格信息-->
+                <include
+                    layout="@layout/item_price_range_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_cell_height" />
+
+
+                <!--space-->
+                <View
+                    android:id="@+id/special_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/standard_cell_space"
+                    android:background="@color/confirmorder_background" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/recyclerview_deco_parallel_lines"
+                    android:orientation="vertical">
+
+                    <!--心理价格，针对区间价格会显示-->
+                    <RelativeLayout
+                        android:id="@+id/service_price_layout"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_cell_height"
+                        android:layout_marginLeft="@dimen/standard_cell_margin"
+                        android:background="@drawable/bottom_line"
+                        android:gravity="center_vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingRight="@dimen/padding_small">
+
+                            <TextView
+                                android:id="@+id/suitable_service_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawablePadding="7dp"
+                                android:drawableRight="@mipmap/right_gray"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical|right"
+                                android:hint="@string/hint_choose_service_price_str"
+                                android:maxLines="2"
+                                android:textColorHint="@color/appTextLight" />
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:drawableLeft="@mipmap/confirm_an_order_price"
+                                android:drawablePadding="@dimen/padding_small"
+                                android:fontFamily="Noto"
+                                android:text="@string/service_price_str"
+                                android:textSize="14sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <!--服务数量-->
+                    <RelativeLayout
+                        android:id="@+id/service_number_layout"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_cell_height"
+                        android:layout_marginLeft="@dimen/standard_cell_margin"
+                        android:background="@drawable/bottom_line"
+                        android:paddingRight="@dimen/padding_small">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@mipmap/confirm_an_order_amount"
+                            android:drawablePadding="@dimen/padding_small"
+                            android:text="服务数量"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/unit"
+                            android:orientation="horizontal"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:id="@+id/minus_action"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@mipmap/reduce2"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/service_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="6dp"
+                                android:background="#f1f2f6"
+                                android:gravity="center"
+                                android:minHeight="25dp"
+                                android:minWidth="50dp"
+                                tools:text="1" />
+
+                            <ImageView
+                                android:id="@+id/plus_action"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="6dp"
+                                android:src="@mipmap/add1"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/textView9"
+                            android:layout_alignBottom="@+id/textView9"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:drawablePadding="7dp"
+                            android:drawableRight="@mipmap/right_gray"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            tools:text="小时" />
+                    </RelativeLayout>
+
+
+                    <!--服务时间-->
+                    <RelativeLayout
+                        android:id="@+id/id_anchor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_cell_height"
+                        android:layout_marginLeft="@dimen/standard_cell_margin"
+                        android:background="@drawable/bottom_line">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@mipmap/confirm_an_order_time"
+                            android:drawablePadding="@dimen/padding_small"
+                            android:fontFamily="Noto"
+                            android:text="服务时间"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/service_time_option"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="@dimen/padding_small"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true">
+
+                            <TextView
+                                android:id="@+id/service_time_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawablePadding="7dp"
+                                android:drawableRight="@mipmap/right_gray"
+                                android:gravity="center_vertical"
+                                android:hint="请选择服务时间"
+                                android:textColor="@color/appTextSubTitle"
+                                android:textColorHint="@color/appTextLight" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                    <include layout="@layout/promotion_activity_layout" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/activity_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/standard_cell_space">
+
+                    <!--活动-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/action_collection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:visibility="visible"
+                        app:layoutManager="@string/layoutManager_LinearLayout"
+                        tools:listitem="@layout/list_item_string"
+                        android:background="@drawable/recyclerview_deco_parallel_lines"/>
+                </LinearLayout>
+
+
+                <!--订单金额-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/discount_sum_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/standard_cell_space"
+                    android:background="@drawable/recyclerview_deco_parallel_lines">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/standard_cell_margin"
+                        android:background="@drawable/bottom_line"
+                        android:paddingBottom="16dp"
+                        android:paddingRight="16sp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="订单金额"
+                            android:textSize="12sp"
+                            android:textColor="@color/appTextSubTitle" />
+
+                        <TextView
+                            android:id="@+id/sum_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            tools:text="¥30×3  ¥90" />
+                        <!--活动-->
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_below="@+id/sum_description"
+                            android:id="@+id/action_special"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            app:layoutManager="@string/layoutManager_LinearLayout"
+                            tools:listitem="@layout/list_item_action" />
+                        <!--<TextView-->
+                            <!--android:id="@+id/available_action_description"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/sum_description"-->
+                            <!--android:layout_marginTop="14dp"-->
+                            <!--android:textSize="12sp"-->
+                            <!--android:textColor="@color/appTextSubTitle"-->
+                            <!--tools:text="小时工在线支付满90减10" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/discount_description"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentRight="true"-->
+                            <!--android:layout_below="@id/sum_description"-->
+                            <!--android:layout_marginTop="14dp"-->
+                            <!--android:textColor="@color/decorateOrange"-->
+                            <!--tools:text="-¥ 10" />-->
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/standard_cell_margin"
+                        android:layout_marginRight="@dimen/standard_cell_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="订单总计"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/sum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/decorateOrange"
+                            tools:text="¥ 80" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <!--备注-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/standard_cell_space">
+                    <!--备注-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/standard_cell_height"
+                        android:background="@drawable/recyclerview_deco_parallel_lines"
+                       >
+
+                        <TextView
+                            android:id="@+id/remark_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/standard_cell_margin"
+                            android:text="备注"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/remark_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/remark_textview"
+                            android:layout_marginLeft="25dp"
+                            android:drawablePadding="7dp"
+                            android:drawableRight="@mipmap/right_gray"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:hint="描述您的服务要求，可添加图片"
+                            android:maxLines="1"
+                            android:paddingRight="@dimen/padding_small"
+                            android:singleLine="true"
+                            android:textColorHint="@color/appTextLight"
+                            android:textColor="@color/appTextSubTitle"/>
+                    </RelativeLayout>
+
+                    <!--照片-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/album"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_line"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/padding_small"
+                        android:paddingTop="@dimen/padding_small"
+                        android:visibility="gone"
+                        app:layoutManager="@string/layoutManager_LinearLayout"
+                        tools:listitem="@layout/list_item" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/service_description"
+                    android:textSize="13sp"
+                    android:paddingTop="15dp"
+                    android:lineSpacingExtra="6sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="250dp"
+                    android:textColor="#999"
+                    android:background="@color/confirmorder_background"
+                    android:paddingLeft="@dimen/standard_cell_margin"
+                    android:paddingRight="@dimen/padding_small" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_height="2px"
+                android:background="@color/colorDivider" />
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/favor_result_layout"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/bill_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="1px"
+                    android:background="#ccc"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="25dp"/>
+
+                <TextView
+                    android:id="@+id/favor_result_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/appTextLight"
+                    android:textSize="12sp"
+                    tools:text="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/submit_order"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/line"
+                android:background="@color/newAppPrimary"
+                android:gravity="center"
+                android:minHeight="45dp"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                android:text="提交订单"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/bill_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/decorateOrange"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_text"
+                android:layout_toEndOf="@+id/id_text" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+</LinearLayout>

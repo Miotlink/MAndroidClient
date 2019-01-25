@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sliding_panel_short_detail_height"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_divider"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small">
+        <!-- photo-->
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_small"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@mipmap/portrait_default" />
+        <!--detail-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/TextViewEllipsizeEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sliding_panel_short_detail_title_height"
+                android:layout_marginLeft="@dimen/horizontal_margin_small"
+                android:layout_marginRight="@dimen/horizontal_margin_small"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                tools:text="刘德华" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sliding_panel_short_detail_title_height"
+                android:gravity="center_vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                        android:id="@+id/like"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="2dp"
+                        android:src="@drawable/checkbox_like"
+                        android:textColor="@color/appTextPrimary"
+                        android:textSize="13sp"
+                        tools:text="123" />
+
+                    <TextView
+                        android:id="@+id/like_anim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/anim_plus"
+                        android:textColor="@color/appPrimary"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                        android:id="@+id/collection"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="2dp"
+                        android:src="@drawable/checkbox_collection"
+                        android:textColor="@color/appTextPrimary"
+                        android:textSize="13sp"
+                        tools:text="35" />
+
+                    <TextView
+                        android:id="@+id/collection_anim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/anim_plus"
+                        android:textColor="@color/appPrimary"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:drawablePadding="2dp"
+                    android:src="@mipmap/checkbox_score"
+                    android:textColor="@color/appTextPrimary"
+                    android:textSize="13sp"
+                    tools:text="4.8" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:drawableRight="@mipmap/arrow_into"
+                        android:padding="5dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:divider="@drawable/layout_horizontal_divider"
+        android:dividerPadding="@dimen/divider_padding"
+        android:showDividers="middle"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/contact_provider"
+            android:layout_weight="1"
+            android:textColor="@color/order_detail_tabtext_color"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/contact_mechant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/contact_service"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/order_detail_tabtext_color"
+            android:text="@string/contact_hourlyworker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

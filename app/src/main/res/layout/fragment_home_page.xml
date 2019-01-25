@@ -1,0 +1,327 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    tools:context="com.homepaas.sls.ui.homepage_3_3_0.HomePageFragment">
+
+    <me.henrytao.smoothappbarlayout.SmoothAppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/appPrimary"
+            app:contentScrim="@color/appPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!--<com.homepaas.sls.ui.widget.Banner.Banner-->
+            <!--android:id="@+id/old_banner"-->
+            <!--app:indicator_drawable_selected="@drawable/selected_radius"-->
+            <!--app:indicator_drawable_unselected="@drawable/unselected_radius"-->
+            <!--app:layout_collapseMode="parallax"-->
+            <!--app:layout_collapseParallaxMultiplier="0.7"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+            <!--</com.homepaas.sls.ui.widget.Banner.Banner>-->
+            <!--app:navigationIcon="@mipmap/client_v3_3_0_ic_sweep"-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@null"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <LinearLayout
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/trans"
+                        android:elevation="1dp"
+                        android:orientation="horizontal"
+                        android:translationZ="1dp">
+
+                        <TextView
+                            android:id="@+id/location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="16dp"
+                            android:drawableRight="@mipmap/v_3_5_0_ic_down"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxEms="7"
+                            android:maxLines="1"
+                            android:paddingRight="20dp"
+                            android:singleLine="true"
+                            android:textColor="@color/appText10"
+                            tools:text="定位..." />
+
+                        <LinearLayout
+                            android:id="@+id/go_to_search"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/search_bar_background"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:layout_marginRight="7dp"
+                                android:src="@mipmap/search" />
+
+                            <TextView
+                                android:id="@+id/search_edit_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:cursorVisible="false"
+                                android:gravity="center_vertical"
+                                android:hint="@string/edittext_hint"
+                                android:imeOptions="actionSearch"
+                                android:maxLines="1"
+                                android:textColor="@color/homepageServerText1"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/message_entry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingRight="@dimen/mainfragment_srarch_left">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/menu_service"
+                                    android:layout_width="@dimen/nav_icon_size"
+                                    android:layout_height="@dimen/nav_icon_size"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@mipmap/message" />
+
+                                <View
+                                    android:id="@+id/unreadIcon"
+                                    android:layout_width="6dp"
+                                    android:layout_height="6dp"
+                                    android:layout_gravity="right|top"
+                                    android:layout_marginTop="1dp"
+                                    android:background="@drawable/unread_message_icon"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </me.henrytao.smoothappbarlayout.SmoothAppBarLayout>
+
+    <com.homepaas.sls.ui.widget.ReboundScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@mipmap/default_image"
+                app:indicator_drawable_selected="@drawable/selected_radius" />
+
+            <FrameLayout
+                android:id="@+id/hot_fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/hot_search_link"
+                    android:paddingTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="@string/layoutManager_Gridlayout" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/super_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                //2017/7/24 图片有不规则凸起，且在adapter中的图片fit需要，fitcenter等效果不理想，所以在fitXY的情况下图片paddingtop
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_toRightOf="@+id/super_discount_title"
+                        android:background="@color/line_color" />
+
+                    <TextView
+                        android:id="@+id/super_discount_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="bottom"
+                        android:text="@string/super_discount"
+                        android:textColor="@color/homepageServerText1"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_toLeftOf="@+id/super_discount_title"
+                        android:background="@color/line_color" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/super_discount_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:layoutManager="@string/layoutManager_Gridlayout" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/nagavition_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="@string/layoutManager_LinearLayout" />
+
+
+            <TextView
+                android:id="@+id/tv_select_all_service"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/homepage2"
+                android:textColor="@color/appPrimary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </com.homepaas.sls.ui.widget.ReboundScrollView>
+
+    <!--订单状态浮层-->
+
+    <LinearLayout
+        android:id="@+id/ly_home_order_status"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/home_order_status_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_anchor="@id/scroll_content"
+        app:layout_anchorGravity="bottom|right|end">
+
+        <RelativeLayout
+            android:id="@+id/rl_anim_target"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="12dp"
+                android:src="@mipmap/home_order_status_time" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:text="成功接单sdfsdf" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/appText3"
+                android:textSize="14sp"
+                tools:text="等待工人上门sdfsdfsf" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/home_order_status_right_arrow" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

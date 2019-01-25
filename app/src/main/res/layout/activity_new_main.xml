@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/novice"
+        android:layout_toRightOf="@+id/novice"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/fragment_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <!--tab-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/common_background_color" />
+
+            <com.homepaas.sls.ui.widget.bottomnavigation.MainBottomNavigation
+                android:id="@+id/main_bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!--提示界面-->
+    <FrameLayout
+        android:id="@+id/novice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucentCount"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/yindao_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/new_yindao_3"
+                app:layout_marginRightPercent="7%" />
+
+            <Button
+                android:id="@+id/novive_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/new_btn_known"
+                android:enabled="true"
+                android:scaleType="center"
+                android:visibility="gone"
+                app:layout_marginBottomPercent="40%" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <ImageView
+            android:id="@+id/yindao_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="80dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitStart"
+            android:src="@mipmap/new_yindao_2" />
+
+        <ImageView
+            android:id="@+id/novice_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/new_yindao_5"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+
+    <!--红包弹框view-->
+    <RelativeLayout
+        android:id="@+id/activity_rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/appText2"
+            android:onClick="emptyViewClick"></RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="420dp"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/activity_imageView"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:src="@mipmap/quxiao" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_layout"
+    android:divider="@drawable/layout_vertical_divider"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/appTextPrimary"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText"
+            tools:text="一元保险说明" />
+
+        <View style="@style/fenge_view1" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/appTextNormal"
+            android:textSize="15sp"
+            tools:text="Are you sure to Exit current account，and the relative records will be delete forever util next login,but won.t be recovery entirely!" />
+
+        <View style="@style/fenge_view1" />
+
+        <TextView
+            android:id="@+id/agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:autoLink="all"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/homepageServerText1"
+            android:textSize="12sp"
+            tools:text="轻触下方的“好的”按钮，即表示你同意《保险协议》" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/layout_horizontal_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/appPrimary" />
+
+        <TextView
+            android:id="@+id/button_confirm"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/action_confirm"
+            android:textColor="@color/appPrimary" />
+    </LinearLayout>
+</LinearLayout>

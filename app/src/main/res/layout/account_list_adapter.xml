@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/details_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/choose_drawable_left"
+        android:layout_marginRight="@dimen/choose_drawable_left"
+        android:layout_marginTop="@dimen/choose_adapter_top">
+
+        <TextView
+            android:id="@+id/account_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:text="哈哈"
+            android:textColor="@color/appText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/account_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:text="哈哈"
+            android:textColor="@color/appText"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/choose_drawable_left"
+        android:layout_marginRight="@dimen/choose_drawable_left"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/choose_adapter_top">
+
+        <TextView
+            android:id="@+id/account_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:text="哈哈"
+            android:textColor="@color/appText3"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/account_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:text="哈哈"
+            android:textColor="@color/appText3"
+            android:textSize="12sp" />
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/choose_drawable_left"
+        android:layout_marginRight="@dimen/choose_drawable_left"
+        android:background="@color/adapter_view"></View>
+</LinearLayout>

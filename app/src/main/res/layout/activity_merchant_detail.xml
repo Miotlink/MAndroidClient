@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.homepaas.sls.ui.merchantservice.detail.MerchantDetailActivity">
+
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="详情" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sliding_panel_short_detail_height"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small">
+
+            <!-- photo-->
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin_small"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@mipmap/portrait_default" />
+            <!--detail-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <!--商户名-->
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/TextViewEllipsizeEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/horizontal_margin_small"
+                    android:layout_marginRight="@dimen/horizontal_margin_small"
+                    android:gravity="bottom"
+                    android:textSize="15sp"
+                    android:text="刘德华" />
+                <!--地点，距离-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:dividerPadding="@dimen/padding_small"
+                    android:divider="@drawable/layout_horizontal_divider_dark"
+                    android:showDividers="middle"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="@dimen/horizontal_margin_small"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_weight="3"
+                        tools:text="丹桂街，迪凯国际中心25B云锦科技助家生活"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        tools:text="距离1243km"
+                        android:layout_marginLeft="@dimen/horizontal_margin_small"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+                    <TextView
+                        android:background="@drawable/app_primary_text_bg"
+                        android:layout_marginLeft="@dimen/horizontal_margin_small"
+                        android:textColor="@color/appPrimary"
+                        android:gravity="center"
+                        tools:text="业务"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        tools:text="家电维修 手机维修 收音机维修 什么都修"
+                        android:layout_marginLeft="@dimen/horizontal_margin_small"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="15dp"
+        android:background="@drawable/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:background="@drawable/gray_border_button_bg"
+            android:layout_width="0dp"
+            android:padding="@dimen/padding_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                android:src="@drawable/checkbox_like"
+                android:layout_gravity="center"
+                android:textColor="@color/appPrimary"
+                android:drawablePadding="@dimen/padding_small"
+                android:text="322"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:background="@drawable/gray_border_button_bg"
+            android:layout_width="0dp"
+            android:padding="@dimen/padding_small"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <com.homepaas.sls.ui.widget.ManuallyCheckBox
+                android:src="@drawable/checkbox_collection"
+                android:layout_gravity="center"
+                android:textColor="@color/appPrimary"
+                android:drawablePadding="@dimen/padding_small"
+                android:text="322"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <include layout="@layout/detail_message_include"/>
+
+    <include layout="@layout/detail_icon_bonus_include"/>
+
+
+    <TableLayout
+        android:id="@+id/tablayout"
+        android:layout_width="@dimen/nav_header_height"
+        android:layout_height="wrap_content"></TableLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    
+
+</LinearLayout>

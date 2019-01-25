@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <LinearLayout
+        android:id="@+id/go_detail_lin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/appText"
+                android:textSize="15sp"
+                android:text="小时工"/>
+            <LinearLayout
+                android:id="@+id/attribute_lin"
+                android:layout_marginLeft="@dimen/service_result_left"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:orientation="horizontal"
+                android:background="@color/common_background_color"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="11dp"
+                    android:id="@+id/gender_image"
+                    android:src="@mipmap/man"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/age_text"
+                    android:textSize="11sp"
+                    android:textColor="@color/appText3"
+                    android:text="38岁"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/whole_city_service"
+                android:src="@mipmap/the_whole_city"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="小时工"
+            android:textSize="12sp"
+            android:textColor="@color/appText3"
+            android:id="@+id/service_list"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/order_lin">
+        <Button
+            android:id="@+id/order_button"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:background="@drawable/recharge_button_bg"
+            android:text="一键下单"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

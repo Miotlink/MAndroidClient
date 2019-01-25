@@ -1,0 +1,79 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="设置昵称"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".ui.personalcenter.personalmessage.ModifyNicknameFragment">
+
+        <EditText
+            android:id="@+id/modify_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/input_new_nickname"
+            android:imeActionLabel="@string/action_confirm"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal"
+            android:text="请把您的昵称控制在10个字符以内哦"/>
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/save"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:background="@drawable/bottom_button_background"-->
+        <!--android:src="@mipmap/save_with_text"/>-->
+
+        <Button
+            android:id="@+id/save"
+            style="@style/CommonPressedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/horizontal_margin_large"
+            android:layout_marginRight="@dimen/horizontal_margin_large"
+            android:layout_marginTop="100dp"
+            android:text="确认保存"/>
+        <!--<com.homepaas.sls.ui.widget.ImageTextButton-->
+        <!--android:id="@+id/save"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:background="@drawable/bottom_button_background"-->
+        <!--android:src="@drawable/save_button"-->
+        <!--android:drawablePadding="4dp"-->
+        <!--android:text="保存"-->
+        <!--android:textColor="@color/speech_button_text_color"-->
+        <!--android:textSize="17sp"/>-->
+    </FrameLayout>
+</LinearLayout>

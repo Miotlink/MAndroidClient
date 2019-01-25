@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.homepaas.sls.ui.account.AccountActivity">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="账户管理" />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:divider="@drawable/layout_vertical_divider"
+        android:orientation="vertical"
+        android:showDividers="beginning|middle">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="fixed"
+
+            app:tabTextColor="@color/appText3"
+            app:tabIndicatorColor="@color/appText13"
+            app:tabSelectedTextColor="@color/appTextSubTitle"
+            app:tabTextAppearance="@style/TabTextAppearance" />
+
+        <com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:refreshMode="LIST_REFRESH_ONLY">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackground"
+                android:fillViewport="true">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v4.widget.NestedScrollView>
+        </com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout>
+    </LinearLayout>
+
+</FrameLayout>

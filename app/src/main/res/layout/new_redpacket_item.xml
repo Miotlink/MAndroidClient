@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/redPacket"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:shadowColor="@color/appShandow"
+        android:shadowDx="0"
+        android:shadowDy="7"
+        android:shadowRadius="1"
+        android:clickable="true"
+        android:id="@+id/couponbd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/hongbao">
+
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/price"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/price_unit"
+                android:textSize="18sp"
+                android:text="￥"
+                android:textColor="@color/appText7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/redpacket_price"
+                android:textSize="45sp"
+                tools:text="80"
+                android:textColor="@color/appText7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/amount"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/price"
+            android:textColor="@color/appText7"
+            tools:text="满80元可用"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/fengjiexian"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/amount"
+            android:src="@mipmap/henxian"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="100dp"
+            android:id="@+id/fengexian"
+            android:background="@null"
+            android:src="@mipmap/shuxian"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/fengexian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/redpacket_name"
+                android:textColor="@color/appText"
+                tools:text="新人红包"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/redpacket_kind"
+                android:drawableLeft="@mipmap/yuan"
+                android:drawableStart="@mipmap/yuan"
+                android:drawablePadding="2dp"
+                tools:text="全品类可用"
+                android:textSize="11sp"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/appText10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/redpacket_time"
+                android:drawableLeft="@mipmap/yuan"
+                android:drawableStart="@mipmap/yuan"
+                android:drawablePadding="2dp"
+                tools:text="2016-11-27至2016-12-1"
+                android:textSize="11sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/appText10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/status"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@mipmap/yishiyong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/gou"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="35dp"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:src="@mipmap/duigou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/fengjiexian"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/area"
+            android:drawableLeft="@mipmap/yuan"
+            android:drawableStart="@mipmap/yuan"
+            android:drawablePadding="2dp"
+            tools:text="仅限杭州区域"
+            android:textSize="12sp"
+            android:textColor="@color/appText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/fengjiexian"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="12sp"
+            android:textColor="@color/appText8"
+            android:id="@+id/deadline"
+            tools:text="还有3天期限"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

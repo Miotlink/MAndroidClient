@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_rel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_title_bg"
+        android:elevation="7dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/close"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_margin_left_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textColor="@color/login_close"
+            android:text="关闭" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/cancel_reasons"
+            android:textColor="@color/app_title_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <com.homepaas.sls.ui.widget.ReboundScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_rel"
+        android:layout_marginBottom="80dp"
+        android:fadingEdge="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_item_top"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/common_margin_left_right"
+                    android:text="@string/ordre_cancel_talk_reasons"
+                    android:textColor="@color/homepageServerText1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/common_margin_left_right"
+                    android:layout_marginTop="@dimen/common_item_top"
+                    android:text="@string/provide_the_best_service"
+                    android:textColor="@color/appText13"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cancel_reasons_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_item_top"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layoutManager="@string/layoutManager_LinearLayout" />
+
+            <LinearLayout
+                android:id="@+id/other_reasons_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <EditText
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:id="@+id/other_reasons_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin_left_right"
+                    android:layout_marginLeft="@dimen/common_margin_left_right"
+                    android:layout_marginRight="@dimen/common_margin_left_right"
+                    android:background="@color/common_background_color"
+                    android:gravity="left|top"
+                    android:hint="@string/input_other_reasons"
+                    android:maxEms="100"
+                    android:maxLength="100"
+                    android:minHeight="120dp"
+                    android:padding="@dimen/common_item_top"
+                    android:textColorHint="@color/appText3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.homepaas.sls.ui.widget.ReboundScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_sumbit_rel_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View style="@style/fenge_view1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/btn_sumbit"
+                android:layout_width="@dimen/btn_sumbit_width"
+                android:layout_height="@dimen/btn_sumbit_height"
+                android:background="@drawable/subset_order_button"
+                android:text="@string/submit_reasons"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

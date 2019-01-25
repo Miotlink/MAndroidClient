@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/picker_title"
+            android:gravity="center"
+            tools:text="服务价格越高,服务质量越好哦"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            android:textSize="@dimen/small_title_size"
+            android:textColor="@color/appTextLight"
+            android:layout_toRightOf="@+id/cancel"
+            android:layout_toLeftOf="@+id/confirm"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/confirm"
+            android:text="确定"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/newAppPrimary"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:layout_gravity="right|end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:text="取消"
+            android:textSize="16sp"
+            android:textColor="@color/appTextLight"
+            android:padding="@dimen/padding_small"
+            android:layout_gravity="right|end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <com.homepaas.sls.ui.widget.PickerView
+        android:id="@+id/number_picker"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+</LinearLayout>

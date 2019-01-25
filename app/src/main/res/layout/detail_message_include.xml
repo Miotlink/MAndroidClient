@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_normal"
+    tools:showIn="@layout/activity_detail">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/detail_message_image1"
+            android:layout_width="@dimen/detail_message_icon_size"
+            android:layout_height="@dimen/detail_message_icon_size"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/detail_place_order_count"/>
+
+        <TextView
+            android:id="@+id/detail_message_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/detail_message_text_margin_left"
+            android:layout_marginStart="@dimen/detail_message_text_margin_left"
+            android:textColor="@color/appTextNormal"
+            android:textSize="13sp"
+            tools:text="已接单45单"/>
+
+        <TextView
+            android:id="@+id/detail_message_rank1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/detail_message_text_margin_left"
+            android:layout_marginStart="@dimen/detail_message_text_margin_left"
+            android:drawableLeft="@mipmap/detail_ranking"
+            android:drawablePadding="4dp"
+            android:drawableStart="@mipmap/detail_ranking"
+            android:textSize="13sp"
+            tools:text="↓70%"
+            tools:textColor="@color/decorateGreen"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/detail_message_image2"
+            android:layout_width="@dimen/detail_message_icon_size"
+            android:layout_height="@dimen/detail_message_icon_size"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/detail_call_count"/>
+
+        <TextView
+            android:id="@+id/detail_message_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/detail_message_text_margin_left"
+            android:layout_marginStart="@dimen/detail_message_text_margin_left"
+            android:textColor="@color/appTextNormal"
+            android:textSize="13sp"
+            tools:text="已接单66通"/>
+
+        <TextView
+            android:id="@+id/detail_message_rank2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/detail_message_text_margin_left"
+            android:layout_marginStart="@dimen/detail_message_text_margin_left"
+            android:drawableLeft="@mipmap/detail_ranking"
+            android:drawablePadding="4dp"
+            android:drawableStart="@mipmap/detail_ranking"
+            android:textSize="13sp"
+            tools:text="↑40%"
+            tools:textColor="@color/decorateYellow"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/detail_message_image3"
+            android:layout_width="@dimen/detail_message_icon_size"
+            android:layout_height="@dimen/detail_message_icon_size"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/detail_review"/>
+
+        <TextView
+            android:id="@+id/detail_message_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/detail_message_text_margin_left"
+            android:layout_marginStart="@dimen/detail_message_text_margin_left"
+            android:textColor="@color/appTextNormal"
+            android:textSize="13sp"
+            tools:text="评分4.5分"/>
+
+        <TextView
+            android:id="@+id/detail_message_rank3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/detail_message_text_margin_left"
+            android:layout_marginStart="@dimen/detail_message_text_margin_left"
+            android:drawableLeft="@mipmap/detail_ranking"
+            android:drawablePadding="4dp"
+            android:drawableStart="@mipmap/detail_ranking"
+            android:textSize="13sp"
+            tools:text="↑10%"
+            tools:textColor="@color/decorateOrange"/>
+    </FrameLayout>
+</LinearLayout>

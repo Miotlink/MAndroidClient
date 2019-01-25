@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallet_title_height"
+        android:elevation="7dp"
+        android:background="@color/app_title_bg">
+
+        <LinearLayout
+            android:id="@+id/back_ll"
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:scaleType="center"
+                android:src="@mipmap/return_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/pay_succ"
+            android:textColor="@color/app_title_color"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image"
+                    android:src="@mipmap/order_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_toRightOf="@id/image"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="支付成功"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="实付"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginLeft="3dp"
+                            android:id="@+id/pay_sum"
+                            android:layout_gravity="bottom"
+                            android:textColor="@color/decorateOrange"
+                            android:text="80.00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+       <View
+           style="@style/fenge_view"/>
+       <LinearLayout
+           android:layout_marginTop="@dimen/gradview_left"
+           android:orientation="vertical"
+           android:paddingLeft="@dimen/padding_normal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+           <TextView
+               android:text="@string/recharge_total_money"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+                <TextView
+                   android:id="@+id/total_money"
+                   android:textColor="@color/appText3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"/>
+           </LinearLayout>
+           <!--联系人-->
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_marginTop="@dimen/margin_small"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/gift_ll">
+               <TextView
+                   android:text="@string/recharge_gift"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+               <TextView
+                   android:id="@+id/recharge_gift"
+                   android:textColor="@color/appText3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="5dp"/>
+           </LinearLayout>
+           <!--服务地址-->
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_marginTop="@dimen/margin_small"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:text="@string/recharge_time"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+
+               <TextView
+                   android:id="@+id/recharge_time"
+                   android:textColor="@color/appText3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="5dp"/>
+           </LinearLayout>
+           <!--服务地址-->
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_marginTop="@dimen/margin_small"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:text="@string/recharge_tradeno"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView" />
+
+               <TextView
+                   android:id="@+id/recharge_tradeno"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/appText3"
+                   android:layout_marginLeft="5dp"
+                   />
+
+           </LinearLayout>
+       </LinearLayout>
+   </LinearLayout>
+    <View
+        android:layout_marginTop="@dimen/gradview_left"
+        style="@style/fenge_view"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <Button
+                style="@style/CommonButton"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:paddingTop="@dimen/padding_tiny"
+                android:paddingBottom="@dimen/padding_tiny"
+                android:text="继续充值"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/check_detail" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <Button
+                style="@style/CommonButton"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:paddingTop="@dimen/padding_tiny"
+                android:paddingBottom="@dimen/padding_tiny"
+                android:text="返回主页"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_page" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

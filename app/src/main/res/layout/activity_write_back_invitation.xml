@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_write_back_invitation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.homepaas.sls.ui.personalcenter.WriteBackInvitationActivity">
+
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            app:title="邀请码"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"/>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:divider="@drawable/layout_vertical_divider_dim"
+        android:showDividers="middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/invitation_layout"
+            android:divider="@drawable/layout_vertical_divider_dim"
+            android:showDividers="middle"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="填写邀请码，获得更多优惠"
+                android:textColor="@color/appTextLight"
+                android:padding="@dimen/padding_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:paddingLeft="@dimen/padding_normal"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="邀请码"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView12" />
+
+                <com.homepaas.sls.ui.widget.ScalableHintEditText
+                    android:id="@+id/invitation_input"
+                    android:hint="填写邀请码"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/textView12"
+                    android:layout_toLeftOf="@id/confirm"
+                    app:hintTextSize="17sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/confirm"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/primary_common_button"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:background="@drawable/gray_border_button_bg"
+            android:padding="@dimen/padding_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                   android:layout_centerInParent="true"
+                    android:src="@mipmap/invitation_code_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/want_more"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:text="想要获得更多优惠吗？"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="邀请您的好友加入助家生活"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/appPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/want_more_arrow"
+                android:drawableRight="@mipmap/arrow_into"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

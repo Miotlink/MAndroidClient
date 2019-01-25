@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/menu_rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/color_lin"
+            android:layout_width="4dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@color/merchant_menu_select"
+            android:orientation="horizontal"></LinearLayout>
+
+        <TextView
+            android:id="@+id/menu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新房开荒"
+            android:textColor="@color/appText10"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

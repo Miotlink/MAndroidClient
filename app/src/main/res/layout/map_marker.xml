@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="@dimen/marker_width"
+             android:layout_height="@dimen/marker_height"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:background="@mipmap/map_marker_bg_unchecked"
+             android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        app:riv_corner_radius="@dimen/marker_photo_corner"
+        android:id="@+id/photo"
+        android:layout_width="@dimen/marker_photo_width"
+        android:layout_height="@dimen/marker_photo_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/marker_photo_margin_top"
+        android:scaleType="fitXY"
+        tools:src="@mipmap/worker_portrait_default"/>
+
+    <TextView
+        android:id="@+id/marker_service"
+        android:layout_width="@dimen/marker_text_width"
+        android:layout_height="@dimen/marker_text_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/marker_text_margin_top"
+        android:background="@drawable/marker_text_bg"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="11sp"
+        tools:text="小时工"/>
+</FrameLayout>

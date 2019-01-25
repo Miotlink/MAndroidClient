@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/range_layout"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:paddingLeft="@dimen/padding_small"
+    android:paddingRight="@dimen/padding_small"
+    android:paddingTop="10dp"
+    android:background="@drawable/top_line_bg"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/price_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="Noto"
+        android:textColor="@color/appTextLight"
+        android:gravity="right|end"
+        tools:text="管道疏通（主管）价格范围：¥60~300/次"
+        android:textSize="12sp" />
+</LinearLayout>

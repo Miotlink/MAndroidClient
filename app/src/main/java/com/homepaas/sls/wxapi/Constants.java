@@ -1,0 +1,11 @@
+package com.homepaas.sls.wxapi;
+
+public class Constants {
+	// APP_ID 申请的APPID
+    public static final String APP_ID = "wx34bcf2cceb9a61a1";
+    public static class ShowMsgActivity {
+		public static final String STitle = "showmsg_title";
+		public static final String SMessage = "showmsg_message";
+		public static final String BAThumbData = "showmsg_thumb_data";
+	}
+}

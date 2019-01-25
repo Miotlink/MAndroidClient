@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/layout_vertical_divider"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="@string/set_photo_portrait"/>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--作为默认的子View，仅用于显示信息，出现自定义的view则使其隐藏-->
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:textSize="17sp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_normal"
+            tools:text="你是否要退出你是否要退出出你是否要退出你是否要退出你是否要退出你是否要退出你是否要退出你是否要退出你是否要退出"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/layout_horizontal_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <TextView
+            android:gravity="center"
+            tools:text="@string/cancel"
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/appPrimary"
+            tools:text="@string/action_confirm"
+            android:id="@+id/button_confirm"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

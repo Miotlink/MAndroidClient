@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.v7.widget.CardView
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardElevation="@dimen/cardElevation"
+        app:contentPadding="10dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:background="@mipmap/client_v330_ic_type_circle11"
+                android:id="@+id/icon_bg"
+                android:layout_width="45dp"
+                android:layout_height="45dp">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_centerInParent="true"
+                    android:layout_margin="7dp"
+                    android:id="@+id/icon"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/client_v3_3_0_ic_tab_homepage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginRight="7dp"
+                android:layout_marginLeft="7dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="冰箱清洗"
+                    android:textSize="16sp"
+                    android:textColor="@color/homepageServerText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/subtitle"
+                    tools:text="冰箱清洗"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/appText10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

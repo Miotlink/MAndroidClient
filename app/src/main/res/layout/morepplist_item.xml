@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/more_menu_select"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tv_more_item"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="取消订单"
+        android:textColor="@color/homepageServerText1" />
+
+    <View
+        android:id="@+id/lin_bg"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_background_color" />
+</LinearLayout>
+
+
+

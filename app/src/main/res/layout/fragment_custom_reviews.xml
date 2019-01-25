@@ -1,0 +1,40 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.detail.ServiceContentFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:paddingLeft="8dp"
+        android:id="@+id/recyclerView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="@string/layoutManager_LinearLayout"
+        tools:listitem="@layout/customer_review_item" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/service_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:drawablePadding="@dimen/padding_normal"
+            android:drawableTop="@mipmap/no_comment_default_bg"
+            android:gravity="center_horizontal"
+            android:text="@string/no_comment_explanation"
+            android:textColor="@color/appTextNormal" />
+
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="信息">
+
+        </com.homepaas.sls.ui.widget.CenterTitleToolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:divider="@drawable/layout_vertical_divider"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/vertical_padding_small"
+                    android:paddingLeft="@dimen/horizontal_padding_normal"
+                    android:paddingRight="@dimen/horizontal_padding_normal"
+                    android:paddingTop="@dimen/vertical_padding_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/shop_message_item_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_worker_code"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/worker_number"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="8"
+                            android:gravity="center_vertical"
+                            tools:text="家美乐家政公司"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/shop_message_item_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_native_place"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/native_place"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            tools:text="2008年"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_working_year"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/working_year"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            tools:text="5年"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/shop_message_item_height">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_education"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/education"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            tools:text="40平方米"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_hobby"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/hobby"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            tools:text="旅游"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/shop_message_item_height">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_height"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/height"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            tools:text="180"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_weight"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/weight"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            tools:text="56"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/shop_message_item_height">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_blood_type"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/blood_type"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            tools:text="AB"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical"
+                            android:text="@string/worker_message_constellation"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/constellation"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            tools:text="人马座"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/shop_message_item_height"
+                        android:gravity="center_vertical">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/shop_message_signature"
+                            android:textColor="@color/appTextNormal"/>
+
+                        <TextView
+                            android:id="@+id/signature"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            tools:text="用户是上帝 用户是上帝 用户是上帝"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_height"
+                    android:background="@color/colorDividerLight"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:minHeight="@dimen/shop_message_item_min_height"
+                    android:paddingBottom="@dimen/vertical_padding_small"
+                    android:paddingLeft="@dimen/horizontal_padding_normal"
+                    android:paddingRight="@dimen/horizontal_padding_normal"
+                    android:paddingTop="@dimen/vertical_padding_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/shop_message_service_tag"
+                        android:textColor="@color/appTextNormal"/>
+                    
+                    <!--
+   自定义属性解释:
+       tagSpacing:各个标签之间的距离
+       lineSpacing:行间距
+   -->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content">
+                        <com.homepaas.sls.ui.tag.TagLayout
+                            android:id="@+id/tag"
+                            app:tagSpacing="15dp"
+                            app:lineSpacing="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></com.homepaas.sls.ui.tag.TagLayout>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_height"
+                    android:background="@color/colorDividerLight"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:minHeight="@dimen/shop_message_item_min_height"
+                    android:paddingBottom="@dimen/vertical_padding_small"
+                    android:paddingLeft="@dimen/horizontal_padding_normal"
+                    android:paddingRight="@dimen/horizontal_padding_normal"
+                    android:paddingTop="@dimen/vertical_padding_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/shop_message_service_time"
+                        android:textColor="@color/appTextNormal"/>
+
+                    <TextView
+                        android:id="@+id/service_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        tools:text="每周一至周日    8:00-20:00"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_height"
+                    android:background="@color/colorDividerLight"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:minHeight="@dimen/shop_message_item_min_height"
+                    android:paddingBottom="@dimen/vertical_padding_small"
+                    android:paddingLeft="@dimen/horizontal_padding_normal"
+                    android:paddingRight="@dimen/horizontal_padding_normal"
+                    android:paddingTop="@dimen/vertical_padding_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/worker_message_worker_address"
+                        android:textColor="@color/appTextNormal"/>
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        tools:text="浙江省杭州市江干区迪凯国际中心25B"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_height"
+                    android:background="@color/colorDividerLight"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:minHeight="@dimen/shop_message_item_min_height"
+                    android:paddingBottom="@dimen/vertical_padding_small"
+                    android:paddingLeft="@dimen/horizontal_padding_normal"
+                    android:paddingRight="@dimen/horizontal_padding_normal"
+                    android:paddingTop="@dimen/vertical_padding_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/shop_message_service_range"
+                        android:textColor="@color/appTextNormal"/>
+
+                    <TextView
+                        android:id="@+id/worker_distance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        tools:text="5公里内"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_height"
+                    android:background="@color/colorDividerLight"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:minHeight="@dimen/shop_message_item_min_height"
+                    android:paddingBottom="@dimen/vertical_padding_small"
+                    android:paddingLeft="@dimen/horizontal_padding_normal"
+                    android:paddingRight="@dimen/horizontal_padding_normal"
+                    android:paddingTop="@dimen/vertical_padding_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_weight="2"
+                        android:text="@string/worker_message_worker_introduction"
+                        android:textColor="@color/appTextNormal"/>
+
+                    <TextView
+                        android:id="@+id/introduction"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        tools:text="加了没是一个可以给大家提供保障的公司，阿姨工人都有，家政，维修安装都有"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_divider_height"
+                    android:background="@color/colorDividerLight"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/horizontal_margin_normal"
+                    android:layout_marginStart="@dimen/horizontal_margin_normal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_weight="2"
+                        android:paddingBottom="@dimen/vertical_padding_small"
+                        android:paddingTop="@dimen/vertical_padding_small"
+                        android:text="@string/shop_message_system_authenticate"
+                        android:textColor="@color/appTextNormal"/>
+
+                    <com.homepaas.sls.ui.widget.NoScrollGridView
+                        android:id="@+id/gridView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:numColumns="2"
+                        tools:listitem="@layout/authenticate_detail_item"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.design.widget.CoordinatorLayout>

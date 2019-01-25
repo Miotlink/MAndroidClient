@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.homepaas.sls.ui.order.directOrder.OrderDetailsActivity">
+
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@color/appPrimary"
+            app:popupTheme="@style/MenuStyle"
+            app:theme="@style/ToolbarTheme"
+            app:title="订单详情" />
+    </android.support.design.widget.AppBarLayout>
+
+    <Button
+        android:id="@+id/detail_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="?android:actionBarSize"
+        android:background="@color/white"
+        android:text="取消订单"
+        android:visibility="gone" />
+
+    <com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?android:actionBarSize"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/count_down"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/preferential_push_background"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支付剩余时间"
+                        android:textColor="@color/count_down"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/count_down_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:textColor="@color/count_down_time"
+                        android:textSize="14sp"
+                        tools:text="14:58" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:paddingRight="12dp"
+                    android:src="@mipmap/client_v3_3_0_ic_pay_help" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/count_down"
+                android:background="@color/white" />
+        </RelativeLayout>
+
+    </com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout>
+
+</RelativeLayout>

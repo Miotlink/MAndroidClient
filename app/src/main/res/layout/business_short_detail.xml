@@ -1,0 +1,211 @@
+<LinearLayout android:id="@+id/content_main"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/sliding_panel_short_height"
+              android:background="@color/colorBackground"
+              android:divider="@drawable/layout_vertical_divider"
+              android:orientation="vertical"
+              android:showDividers="beginning">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sliding_panel_short_detail_height"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small">
+        <!-- photo-->
+        <com.makeramen.roundedimageview.RoundedImageView
+            app:riv_corner_radius="6dp"
+            android:id="@+id/photo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_small"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/portrait_default"/>
+        <!--detail-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/TextViewEllipsizeEnd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sliding_panel_short_detail_title_height"
+                android:layout_marginLeft="@dimen/horizontal_margin_small"
+                android:layout_marginRight="@dimen/horizontal_margin_small"
+                android:gravity="bottom"
+                android:textSize="15sp"
+                tools:text="浙江豪庭家政服务"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/sliding_panel_short_detail_message_height"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/message_item1"
+                    style="@style/TextViewEllipsizeEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:drawableRight="@drawable/layout_horizontal_divider"
+                    android:drawableEnd="@drawable/layout_horizontal_divider"
+                    android:textSize="13sp"
+                    tools:text="小时工"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/message_item2"-->
+                    <!--style="@style/TextViewEllipsizeEnd"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:paddingLeft="4dp"-->
+                    <!--android:paddingRight="4dp"-->
+                    <!--android:textSize="13sp"-->
+                    <!--tools:text="河南"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/message_item3"-->
+                    <!--style="@style/TextViewEllipsizeEnd"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:drawableEnd="@mipmap/arrow_into"-->
+                    <!--android:drawableRight="@mipmap/arrow_into"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:paddingLeft="4dp"-->
+                    <!--android:textSize="13sp"-->
+                    <!--tools:text="6年工龄"/>-->
+
+
+
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/like"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="2dp"
+                            android:drawableStart="@drawable/checkbox_like"
+                            android:drawableLeft="@drawable/checkbox_like"
+                            android:textColor="@color/appTextPrimary"
+                            android:textSize="13sp"
+                            tools:text="123"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:id="@+id/collection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="2dp"
+                            android:drawableStart="@drawable/checkbox_collection"
+                            android:drawableLeft="@drawable/checkbox_collection"
+                            android:textColor="@color/appTextPrimary"
+                            android:textSize="13sp"
+                            tools:text="35"/>
+
+                    </FrameLayout>
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="2dp"
+                        android:drawableStart="@mipmap/checkbox_score_unchecked"
+                        android:drawableLeft="@mipmap/checkbox_score_unchecked"
+                        android:textColor="@color/appTextPrimary"
+                        android:textSize="13sp"
+                        tools:text="4.8"/>
+                </FrameLayout>
+                <ImageView
+                    android:src="@mipmap/arrow_into"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:orientation="horizontal"
+            app:layoutManager="@string/layoutManager_LinearLayout"/>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/panel_operate_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_operate_button_height"
+        android:background="@drawable/top_line_divider_background"
+        android:divider="@drawable/layout_horizontal_divider"
+        android:dividerPadding="@dimen/padding_small"
+        android:showDividers="middle">
+        <com.homepaas.sls.ui.widget.TintableImageButton
+            android:id="@+id/direct_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_operate_button_background"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_pay"
+            app:tint="@color/bottom_button_background_tint"/>
+
+        <com.homepaas.sls.ui.widget.TintableImageButton
+            android:id="@+id/place_order_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_operate_button_background"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_order_nor"
+            app:tint="@color/bottom_button_background_tint"/>
+
+        <com.homepaas.sls.ui.widget.TintableImageButton
+            android:id="@+id/call_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_operate_button_background"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_phone_nor"
+            app:tint="@color/bottom_button_background_tint"/>
+    </LinearLayout>
+</LinearLayout>

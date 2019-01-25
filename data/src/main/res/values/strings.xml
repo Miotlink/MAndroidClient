@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Data</string>
+    <string name="network_error">网络不稳定,请检查设置并重试</string>
+</resources>

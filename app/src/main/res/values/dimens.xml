@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_height">140dp</dimen>
+    <dimen name="nav_header_padding_top">16dp</dimen>
+    <dimen name="horizontal_margin_small">8dp</dimen>
+    <dimen name="vertical_margin_small">8dp</dimen>
+    <dimen name="margin_small">7dp</dimen>
+    <dimen name="horizontal_margin_normal">15dp</dimen>
+    <dimen name="vertical_margin_normal">16dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="horizontal_margin_large">24dp</dimen>
+    <dimen name="vertical_margin_large">24dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+
+    <dimen name="horizontal_padding_small">8dp</dimen>
+    <dimen name="vertical_padding_small">8dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="horizontal_padding_normal">16dp</dimen>
+    <dimen name="vertical_padding_normal">16dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="horizontal_padding_large">24dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+
+    <dimen name="sliding_panel_short_height">100dp</dimen>
+    <dimen name="sliding_panel_short_detail_height">100dp</dimen>
+    <dimen name="sliding_panel_short_detail_title_height">34dp</dimen>
+    <dimen name="sliding_panel_short_detail_message_height">28dp</dimen>
+    <dimen name="bottom_operate_button_height">56dp</dimen>
+
+    <dimen name="detail_main_height">100dp</dimen>
+    <dimen name="detail_portrait_size">60dp</dimen>
+    <dimen name="detail_text_height">20dp</dimen>
+    <dimen name="detail_checkbox_height">32dp</dimen>
+
+    <dimen name="detail_message_icon_size">24dp</dimen>
+    <dimen name="detail_message_text_margin_left">28dp</dimen>
+
+    <dimen name="shop_message_item_height">28dp</dimen>
+    <dimen name="space_divider_height">6dp</dimen>
+    <dimen name="shop_message_item_min_height">32dp</dimen>
+    <dimen name="personal_item_height">50dp</dimen>
+
+    <!--我对二维码图片宽度-->
+    <dimen name="dialog_qr_code_size">210dp</dimen>
+    <dimen name="map_search_address_item_height">80dp</dimen>
+    <dimen name="menu_item_height">50dp</dimen>
+    <dimen name="divider_item_height">10dp</dimen>
+    <dimen name="auth_code_button_width">80dp</dimen>
+    <dimen name="message_center_icon_top">130dp</dimen>
+
+
+    <!--todo 由于图片源大小不同，会导致最后呈现到Image上的圆角大小也不同，考虑针对ImageView做处理-->
+    <dimen name="marker_photo_corner">4dp</dimen>
+    <dimen name="marker_photo_width">189px</dimen>
+    <dimen name="marker_photo_height">189px</dimen>
+    <dimen name="marker_photo_margin_top">2px</dimen>
+    <dimen name="marker_text_width">189px</dimen>
+    <dimen name="marker_text_height">55px</dimen>
+    <dimen name="marker_text_margin_top">139px</dimen>
+    <dimen name="marker_width">199px</dimen>
+    <dimen name="marker_height">238px</dimen>
+    <dimen name="marker_text_corner">2dp</dimen>
+    <dimen name="border">3dp</dimen>
+    <dimen name="nav_icon_size">25dp</dimen>
+
+    <dimen name="ratingBar_minHeight_large">14dp</dimen>
+    <dimen name="ratingBar_minWidth_large">16dp</dimen>
+    <dimen name="divider_padding">10dp</dimen>
+    <dimen name="fontSizeMidleTitle">17sp</dimen>
+    <dimen name="service_content_height">100dp</dimen>
+    <dimen name="service_item_width">90dp</dimen>
+    <dimen name="service_item_first_margin">20dp</dimen>
+    <dimen name="service_item_second_margin">120dp</dimen>
+    <dimen name="service_item_3rd_margin">220dp</dimen>
+    <dimen name="middle_margin">15dp</dimen>
+    <dimen name="rating_bar_mingheight">16dp</dimen>
+    <dimen name="activity_myorder_content_minHeight">15dp</dimen>
+    <!--评价RatingBar的红心高度-->
+
+    <!--刷新控件参数-->
+    <dimen name="refresh_view_height">300dp</dimen>
+    <dimen name="pull_refresh_text_size">12dp</dimen>
+    <dimen name="pull_refresh_vertical_space">16dp</dimen>
+    <dimen name="pull_refresh_vertical_offset">8dp</dimen>
+    <dimen name="pull_refresh_horizontal_space">100dp</dimen>
+    <dimen name="top_pull_fresh_vertical_move_space">40dp</dimen>
+    <dimen name="padding_tiny">5dp</dimen>
+    <dimen name="small_button_width">60dp</dimen>
+    <dimen name="small_button_height">25dp</dimen>
+    <dimen name="space_divider_height_normal">15dp</dimen>
+    <dimen name="margin_tiny">3dp</dimen>
+    <dimen name="small_title_size">17sp</dimen>
+    <dimen name="standard_cell_height">45dp</dimen>
+    <dimen name="standard_cell_space">15dp</dimen>
+    <dimen name="standard_cell_margin">18dp</dimen>
+
+    <!--我的钱包-->
+    <dimen name="wallet_title_height">50dp</dimen>
+    <dimen name="detail_account_height">55dp</dimen>
+    <dimen name="choose_account_type_height">50dp</dimen>
+    <dimen name="margin_left_right">15dp</dimen>
+    <dimen name="choose_drawable_left">12dp</dimen>
+    <dimen name="choose_adapter_top">16dp</dimen>
+    <dimen name="preferential_push_left">6dp</dimen>
+
+    <!--充值-->
+    <dimen name="gradview_left">16dp</dimen>
+    <dimen name="gradview_space_hor">12dp</dimen>
+    <dimen name="gradview_space_ver">12dp</dimen>
+    <dimen name="recharge_choose_top">30dp</dimen>
+    <dimen name="recharge_choose_height_one">50dp</dimen>
+    <dimen name="recharge_choose_height_two">40dp</dimen>
+
+    <!--服务选择-->
+    <dimen name="service_type_left">13.5dp</dimen>
+
+    <!--服务搜索-->
+    <dimen name="service_result_left">12dp</dimen>
+    <dimen name="tag_corner_radius">5.0dip</dimen>
+    <dimen name="taglistview_top">14dp</dimen>
+    <dimen name="remen_martop">28dp</dimen>
+    <dimen name="mainfragment_srarch_left">16dp</dimen>
+    <dimen name="home_search_top">44dp</dimen>
+
+    <!--商户主页和工人主页的服务项-->
+    <dimen name="service_detail_photo">375dp</dimen>
+    <dimen name="service_detail_attribute_height">44dp</dimen>
+    <dimen name="purchase_button_height">49dp</dimen>
+    <dimen name="service_choose_marginTop">10dp</dimen>
+    <dimen name="item_servic_type_paddin">15sp</dimen>
+    <dimen name="merchant_photo_size">60dp</dimen>
+
+    <!--新主页尺寸-->
+    <dimen name="space_bootom">16dp</dimen>
+    <dimen name="corner_radius">3dp</dimen>
+    <dimen name="cardElevation">1dp</dimen>
+
+    <!--新下单-->
+    <dimen name="place_order_marginleft">16.5dp</dimen>
+    <dimen name="image_name">12dp</dimen>
+    <dimen name="common_margin_left_right">12dp</dimen>
+    <dimen name="common_margin_left_right_first">15dp</dimen>
+    <dimen name="common_margin_left_right_second">16dp</dimen>
+    <dimen name="common_margin_left_right_third">25dp</dimen>
+    <dimen name="client_order_list_margin">20dp</dimen>
+    <dimen name="common_item_height">44dp</dimen>
+    <dimen name="common_item_top">6dp</dimen>
+    <dimen name="btn_sumbit_rel_height">73dp</dimen>
+    <dimen name="btn_sumbit_height">43dp</dimen>
+    <dimen name="btn_sumbit_width">325dp</dimen>
+
+    <!--快递订单跟踪-->
+    <dimen name="technological_process_margin_top">5dp</dimen>
+    <dimen name="technological_process_orderinfo_margin">10dp</dimen>
+    <dimen name="express_company_margin_top">21dp</dimen>
+    <dimen name="express_icon_compan">8dp</dimen>
+    
+    <!--赔付原因-->
+    <dimen name="compensation_reason_item">60dp</dimen>
+    <dimen name="compensation_reason_text">45dp</dimen>
+    
+    <dimen name="activity_relief_right">27dp</dimen>
+    <dimen name="business_workers_photo">76dp</dimen>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.tag.TagDetailActivity">
+    <!--Title-->
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="胡佳玉的标签" />
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/serviceNumber"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/horizontal_margin_normal"
+        android:layout_marginTop="@dimen/vertical_margin_normal"
+        android:textColor="@color/appPrimary"
+        android:text="共20个标签"
+        android:layout_below="@+id/title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_below="@+id/serviceNumber"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/horizontal_margin_normal"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.homepaas.sls.ui.tag.TagLayout
+            android:id="@+id/tag"
+            app:tagSpacing="5dp"
+            app:lineSpacing="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</RelativeLayout>

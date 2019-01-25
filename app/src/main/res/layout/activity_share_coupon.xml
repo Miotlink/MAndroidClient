@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/close"
+            android:padding="0dp"
+            android:src="@mipmap/close"
+            android:layout_alignRight="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+       <RelativeLayout
+           android:id="@+id/layout"
+           android:padding="0dp"
+           android:layout_margin="0dp"
+           android:background="@drawable/white_background"
+           android:layout_below="@+id/close"
+           android:layout_width="200dp"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:scaleType="fitXY"
+               android:id="@+id/iv"
+               android:src="@mipmap/quan_2"
+               android:layout_width="match_parent"
+               android:layout_height="150dp" />
+           <TextView
+               android:layout_below="@+id/iv"
+               android:id="@+id/description"
+               android:layout_width="match_parent"
+               android:minHeight="60dp"
+               android:gravity="center"
+               android:text="您有10张优惠券可与好友分享"
+               android:layout_height="wrap_content" />
+           <TextView
+               android:id="@+id/share"
+               android:layout_below="@+id/description"
+               android:text="分享"
+               android:paddingTop="@dimen/padding_normal"
+               android:paddingBottom="@dimen/padding_normal"
+               android:gravity="center"
+               android:textColor="@color/appPrimary"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" />
+
+       </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

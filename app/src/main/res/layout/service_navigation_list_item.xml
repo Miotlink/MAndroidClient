@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/icon"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_image" />
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/icon_des_fl"-->
+       <!---->
+          <!---->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="30dp">-->
+            <TextView
+               android:visibility="gone"
+                android:gravity="center_vertical|right"
+                android:background="@mipmap/preferential_price"
+                android:id="@+id/icon_des"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="bottom|end"
+                android:paddingRight="5dp"
+                tools:text="优惠后￥75元"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        <!--</FrameLayout>-->
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/name"
+        android:textColor="@color/homepageServerText1"
+        android:text="擦玻璃"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/price"
+        android:textColor="@color/appText3"
+        android:text="17元/平方米"
+        android:textSize="11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

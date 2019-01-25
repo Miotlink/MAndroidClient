@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/activity_wrapper"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--empty space-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_cell_space"
+            android:background="#fbfbfb"
+            android:foreground="@drawable/bottom_line" />
+
+        <!--活动-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/action_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:visibility="visible"
+            app:layoutManager="@string/layoutManager_LinearLayout"
+            tools:listitem="@layout/list_item_string" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/discount_sum_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--empty space-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/standard_cell_space"
+            android:background="#fbfbfb"
+            android:foreground="@drawable/bottom_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_cell_margin"
+            android:background="@drawable/bottom_line"
+            android:paddingBottom="16dp"
+            android:paddingRight="16sp"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单金额"
+                android:textColor="@color/appTextSubTitle" />
+
+            <TextView
+                android:id="@+id/sum_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text="¥30×3  ¥90" />
+            <!--活动-->
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/sum_description"
+                android:id="@+id/action_special"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:visibility="visible"
+                app:layoutManager="@string/layoutManager_LinearLayout"
+                tools:listitem="@layout/list_item_action" />
+            <!--<TextView-->
+                <!--android:id="@+id/action_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/sum_description"-->
+                <!--android:layout_marginTop="14dp"-->
+                <!--android:textColor="@color/appTextSubTitle"-->
+                <!--tools:text="小时工在线支付满90减10" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/action_discount"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_below="@id/sum_description"-->
+                <!--android:layout_marginTop="14dp"-->
+                <!--android:textColor="@color/decorateOrange"-->
+                <!--tools:text="-¥ 10" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/standard_cell_margin"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="订单总计"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/order_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/decorateOrange"
+                tools:text="¥ 80" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

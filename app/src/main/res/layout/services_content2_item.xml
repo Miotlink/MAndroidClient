@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/services_content2_item_textView1"
+        style="@style/ServiceItemText"
+        android:layout_width="@dimen/service_item_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/service_item_first_margin"
+        android:layout_marginStart="@dimen/service_item_first_margin"
+        android:padding="8dp"
+        tools:text="家政服务"/>
+
+    <TextView
+        android:id="@+id/services_content2_item_textView2"
+        style="@style/ServiceItemText"
+        android:layout_width="@dimen/service_item_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/service_item_second_margin"
+        android:layout_marginStart="@dimen/service_item_second_margin"
+        android:padding="8dp"
+        tools:text="家政服务"/>
+
+</FrameLayout>

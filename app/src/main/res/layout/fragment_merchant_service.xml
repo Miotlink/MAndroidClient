@@ -1,0 +1,134 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshLayout"
+    tools:context="com.homepaas.sls.ui.newdetail.NewCustomerReviewFragment"
+    >
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/merchant_menu_background">
+
+                <RelativeLayout
+                    android:id="@+id/pay_in_store_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="@dimen/service_choose_marginTop"
+                    android:layout_marginLeft="@dimen/service_result_left"
+                    android:layout_marginRight="@dimen/service_result_left"
+                    android:layout_marginTop="@dimen/service_choose_marginTop"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/buy_in_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/service_result_left"
+                        android:layout_marginTop="@dimen/service_result_left"
+                        android:text="@string/to_store_payment"
+                        android:textColor="@color/homepageServerText2"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/buy_in_store"
+                        android:layout_marginLeft="@dimen/service_result_left"
+                        android:layout_marginTop="6dp"
+                        android:paddingBottom="@dimen/service_result_left"
+                        android:text="@string/to_store_payment"
+                        android:textColor="@color/appText3"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/to_pay_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/service_result_left"
+                        android:background="@drawable/order_middle_bg"
+                        android:gravity="center"
+                        android:text="支付"
+                        android:textColor="@color/decorateOrange" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/has_date_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/menu_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        app:layoutManager="@string/layoutManager_LinearLayout"
+                        tools:listitem="@layout/merchant_service_menu_adapter" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:orientation="horizontal"
+                            android:background="@color/merchant_fenge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/service_number_background"
+                                android:gravity="center_vertical"
+                                android:layout_marginLeft="3dp">
+                                <TextView
+                                    android:id="@+id/service_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/service_result_left"
+                                    android:text="你好"
+                                    android:textColor="@color/homepageServerText1"
+                                    android:textSize="14sp"
+                                    android:layout_marginLeft="4dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/item_recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/item_servic_type_paddin"
+                            app:layoutManager="@string/layoutManager_LinearLayout"
+                            tools:listitem="@layout/merchant_service_item__four_adapter" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

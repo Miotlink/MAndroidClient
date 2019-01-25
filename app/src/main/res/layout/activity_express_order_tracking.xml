@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_title_bg"
+        android:elevation="1dp"
+        android:gravity="center_vertical"
+        android:translationZ="1dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@mipmap/return_black" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/express_order_tracking"
+            android:textColor="@color/app_title_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_rel"
+        app:refreshMode="LIST_REFRESH_ONLY">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_background_color"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/wait_courier_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:layout_marginTop="@dimen/technological_process_margin_top"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/status_picture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/client_v3_1_0_ic_indent_await" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/express_icon_compan"
+                            android:layout_toRightOf="@id/status_picture"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/status_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/drop_box_program"
+                                android:textColor="@color/order_detail_type"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/status_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="9dp"
+                                android:text="@string/wait_courier_collect"
+                                android:textColor="@color/appText10"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <!--订单追踪信息-->
+                <LinearLayout
+                    android:id="@+id/express_order_trackint_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/technological_process_margin_top"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin_left_right"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/express_company_margin_top"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/express_company" />
+
+                            <TextView
+                                android:id="@+id/express_company"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/appText10"
+                                android:textSize="14sp"
+                                tools:text="顺丰快递" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/express_company_margin_top"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/express_odd_numbers" />
+
+                            <TextView
+                                android:id="@+id/express_odd_Numbers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/appText10"
+                                android:textSize="14sp"
+                                tools:text="123456789" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/division_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/client_v3_1_0_ic_indent_imaginary_line"
+                            android:visibility="gone" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/express_order_tarcking_recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/express_company_margin_top"
+                            android:layout_marginRight="@dimen/common_margin_left_right"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            app:layoutManager="@string/layoutManager_LinearLayout" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--订单基本信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/express_company_margin_top"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin_left_right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/common_margin_left_right_first"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first"
+                            android:text="@string/order_information"
+                            android:textColor="@color/appText"
+                            android:textSize="16sp" />
+
+                        <View style="@style/fenge_view" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/company_icon"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/client_v330_ic_expressage_head" />
+
+                            <TextView
+                                android:id="@+id/express_company_text"
+                                style="@style/express_order_tracking_text_left"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/express_icon_compan"
+                                tools:text="顺丰快递" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                            <TextView
+                                android:id="@+id/send_address_text"
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/send_address" />
+
+                            <TextView
+                                android:id="@+id/send_address"
+                                style="@style/express_order_tracking_text_other_right"
+                                tools:text="大洋彼岸" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:layout_marginLeft="14dp"
+                                android:text="@string/send_people" />
+
+                            <TextView
+                                android:id="@+id/send_people"
+                                style="@style/express_order_tracking_text_other_right"
+                                tools:text="大叔" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/fenge_view"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                            <TextView
+                                android:id="@+id/receiver_address_text"
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/receiver_address" />
+
+                            <TextView
+                                android:id="@+id/receiver_address"
+                                style="@style/express_order_tracking_text_other_right"
+                                tools:text="大洋彼岸" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                style="@style/express_order_tracking_text_left"
+                                android:layout_marginLeft="14dp"
+                                android:text="@string/receiver_people" />
+
+                            <TextView
+                                android:id="@+id/receiver_people"
+                                style="@style/express_order_tracking_text_other_right"
+                                tools:text="大叔11" />
+                        </LinearLayout>
+
+                        <View
+                            style="@style/fenge_view"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/goods_name" />
+
+                            <TextView
+                                android:id="@+id/goods_name"
+                                style="@style/express_order_tracking_text_right"
+                                tools:text="文件" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/goods_weight" />
+
+                            <TextView
+                                android:id="@+id/goods_weight"
+                                style="@style/express_order_tracking_text_right"
+                                tools:text="1kg" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/payment_method" />
+
+                            <TextView
+                                android:id="@+id/payment_method"
+                                style="@style/express_order_tracking_text_right"
+                                tools:text="寄件人付" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first"
+                            android:visibility="gone">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/estimated_cost" />
+
+                            <TextView
+                                android:id="@+id/estimated_cost"
+                                style="@style/express_order_tracking_text_right"
+                                android:textColor="@color/appText14"
+                                tools:text="100元" />
+                        </RelativeLayout>
+
+                        <View
+                            style="@style/fenge_view"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/order_number" />
+
+                            <TextView
+                                android:id="@+id/order_number"
+                                style="@style/express_order_tracking_text_right"
+                                tools:text="1444444" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/common_margin_left_right_first"
+                            android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+                            <TextView
+                                style="@style/express_order_tracking_text_left"
+                                android:text="@string/order_create_time" />
+
+                            <TextView
+                                android:id="@+id/order_create_time"
+                                style="@style/express_order_tracking_text_right"
+                                tools:text="1444444" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout>
+</LinearLayout>

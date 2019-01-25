@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/vertical_padding_small"
+              android:paddingLeft="@dimen/horizontal_padding_small"
+              android:paddingRight="@dimen/horizontal_padding_small"
+              android:paddingTop="@dimen/horizontal_padding_small">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:scaleType="fitXY"
+        tools:src="@mipmap/authenticate_business_license"/>
+
+    <TextView
+        android:id="@+id/explanation"
+        style="@style/TextViewEllipsizeEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/horizontal_margin_normal"
+        android:layout_marginStart="@dimen/horizontal_margin_normal"
+        tools:text="营业执照"/>
+</LinearLayout>

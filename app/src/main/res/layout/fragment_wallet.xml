@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_background_color">
+
+    <RelativeLayout
+        android:id="@+id/push_rl"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:animateLayoutChanges="true"
+        android:background="@color/preferential_push_background"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/trumpet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/choose_drawable_left"
+            android:background="@mipmap/wallet_trumpet"
+            android:scaleType="fitXY" />
+
+        <FrameLayout
+            android:id="@+id/push_close"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginRight="@dimen/choose_drawable_left"
+                android:background="@mipmap/wallet_close"
+                android:scaleType="fitXY" />
+        </FrameLayout>
+
+        <com.homepaas.sls.ui.widget.AutoText
+            android:id="@+id/push_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/preferential_push_left"
+            android:layout_marginRight="@dimen/preferential_push_left"
+            android:layout_toLeftOf="@id/push_close"
+            android:layout_toRightOf="@id/trumpet"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@color/preferential_push_text"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/account_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/wallet_background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/account_balance"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/account_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="23dp"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:textSize="60sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/caozuo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standard_cell_space"
+            android:layout_marginTop="@dimen/standard_cell_space"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/recharge_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:background="@drawable/recharge_button_bg"
+                android:text="@string/recharge_button"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/item_my_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_account_height"
+            android:background="@drawable/shape_order_rectangle"
+            android:paddingLeft="@dimen/padding_normal"
+            android:paddingRight="@dimen/padding_normal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/wallet_bill"
+                android:drawablePadding="@dimen/space_divider_height_normal"
+                android:drawableStart="@mipmap/wallet_bill"
+                android:gravity="center_vertical"
+                android:text="@string/detail_account"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:src="@mipmap/arrow_indicator" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

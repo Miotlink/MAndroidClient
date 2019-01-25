@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.search.SearchActivity">
+
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.PopupOverlay">
+
+        <FrameLayout
+            style="@style/SearchTitleBackground"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/auto_edit_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/search_bar_background">
+
+                <AutoCompleteTextView
+                    android:id="@+id/search_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:background="@android:color/transparent"
+                    android:completionThreshold="1"
+                    android:drawableLeft="@mipmap/search"
+                    android:drawablePadding="@dimen/padding_small"
+                    android:drawableStart="@mipmap/search"
+                    android:gravity="center_vertical"
+                    android:hint="@string/search_bar_hint"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:singleLine="true"
+                    android:textColor="@color/appTextPrimary"
+                    android:textColorHint="@color/textHint"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/delete_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/search_btn_delete"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/search_or_cancel"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/appPrimary"/>
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/recommend_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:divider="@drawable/layout_vertical_divider"
+        android:orientation="vertical"
+        android:showDividers="middle|end">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/clear_recommend"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+
+                android:layout_marginEnd="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:scaleType="center"
+                android:src="@mipmap/btn_close"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:text="热门服务"/>
+
+            <GridView
+
+                android:id="@+id/service_item_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="3"
+                tools:listitem="@layout/search_hot_recommend_item"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorDividerLight"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/no_result_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="75dp"
+            android:drawableTop="@mipmap/search_no_result_bg"
+            android:gravity="center"
+            android:text="搜索不到"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/no_result_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="请换个关键词试试"
+            android:textColor="@color/appTextNormal"/>
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,226 @@
+{
+  "channelInfoList": [
+    {
+      "channel": "官方",
+      // 此channel将使用自己声明的extraInfo
+      /*
+      此alias可以做到写入apk的channel是meituan，而打包时输出的文件名是美团
+      注意：alias不声明时，walle配置apkFileNameFormat中channel就是channel，否则为alias
+      */
+      "alias": "官方",
+      "extraInfo": {
+        "marketId": "0"
+      }
+    },
+    {
+      "channel": "安卓市场",
+      "alias": "安卓市场",
+      "extraInfo": {
+        "marketId": "1"
+      }
+    },
+    {
+      "channel": "百度手机助手",
+      "alias": "百度手机助手",
+      "extraInfo": {
+        "marketId": "2"
+      }
+    },
+    {
+      "channel": "91助手",
+      "alias": "91助手",
+      "extraInfo": {
+        "marketId": "3"
+      }
+    },
+    {
+      "channel": "应用汇",
+      "alias": "应用汇",
+      "extraInfo": {
+        "marketId": "4"
+      }
+    },
+    {
+      "channel": "应用宝",
+      "alias": "应用宝",
+      "extraInfo": {
+        "marketId": "5"
+      }
+    },
+    {
+      "channel": "联想",
+      "alias": "联想",
+      "extraInfo": {
+        "marketId": "6"
+      }
+    },
+    {
+      "channel": "小米商城",
+      "alias": "小米商城",
+      "extraInfo": {
+        "marketId": "8"
+      }
+    },
+    {
+      "channel": "魅族",
+      "alias": "魅族",
+      "extraInfo": {
+        "marketId": "9"
+      }
+    },
+    {
+      "channel": "安智市场",
+      "alias": "安智市场",
+      "extraInfo": {
+        "marketId": "10"
+      }
+    },
+    {
+      "channel": "豌豆荚",
+      "alias": "豌豆荚",
+      "extraInfo": {
+        "marketId": "11"
+      }
+    },
+    {
+      "channel": "华为市场",
+      "alias": "华为市场",
+      "extraInfo": {
+        "marketId": "12"
+      }
+    },
+    {
+      "channel": "搜狗",
+      "alias": "搜狗",
+      "extraInfo": {
+        "marketId": "13"
+      }
+    },
+    {
+      "channel": "OPPO",
+      "alias": "OPPO",
+      "extraInfo": {
+        "marketId": "15"
+      }
+    },
+    {
+      "channel": "360市场",
+      "alias": "360市场",
+      "extraInfo": {
+        "marketId": "16"
+      }
+    },
+    {
+      "channel": "机锋市场",
+      "alias": "机锋市场",
+      "extraInfo": {
+        "marketId": "17"
+      }
+    },
+    {
+      "channel": "联通沃商店",
+      "alias": "联通沃商店",
+      "extraInfo": {
+        "marketId": "20"
+      }
+    },
+    {
+      "channel": "安卓园",
+      "alias": "安卓园",
+      "extraInfo": {
+        "marketId": "26"
+      }
+    },
+    {
+      "channel": "易用汇",
+      "alias": "易用汇",
+      "extraInfo": {
+        "marketId": "29"
+      }
+    },
+    {
+      "channel": "木蚂蚁",
+      "alias": "木蚂蚁",
+      "extraInfo": {
+        "marketId": "31"
+      }
+    },
+    {
+      "channel": "乐视手机市场",
+      "alias": "乐视手机市场",
+      "extraInfo": {
+        "marketId": "35"
+      }
+    },
+    {
+      "channel": "01锁屏",
+      "alias": "01锁屏",
+      "extraInfo": {
+        "marketId": "64"
+      }
+    },
+    {
+      "channel": "渠道01",
+      "alias": "渠道01",
+      "extraInfo": {
+        "marketId": "65"
+      }
+    },
+    {
+      "channel": "渠道02",
+      "alias": "渠道02",
+      "extraInfo": {
+        "marketId": "66"
+      }
+    },
+    {
+      "channel": "渠道03",
+      "alias": "渠道03",
+      "extraInfo": {
+        "marketId": "67"
+      }
+    },
+    {
+      "channel": "渠道04",
+      "alias": "渠道04",
+      "extraInfo": {
+        "marketId": "68"
+      }
+    },
+    {
+      "channel": "渠道05",
+      "alias": "渠道05",
+      "extraInfo": {
+        "marketId": "69"
+      }
+    },
+    {
+      "channel": "渠道06",
+      "alias": "渠道06",
+      "extraInfo": {
+        "marketId": "70"
+      }
+    },
+    {
+      "channel": "渠道07",
+      "alias": "渠道07",
+      "extraInfo": {
+        "marketId": "71"
+      }
+    },
+    {
+      "channel": "vivo",
+      "alias": "vivo",
+      "extraInfo": {
+        "marketId": "72"
+      }
+    },
+    {
+      "channel": "锤子市场",
+      "alias": "锤子市场",
+      "extraInfo": {
+        "marketId": "73"
+      }
+    }
+  ]
+}

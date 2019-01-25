@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.homepaas.sls.ui.order.directOrder.PlaceOrderActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <!--Title-->
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            app:title="@string/confirm_order" />
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_gravity="bottom"
+            android:layout_height="50dp"
+            android:layout_width="match_parent">
+
+            <View
+                android:background="@color/colorDivider"
+                android:id="@+id/line"
+                android:layout_height="1px"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:text=""
+                android:textSize="16sp" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/bill_sum"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/id_text"
+                android:layout_width="wrap_content"
+                android:textColor="@color/decorateOrange"
+                android:textSize="20sp"
+                tools:text="¥120" />
+
+            <LinearLayout
+                android:id="@+id/favor_result_layout"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/bill_sum"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:background="#ccc"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="1px" />
+
+                <TextView
+                    android:id="@+id/favor_result_description"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="#999"
+                    android:textSize="12sp"
+                    tools:text="已优惠¥10" />
+            </LinearLayout>
+
+            <Button
+                android:background="@color/newAppPrimary"
+                android:id="@+id/submit"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/line"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="提交订单"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:id="@+id/recycler_view"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            tools:listitem="@layout/list_item" />
+    </FrameLayout>
+
+</LinearLayout>
+

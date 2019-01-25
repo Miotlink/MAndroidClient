@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_left_right_first">
+
+        <TextView
+            android:id="@+id/activity_title"
+            style="@style/client_order_detail_text_left"
+            tools:text="特价小时工" />
+
+        <TextView
+            android:id="@+id/activity_amount"
+            style="@style/client_order_detail_text_right"
+            tools:text="31元" />
+    </RelativeLayout>
+</LinearLayout>

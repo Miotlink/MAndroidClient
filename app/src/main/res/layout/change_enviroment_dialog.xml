@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:id="@+id/outer_layout"
+              android:padding="0dp">
+
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal|top"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/vertical_divider_normal"
+        android:showDividers="middle"
+        android:dividerPadding="1dp"
+        android:background="@drawable/round_layout"
+        android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="50dp"
+            android:padding="@dimen/padding_small"
+            android:textSize="17sp"
+            android:text="请选择你需要的切换的工作环境" />
+        <TextView
+            android:id="@+id/release"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="50dp"
+            android:padding="@dimen/padding_small"
+            android:textSize="17sp"
+            android:textColor="@color/appPrimary"
+            android:text="正式" />
+
+        <TextView
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:padding="@dimen/padding_small"
+        android:gravity="center"
+        android:id="@+id/debug"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textColor="@color/appPrimary"
+        android:textSize="17sp"
+        android:text="预发" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:id="@+id/developer"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:textColor="@color/appPrimary"
+            android:textSize="17sp"
+            android:text="开发" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:background="@drawable/round_layout"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="@dimen/padding_small"
+        android:textSize="17sp"
+        android:textColor="@color/appPrimary"
+        android:text="取消" />
+</LinearLayout>

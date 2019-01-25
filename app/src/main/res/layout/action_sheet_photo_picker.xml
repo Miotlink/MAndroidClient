@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/outer_layout"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal|top"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/layout_vertical_divider"
+        android:showDividers="middle"
+        android:dividerPadding="1dp"
+        android:background="@drawable/round_layout"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/take_photo"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="50dp"
+            android:padding="@dimen/padding_small"
+            android:textSize="17sp"
+            android:textColor="@color/appPrimary"
+            android:text="拍照" />
+
+        <TextView
+            android:id="@+id/gallery_choose"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:padding="@dimen/padding_small"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:textColor="@color/appPrimary"
+            android:textSize="17sp"
+            android:text="从相册选择" />
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:background="@drawable/round_layout"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="@dimen/padding_small"
+        android:textSize="17sp"
+        android:textColor="@color/appPrimary"
+        android:text="取消" />
+</LinearLayout>

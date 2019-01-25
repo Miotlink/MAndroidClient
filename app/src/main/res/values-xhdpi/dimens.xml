@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="detail_checkbox_height">36dp</dimen>
+    <dimen name="detail_main_height">115dp</dimen>
+    <dimen name="detail_portrait_size">75dp</dimen>
+    <dimen name="detail_text_height">25dp</dimen>
+    <dimen name="detail_message_text_margin_left">30dp</dimen>
+    <dimen name="dialog_qr_code_size">240dp</dimen>
+    <dimen name="map_search_address_item_height">80dp</dimen>
+    <dimen name="personal_item_height">50dp</dimen>
+    <dimen name="menu_item_height">50dp</dimen>
+    <dimen name="auth_code_button_width">80dp</dimen>
+    <dimen name="message_center_icon_top">130dp</dimen>
+    <dimen name="marker_photo_corner">4dp</dimen>
+    <dimen name="marker_photo_width">119px</dimen>
+    <dimen name="marker_photo_height">119px</dimen>
+    <dimen name="marker_photo_margin_top">6px</dimen>
+    <dimen name="marker_text_width">119px</dimen>
+    <dimen name="marker_text_height">28px</dimen>
+    <dimen name="marker_text_margin_top">97px</dimen>
+    <dimen name="marker_width">131px</dimen>
+    <dimen name="marker_height">154px</dimen>
+    <dimen name="marker_text_corner">2dp</dimen>
+
+    <dimen name="ratingBar_minHeight_large">14dp</dimen>
+    <dimen name="ratingBar_minWidth_large">16dp</dimen>
+    <dimen name="service_content_height">100dp</dimen>
+</resources>

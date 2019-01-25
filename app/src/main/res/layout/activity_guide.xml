@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/guide_bg_color"
+    tools:context="com.homepaas.sls.ui.GuideActivity">
+    <android.support.v4.view.ViewPager
+        android:layout_above="@+id/viewDot"
+        android:overScrollMode="never"
+        android:id="@+id/viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/viewDot"
+        android:layout_above="@+id/go"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginRight="12dp"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/guide_dot" />
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/guide_dot" />
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:clickable="true"-->
+            <!--android:padding="15.0dip"-->
+            <!--android:src="@drawable/guide_dot" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/go"
+        android:layout_width="260dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/go"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/guide_corner_textview"
+        />
+
+
+</RelativeLayout>

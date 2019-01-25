@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:myrating="http://schemas.android.com/apk/res-auto"
+   android:background="@mipmap/beijin"
+    android:layout_width="332dp"
+    android:layout_height="138dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:divider="@drawable/layout_vertical_divider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--detail-->
+        <RelativeLayout
+            android:id="@+id/showDetial"
+            android:padding="10dp"
+            android:layout_height="103dp"
+            android:layout_width="match_parent">
+            <!--head-->
+            <ImageView
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@mipmap/head_portrait_default"
+                android:scaleType="centerCrop"
+                android:layout_width="83dp"
+                android:layout_height="83dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/head_portrait" />
+            <!--detail_message-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/head_portrait"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--merchant_name-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:id="@+id/merchant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/TextViewEllipsizeEnd3"
+                        android:id="@+id/m_name"
+                        android:drawablePadding="7dp"
+                        android:drawableEnd="@mipmap/service"
+                        android:drawableRight="@mipmap/service"
+                        tools:text="红岭电动车维修店"
+                        android:textColor="@color/homepageServerText1"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!--worker_mame-->
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/worker_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="left|center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd3"
+                            android:id="@+id/name"
+                            tools:text="张大大"
+                            android:textColor="@color/homepageServerText1"
+                            android:textSize="18sp"
+                            android:layout_marginRight="3dp"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/gender_age"
+                            android:textColor="@color/appText6"
+                            tools:text="38岁"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:drawablePadding="3dp"
+                            android:drawableStart="@mipmap/man"
+                            android:drawableLeft="@mipmap/man"
+                            android:background="@drawable/gender_bg_selector"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/w_worker"
+                            android:layout_marginLeft="5dp"
+                            android:src="@mipmap/service"
+                            android:background="@null"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:gravity="right|center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            style="@style/TextViewEllipsizeEnd"
+                            android:id="@+id/worker_wage"
+                            tools:text="35元起"
+                            android:textSize="18sp"
+                            android:textColor="@color/homepageServerText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--grade-->
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.homepaas.sls.ui.widget.MyRatingBar
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/rating_bar"
+                        myrating:mImageWidth="10dp"
+                        myrating:mImageHeight="10dp"
+                        myrating:mClickImageId="@mipmap/star"
+                        myrating:mDefaultImageId="@mipmap/star2"
+                        myrating:mHalfImageId="@mipmap/star3"
+                        myrating:mMargin="1px"
+                        myrating:mStarChoose="0"
+                        myrating:mStarNum="5"
+                        myrating:mScope="2.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/scope"
+                        android:layout_toRightOf="@+id/rating_bar"
+                        android:layout_marginLeft="5dp"
+                        tools:text="4.5"
+                        android:textColor="@color/homepageServerText2"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/scope"
+                        android:id="@+id/activity_jian"
+                        android:background="@null"
+                        android:src="@mipmap/jian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/activity_jian"
+                        android:id="@+id/activity_fan"
+                        android:background="@null"
+                        android:src="@mipmap/fan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/distance"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/appText10"
+                        android:textSize="11sp"
+                        tools:text="1.1km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <!--merchant_address-->
+                <LinearLayout
+                    android:id="@+id/merchant_address_ll"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/merchant_address"
+                        android:gravity="center_vertical"
+                        style="@style/TextViewEllipsizeEnd"
+                        android:drawableStart="@mipmap/distance_"
+                        android:drawableLeft="@mipmap/distance_"
+                        android:drawablePadding="3dp"
+                        android:textSize="11sp"
+                        android:textColor="@color/appText3"
+                        tools:text="这是一串文字描述的是一个很详细很具体而且很长的文字"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/merchant_time"
+                        android:layout_marginLeft="5dp"
+                        android:text="开店5年"
+                        android:textSize="11sp"
+                        android:textColor="@color/appText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!--worker_address-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/worker_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:text="籍贯:"
+                        android:textSize="11sp"
+                        android:textColor="@color/appText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/address"
+                        android:layout_marginLeft="2dp"
+                        tools:text="浙江杭州"
+                        android:textSize="11sp"
+                        android:textColor="@color/appText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="11sp"
+                        android:text="从业:"
+                        android:textColor="@color/appText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:id="@+id/time"
+                        tools:text="3年"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="11sp"
+                        android:textColor="@color/appText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <!--serviceType-->
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/service_type"
+                    style="@style/TextViewEllipsizeEnd2"
+                    android:textColor="@color/appText10"
+                    android:textSize="12sp"
+                    tools:text="小时工、清洁工、月嫂、装修大爷、杂技演员、特效摄影师、航天员、国家主席、学校领导"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+        <!--bottom button-->
+        <LinearLayout
+            android:dividerPadding="2dp"
+            android:divider="@drawable/layout_horizontal_divider"
+            android:showDividers="middle"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+            <FrameLayout
+                android:id="@+id/take_order"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/take_order_text"
+                    android:drawablePadding="6dp"
+                    android:drawableLeft="@mipmap/orders"
+                    android:drawableStart="@mipmap/orders"
+                    android:layout_gravity="center"
+                    android:text="下单"
+                    android:textColor="@drawable/take_order_selector"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/call_phone"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/call_phone_text"
+                    android:drawablePadding="6dp"
+                    android:drawableLeft="@mipmap/phone"
+                    android:drawableStart="@mipmap/phone"
+                    android:layout_gravity="center"
+                    android:text="电话"
+                    android:textColor="@drawable/take_order_selector"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_rel"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="7dp"
+        android:background="@color/app_title_bg"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingLeft="@dimen/common_margin_left_right"
+            android:paddingRight="@dimen/common_margin_left_right"
+            android:src="@mipmap/return_black" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/order_cancel"
+            android:textColor="@color/app_title_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <com.homepaas.sls.ui.widget.ReboundScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/technological_process_orderinfo_margin"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_margin_left_right_second"
+                    android:layout_marginRight="@dimen/common_margin_left_right_second"
+                    android:layout_marginTop="@dimen/service_item_first_margin"
+                    android:text="@string/contact_customer_service_cancel_order"
+                    android:textColor="@color/homepageServerText1"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/cancel_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin_left_right_first"
+                    android:layout_marginLeft="@dimen/common_margin_left_right_second"
+                    android:layout_marginRight="@dimen/common_margin_left_right_second"
+                    android:layout_marginTop="@dimen/common_margin_left_right"
+                    android:textColor="@color/appText3"
+                    android:textSize="12sp"
+                    tools:text="我是取消原因" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin_left_right_first"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/service_item_first_margin"
+                    android:text="@string/serivce_number"
+                    android:textColor="@color/appText3"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/contact_customer_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/common_margin_left_right_first"
+                    android:layout_marginLeft="@dimen/common_margin_left_right_second"
+                    android:layout_marginRight="@dimen/common_margin_left_right_second"
+                    android:layout_marginTop="@dimen/service_item_first_margin"
+                    android:background="@drawable/contact_customer_service"
+                    android:gravity="center"
+                    android:text="联系客服"
+                    android:textColor="@color/homepageServerText1"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.homepaas.sls.ui.widget.ReboundScrollView>
+</LinearLayout>

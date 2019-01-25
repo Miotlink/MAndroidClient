@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--退款记录-->
+    <RelativeLayout
+        android:id="@+id/refund_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_small"
+        android:background="@drawable/bottom_divider"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small">
+
+        <TextView
+            android:id="@+id/refund_text"
+            android:text="@string/refund_record"
+            android:padding="@dimen/padding_small"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/refund_time"
+            tools:text="2016-6-15 11:14"
+            android:padding="@dimen/padding_small"
+            android:layout_below="@+id/refund_text"
+            android:textColor="@color/appTextNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/refund_amount"
+            tools:text="70.00元"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_small"
+            android:layout_below="@+id/refund_text"
+            android:textColor="@color/decorateOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/refund_status"
+            tools:text="退款中"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_small"
+            android:layout_below="@+id/refund_amount"
+            android:textColor="@color/decorateRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

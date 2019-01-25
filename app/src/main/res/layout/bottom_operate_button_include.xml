@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_operate_button_height"
+    android:layout_gravity="bottom"
+    android:background="@drawable/top_line_divider_background"
+    android:divider="@drawable/layout_horizontal_divider"
+    android:dividerPadding="4dp"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+    <!---->
+    <com.homepaas.sls.ui.widget.TintableImageButton
+        android:id="@+id/review_button"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_operate_button_background"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_pay"
+        app:tint="@color/bottom_button_background_tint"/>
+
+    <com.homepaas.sls.ui.widget.TintableImageButton
+        android:id="@+id/place_order_button"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_operate_button_background"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_order_nor"
+        app:tint="@color/bottom_button_background_tint"/>
+
+    <com.homepaas.sls.ui.widget.TintableImageButton
+        android:id="@+id/call_button"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_operate_button_background"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_phone_nor"
+        app:tint="@color/bottom_button_background_tint"/>
+</LinearLayout>

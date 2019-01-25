@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_new_red_packet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.homepaas.sls.ui.redpacket.newRedpacket.NewRedPacketActivity">
+
+    <!--Title-->
+    <android.support.design.widget.AppBarLayout android:elevation="7dp"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.homepaas.sls.ui.widget.CenterTitleToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            app:theme="@style/ToolbarTheme"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/my_red_packet" />
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:divider="@drawable/layout_vertical_divider"
+        android:showDividers="middle"
+        android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.TabLayout
+        app:tabPaddingStart="5dp"
+        app:tabPaddingEnd="5dp"
+        android:id="@+id/indicator"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+
+        app:tabTextColor="@color/appText3"
+        app:tabIndicatorColor="@color/appText13"
+        app:tabSelectedTextColor="@color/appTextSubTitle"/>
+
+    <com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground" />
+    </com.homepaas.sls.ui.widget.refreshview.HeaderViewLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

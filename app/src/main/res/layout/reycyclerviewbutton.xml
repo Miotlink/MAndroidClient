@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/list_fl"
+        android:layout_height="match_parent"
+        android:layout_width="110dp"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:background="@color/white"
+            android:id="@+id/worker_bussines_list"
+            android:orientation="vertical"
+            app:layoutManager="@string/layoutManager_LinearLayout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="110dp"
+            tools:listitem="@layout/worker_bussines_item_view"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/noDatabg"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/no_data_image_selector"
+                android:id="@+id/noDataImage"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/check_rl"
+        app:layout_marginTopPercent="60%"
+        android:layout_toRightOf="@+id/list_fl"
+        android:background="@null"
+        android:layout_width="40dp"
+        android:layout_height="100dp">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/check_src_selector"
+            android:background="@drawable/check_bg_selector"
+            android:id="@+id/check"
+            android:scaleType="fitEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

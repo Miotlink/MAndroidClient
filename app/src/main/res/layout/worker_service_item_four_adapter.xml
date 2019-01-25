@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:paddingLeft="@dimen/mainfragment_srarch_left"
+        android:paddingRight="@dimen/mainfragment_srarch_left">
+
+        <TextView
+            android:id="@+id/worker_four_service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="小时工"
+            android:textColor="@color/homepageServerText1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/worker_four_buy_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/order_middle_bg"
+            android:gravity="center"
+            android:text="购买"
+            android:textColor="@color/decorateOrange" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_item_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:paddingLeft="@dimen/mainfragment_srarch_left"
+        android:paddingRight="@dimen/mainfragment_srarch_left"
+        app:layoutManager="@string/layoutManager_LinearLayout"
+        tools:listitem="@layout/worker_servic_item_item_adapter" />
+
+
+
+</LinearLayout>
